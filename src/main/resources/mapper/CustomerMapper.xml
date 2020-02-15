@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="cn.example.demo.mapper.CustomerMapper">
+    <resultMap id="login" type="cn.example.demo.dao.Customer" >
+        <id column="id" property="id" jdbcType="VARCHAR" />
+        <result column="account" property="account" jdbcType="VARCHAR" />
+        <result column="password" property="password" jdbcType="VARCHAR" />
+    </resultMap>
+    <select id="customer" parameterType="int" resultMap="login">
+        SELECT *
+        FROM login
+        <where>
+            <if test="id != null">
+             id = #{id}
+            </if>
+        </where>
+    </select>
+    <insert id="inset">
+        INSERT INTO login( account, nickname, password, sex, phone, address, email, status, time)
+         VALUES (#{account}, #{nickname}, #{password}, #{sex}, #{phone}, #{address}, #{email}, #{status},#{time})
+    </insert>
+    <update id="update">
+        UPDATE login
+        SET status = #{value}
+        WHERE account =#{account}
+    </update>
+
+    <delete id="delete">
+        DELETE from login WHERE account = #{account}
+    </delete>
+</mapper>

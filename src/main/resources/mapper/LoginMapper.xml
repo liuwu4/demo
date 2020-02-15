@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.example.demo.mapper.LoginMapper">
+    <resultMap id="customer" type="cn.example.demo.dao.Customer" >
+        <id column="id" property="id" jdbcType="VARCHAR" />
+        <result column="account" property="account" jdbcType="VARCHAR" />
+        <result column="password" property="password" jdbcType="VARCHAR" />
+    </resultMap>
+    <select id="result" resultMap="customer">
+        SELECT  *
+        FROM login
+        WHERE account = ${login.account} AND password=${login.password}
+    </select>
+
+    <update id="reset">
+        UPDATE login
+        <set>
+            <if test="customer.password != null and customer.password != ''">
+                password = #{customer.password}
+            </if>
+        </set>
+        WHERE account = #{customer.account}
+    </update>
+</mapper>

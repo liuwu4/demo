@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.example.demo.mapper.ProductMapper">
+    <resultMap id="all" type="cn.example.demo.dao.Product">
+        <id property="no" column="no"/>
+        <result property="type" column="type"/>
+        <result property="name" column="name"/>
+        <result property="price" column="price"/>
+        <result property="number" column="number"/>
+        <result property="picture" column="picture"/>
+        <result property="productionDate" column="production_date"/>
+        <result property="productionAddress" column="production_address"/>
+        <result property="expirationDate" column="expiration_date"/>
+        <result property="status" column="status"/>
+        <result property="description" column="description"/>
+        <result property="remark" column="remark"/>
+    </resultMap>
+    <sql id="allColumn">
+        no, type, name,
+        price, number,
+        picture,
+        production_date AS productionDate,
+        production_address AS productionAddress,
+        expiration_date AS expirationDate,
+        status,
+        description,
+        remark
+    </sql>
+    <select id="products" resultMap="all">
+        SELECT
+        <include refid="allColumn"/>
+        FROM product
+        <if test="no != null">
+            WHERE no=#{no}
+        </if>
+    </select>
+    <insert id="product">
+        INSERT INTO product
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            <if test="product.no != null">
+                no,
+            </if>
+            <if test="product.type != null">
+                type,
+            </if>
+            <if test="product.name != null">
+                name,
+            </if>
+            <if test="product.price != null">
+                price,
+            </if>
+            <if test="product.number != null ">
+                number,
+            </if>
+            <if test="product.picture != null ">
+                picture,
+            </if>
+            <if test="product.productionDate != null ">
+                production_date,
+            </if>
+            <if test="product.productionAddress != null ">
+                production_address,
+            </if>
+            <if test="product.expirationDate != null ">
+                expiration_date,
+            </if>
+            <if test="product.status != null ">
+                status,
+            </if>
+            <if test="product.description != null ">
+                description,
+            </if>
+            <if test="product.remark != null ">
+                remark,
+            </if>
+        </trim>
+        <trim prefix="VALUES(" suffix=")" suffixOverrides=",">
+            <if test="product.no != null">
+                #{product.no},
+            </if>
+            <if test="product.type != null">
+                #{product.type},
+            </if>
+            <if test="product.name != null">
+                #{product.name},
+            </if>
+            <if test="product.price != null">
+                #{product.price},
+            </if>
+            <if test="product.number != null ">
+                #{product.number},
+            </if>
+            <if test="product.picture != null ">
+                #{product.picture},
+            </if>
+            <if test="product.productionDate != null ">
+                #{product.productionDate},
+            </if>
+            <if test="product.productionAddress != null ">
+                #{product.productionAddress},
+            </if>
+            <if test="product.expirationDate != null ">
+                #{product.expirationDate},
+            </if>
+            <if test="product.status != null ">
+                #{product.status},
+            </if>
+            <if test="product.description != null ">
+                #{product.description},
+            </if>
+            <if test="product.remark != null ">
+                #{product.remark},
+            </if>
+        </trim>
+    </insert>
+    <delete id="delete">
+        DELETE FROM product
+        WHERE no = #{no}
+    </delete>
+    <update id="update">
+        UPDATE product
+        <set>
+            <if test="product.no != null">
+               no = #{product.no},
+            </if>
+            <if test="product.type != null">
+                type = #{product.type},
+            </if>
+            <if test="product.name != null and product.name != ''">
+                name = #{product.name},
+            </if>
+            <if test="product.price != null">
+                price = #{product.price},
+            </if>
+            <if test="product.number != null">
+               number = #{product.number},
+            </if>
+            <if test="product.picture != null and product.picture != ''">
+                picture = #{product.picture},
+            </if>
+            <if test="product.productionDate != null ">
+                production_date = #{product.productionDate},
+            </if>
+            <if test="product.productionAddress != null and product.productionAddress != '' ">
+                production_address = #{product.productionAddress},
+            </if>
+            <if test="product.expirationDate != null ">
+                expiration_date = #{product.expirationDate},
+            </if>
+            <if test="product.status != null ">
+                status = #{product.status},
+            </if>
+            <if test="product.description != null and product.description != '' ">
+                description = #{product.description},
+            </if>
+            <if test="product.remark != null and product.remark != '' ">
+                remark = #{product.remark}
+            </if>
+        </set>
+        WHERE no = #{no}
+    </update>
+</mapper>
