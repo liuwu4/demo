@@ -50,14 +50,14 @@ public class CustomerController {
             @ApiImplicitParam(name = "enable", value = "status = 0时, enable = [1]启用 or [0]禁用 必须", required = false)
     })
     public Map<String, Object> users(@PathVariable String account,
-                                     @RequestParam int status,
-                                     @RequestParam int enable){
+                                     @RequestParam Integer status,
+                                     @RequestParam(required = false) Integer enable){
         LOG.info("禁用账号|删除账号"+ account+"\t"+ status+"\t"+enable);
         return responseManage.response(customerService.modify(account, status, enable));
     }
 
     @PutMapping("/user")
-    @ApiOperation(value = "修改账号信息[id, account原样返回]")
+    @ApiOperation(value = "修改账号信息[id原样返回]")
     public Map<String, Object> update(@RequestBody Customer customer){
         LOG.info("修改账号信息:"+ customer);
         return responseManage.response(customerService.updateCustomer(customer));

@@ -42,7 +42,7 @@ public class CustomerService {
      * @param value
      * @return
      */
-    public int modify(String account, int status, int value) {
+    public int modify(String account, Integer status, Integer value) {
         if(status == 0){
             return customerMapper.update(account, value);
         }

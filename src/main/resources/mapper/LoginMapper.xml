@@ -3,21 +3,20 @@
 <mapper namespace="cn.example.demo.mapper.LoginMapper">
     <resultMap id="customer" type="cn.example.demo.dao.Customer" >
         <id column="id" property="id" />
-        <result column="account" property="account" />
         <result column="password" property="password" />
     </resultMap>
     <sql id="info">
-       SELECT id, account, nickname, password, sex, phone, address, email, time
+       SELECT id, nickname, password, sex, phone, address, email, time
     </sql>
     <select id="result" resultMap="customer">
         <include refid="info"/>
         FROM login
-        WHERE account = ${login.account} AND password=${login.password}
+        WHERE (phone = ${login.account} OR email = #{login.account}) AND password=${login.password}
     </select>
     <select id="check" resultMap="customer">
         <include refid="info"/>
         FROM login
-        WHERE account = #{account} OR phone = #{account} OR email = #{account}
+        WHERE phone = #{account} OR email = #{account}
     </select>
     <update id="reset">
         UPDATE login
@@ -26,6 +25,6 @@
                 password = #{customer.password}
             </if>
         </set>
-        WHERE account = #{customer.account}
+        WHERE phone = #{customer.phone}
     </update>
 </mapper>

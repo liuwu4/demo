@@ -7,7 +7,7 @@
         <result column="password" property="password" jdbcType="VARCHAR" />
     </resultMap>
     <sql id="all">
-        id,
+      SELECT  id,
         account,
         nickname,
         sex,
@@ -18,7 +18,7 @@
         time
     </sql>
     <select id="customer" parameterType="int" resultMap="login">
-        SELECT  <include refid="all"/>
+        <include refid="all"/>
         FROM login
         <where>
             <if test="id != null">
@@ -27,13 +27,64 @@
         </where>
     </select>
     <insert id="inset">
-        INSERT INTO login( account, nickname, password, sex, phone, address, email, status, time)
-         VALUES (#{account}, #{nickname}, #{password}, #{sex}, #{phone}, #{address}, #{email}, #{status},#{time})
+        INSERT INTO login
+        <trim prefix="(" suffixOverrides="," suffix=")">
+            <if test="customer.id != null">
+                id,
+            </if>
+            <if test="customer.account != null">
+                account,
+            </if>
+             <if test="customer.nickname != null">
+            nickname,
+        </if>
+         <if test="customer.password != null">
+             password,
+        </if>
+         <if test="customer.sex != null">
+            sex,
+         </if>
+         <if test="customer.phone != null">
+            phone,
+         </if>
+            <if test="customer.address != null">
+                address,
+            </if>
+            <if test="customer.email != null">
+                email,
+            </if>
+        </trim>
+        <trim prefix="VALUES (" suffixOverrides="," suffix=")">
+            <if test="customer.id != null">
+                #{customer.id},
+            </if>
+            <if test="customer.account != null">
+                #{customer.account},
+            </if>
+            <if test="customer.nickname != null">
+                #{customer.nickname},
+            </if>
+            <if test="customer.password != null">
+                #{customer.password},
+            </if>
+            <if test="customer.sex != null">
+                #{customer.sex },
+            </if>
+            <if test="customer.phone != null">
+                #{customer.phone},
+            </if>
+            <if test="customer.address != null">
+                #{customer.address},
+            </if>
+            <if test="customer.email != null">
+                #{customer.email},
+            </if>
+        </trim>
     </insert>
     <update id="update">
         UPDATE login
         SET status = #{value}
-        WHERE account =#{account}
+        WHERE phone =#{account}
     </update>
     <update id="updateCustomer">
         UPDATE login
@@ -64,10 +115,10 @@
                 time = #{customer.time}
             </if>
         </set>
-        WHERE id = #{customer.id} AND account = #{customer.account}
+        WHERE id = #{customer.id}
 
     </update>
     <delete id="delete">
-        DELETE from login WHERE account = #{account}
+         DELETE FROM login WHERE phone = #{account}
     </delete>
 </mapper>

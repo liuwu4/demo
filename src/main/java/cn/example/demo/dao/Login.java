@@ -16,7 +16,7 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @ApiModel
 public class Login {
-    @ApiModelProperty(value = "用户账号[account]", required = true)
+    @ApiModelProperty(value = "用户账号[phone, email]", required = true)
     private  String account;
     @ApiModelProperty(value = "用户密码[password]", required = true)
     private  String password;

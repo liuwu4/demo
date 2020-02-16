@@ -25,7 +25,7 @@ public interface CustomerMapper {
      * @param customer 用户信息
      * @return int
      */
-    int inset(Customer customer);
+    int inset(@Param("customer") Customer customer);
 
     /**
      * 删除用户
