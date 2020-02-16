@@ -36,10 +36,10 @@ public class LoginService {
 
     /**
      * 校验账号是否存在
-     * @param account
+     * @param phone
      * @return
      */
-    public Customer check(String account){
-        return loginMapper.check(account);
+    public Customer check(String phone){
+        return loginMapper.check(phone);
     }
 }

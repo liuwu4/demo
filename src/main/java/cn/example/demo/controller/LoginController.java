@@ -35,9 +35,9 @@ public class LoginController {
     }
 
     @GetMapping("/user/check")
-    @ApiOperation(value = "校验账号是否存在[account, phone, email]")
-    public Map<String, Object> check(@RequestParam(required = true) String account){
-        return responseManage.response(loginService.check(account));
+    @ApiOperation(nickname = "phone", value = "校验账号是否存在 phone")
+    public Map<String, Object> check(@RequestParam(required = true) String phone){
+        return responseManage.response(loginService.check(phone));
     }
 
 

@@ -29,8 +29,8 @@ public interface LoginMapper {
 
     /**
      * 校验账号是否存在
-     * @param account
+     * @param phone
      * @return
      */
-    Customer check(@Param("account") String account);
+    Customer check(@Param("phone") String phone);
 }

@@ -11,12 +11,12 @@
     <select id="result" resultMap="customer">
         <include refid="info"/>
         FROM login
-        WHERE (phone = ${login.account} OR email = #{login.account}) AND password=${login.password}
+        WHERE phone = ${login.account} AND password=${login.password}
     </select>
     <select id="check" resultMap="customer">
         <include refid="info"/>
         FROM login
-        WHERE phone = #{account} OR email = #{account}
+        WHERE phone = #{phone}
     </select>
     <update id="reset">
         UPDATE login
