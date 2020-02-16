@@ -25,6 +25,8 @@ public class Product implements Serializable {
     private Integer no;
     @ApiModelProperty(value = "产品类型", required = true)
     private Integer type;
+    @ApiModelProperty(value = "类型信息[用户查看类型信息]", required = false)
+    private Type typeInfo;
     @ApiModelProperty(value = "产品名称", required = true)
     private String name;
     @ApiModelProperty(value = "产品价格")

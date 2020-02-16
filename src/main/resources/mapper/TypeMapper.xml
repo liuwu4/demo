@@ -15,6 +15,11 @@
             </if>
         </where>
     </select>
+    <select id="selectType" resultMap="info">
+        SELECT type_id, type_name
+        FROM product_type
+        WHERE type_id = #{typeId}
+    </select>
     <insert id="add">
         INSERT INTO product_type
         <trim prefix="(" suffix=")" suffixOverrides=",">

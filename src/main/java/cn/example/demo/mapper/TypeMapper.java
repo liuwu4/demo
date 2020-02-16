@@ -21,6 +21,12 @@ public interface TypeMapper {
     List<Type> type(@Param("typeId") Integer typeId);
 
     /**
+     * 联合查询type
+     * @param typeId
+     * @return
+     */
+    Type selectType(@Param("TypeId") Integer typeId);
+    /**
      * 新增
      * @param type 新增信息
      * @return int

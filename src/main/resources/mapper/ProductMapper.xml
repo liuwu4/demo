@@ -14,6 +14,11 @@
         <result property="status" column="status"/>
         <result property="description" column="description"/>
         <result property="remark" column="remark"/>
+        <association property="typeInfo"
+                     column="type"
+                     javaType="cn.example.demo.dao.Type"
+                     select="cn.example.demo.mapper.TypeMapper.selectType"/>
+
     </resultMap>
     <sql id="allColumn">
         no, type, name,
@@ -34,6 +39,7 @@
             WHERE no=#{no}
         </if>
     </select>
+
     <insert id="product">
         INSERT INTO product
         <trim prefix="(" suffix=")" suffixOverrides=",">
