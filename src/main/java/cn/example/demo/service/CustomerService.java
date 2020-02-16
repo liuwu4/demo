@@ -26,14 +26,36 @@ public class CustomerService {
         return customerMapper.customer(customerId);
     }
 
+    /**
+     * 添加账号
+     * @param customer
+     * @return
+     */
     public int inset(Customer customer){
         return customerMapper.inset(customer);
     }
 
+    /**
+     * 修改账号状态
+     * @param account
+     * @param status
+     * @param value
+     * @return
+     */
     public int modify(String account, int status, int value) {
         if(status == 0){
             return customerMapper.update(account, value);
         }
         return customerMapper.delete(account);
     }
+
+    /**
+     * 更新账号信息
+     * @param customer
+     * @return
+     */
+    public int updateCustomer(Customer customer){
+        return customerMapper.updateCustomer(customer);
+    }
+
 }

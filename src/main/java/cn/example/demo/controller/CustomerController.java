@@ -7,6 +7,8 @@ import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiImplicitParam;
 import io.swagger.annotations.ApiImplicitParams;
 import io.swagger.annotations.ApiOperation;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -18,28 +20,29 @@ import java.util.Map;
  * description:
  */
 @RestController
-@RequestMapping("/customer")
 @Api(tags = "所有的用户信息")
 public class CustomerController {
     @Autowired
     private CustomerService customerService;
     private ResponseManage responseManage = new ResponseManage();
 
+    private static final Logger LOG = LoggerFactory.getLogger(CustomerController.class);
     @GetMapping("/users")
     @ApiOperation(value = "查询用户信息")
     @ApiImplicitParam(name = "customerId", value = "检查用户是否存在[id]", required = false)
     public Map<String, Object> users(@RequestParam(required = false) String customerId){
-        System.out.println("查询"+ customerId);
+        LOG.info("查询用户"+ customerId);
         return responseManage.response(customerService.customer(customerId));
     }
 
-    @PostMapping("/users")
+    @PostMapping("/user")
     @ApiOperation(value = "新增用户")
     public Map<String, Object> users(@RequestBody(required = true) Customer customer){
+        LOG.info("新增"+ customer);
         return responseManage.response(customerService.inset(customer));
     }
 
-    @DeleteMapping("/users/{account}")
+    @DeleteMapping("/user/{account}")
     @ApiOperation(value = "禁用账号|删除账号")
     @ApiImplicitParams({
             @ApiImplicitParam(name = "account", value = "用户account", required = true),
@@ -49,8 +52,15 @@ public class CustomerController {
     public Map<String, Object> users(@PathVariable String account,
                                      @RequestParam int status,
                                      @RequestParam int enable){
+        LOG.info("禁用账号|删除账号"+ account+"\t"+ status+"\t"+enable);
         return responseManage.response(customerService.modify(account, status, enable));
     }
 
+    @PutMapping("/user")
+    @ApiOperation(value = "修改账号信息[id, account原样返回]")
+    public Map<String, Object> update(@RequestBody Customer customer){
+        LOG.info("修改账号信息:"+ customer);
+        return responseManage.response(customerService.updateCustomer(customer));
+    }
 
 }

@@ -42,6 +42,11 @@ public interface CustomerMapper {
      */
     int update(String account, int value);
 
-
+    /**
+     * 更新账号信息
+     * @param customer
+     * @return
+     */
+    int updateCustomer(@Param("customer") Customer customer);
 
 }

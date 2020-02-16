@@ -24,10 +24,10 @@ public class Customer implements Serializable {
     private String nickname;
     @JsonIgnore
     private String password;
-    private int sex;
+    private Integer sex;
     private String phone;
     private String address;
     private String email;
-    private int status;
+    private Integer status;
     private Date time;
 }

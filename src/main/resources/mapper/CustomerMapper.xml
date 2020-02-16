@@ -35,7 +35,38 @@
         SET status = #{value}
         WHERE account =#{account}
     </update>
+    <update id="updateCustomer">
+        UPDATE login
+        <set>
+            <if test="customer.nickname != null">
+                nickname = #{customer.nickname},
+            </if>
+            <if test="customer.password != null">
+                pasaword = #{customer.password},
+            </if>
 
+            <if test="customer.sex != null">
+                sex = #{customer.sex},
+            </if>
+            <if test="customer.phone != null">
+                phone = #{customer.phone},
+            </if>
+            <if test="customer.address != null">
+                address = #{customer.address},
+            </if>
+            <if test="customer.email != null">
+                email = #{customer.email},
+            </if>
+            <if test="customer.status != null">
+                status = #{customer.status},
+            </if>
+            <if test="customer.time != null">
+                time = #{customer.time}
+            </if>
+        </set>
+        WHERE id = #{customer.id} AND account = #{customer.account}
+
+    </update>
     <delete id="delete">
         DELETE from login WHERE account = #{account}
     </delete>
