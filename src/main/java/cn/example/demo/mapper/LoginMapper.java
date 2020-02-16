@@ -3,12 +3,14 @@ package cn.example.demo.mapper;
 import cn.example.demo.dao.Customer;
 import cn.example.demo.dao.Login;
 import org.apache.ibatis.annotations.Param;
+import org.springframework.stereotype.Service;
 
 /**
  * @author liuwu4
  * 13:00
  * description:
  */
+@Service
 public interface LoginMapper {
 
     /**
@@ -24,4 +26,11 @@ public interface LoginMapper {
      * @return int
      */
     int reset(@Param("customer") Login customer);
+
+    /**
+     * 校验账号是否存在
+     * @param account
+     * @return
+     */
+    Customer check(@Param("account") String account);
 }
