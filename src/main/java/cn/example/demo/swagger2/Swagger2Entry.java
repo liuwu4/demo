@@ -37,7 +37,7 @@ public class Swagger2Entry {
                 "liuwu4@yeah.net");
         return new ApiInfoBuilder()
                 //页面标题
-                .title("登录信息")
+                .title("接口")
                 //条款地址
                 .termsOfServiceUrl("https://liuwu4.github.io/")
                 .version("1.0")

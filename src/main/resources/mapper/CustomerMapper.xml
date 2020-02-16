@@ -6,8 +6,19 @@
         <result column="account" property="account" jdbcType="VARCHAR" />
         <result column="password" property="password" jdbcType="VARCHAR" />
     </resultMap>
+    <sql id="all">
+        id,
+        account,
+        nickname,
+        sex,
+        phone,
+        address,
+        email,
+        status,
+        time
+    </sql>
     <select id="customer" parameterType="int" resultMap="login">
-        SELECT *
+        SELECT  <include refid="all"/>
         FROM login
         <where>
             <if test="id != null">

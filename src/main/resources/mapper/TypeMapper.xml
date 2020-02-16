@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.example.demo.mapper.TypeMapper">
+
+    <resultMap id="info" type="cn.example.demo.dao.Type">
+        <id property="typeId" column="type_id"/>
+        <result property="typeName" column="type_name"/>
+    </resultMap>
+    <select id="type" resultMap="info">
+        SELECT type_id, type_name
+        FROM product_type
+        <where>
+            <if test="typeId != null">
+                type_id = #{typeId}
+            </if>
+        </where>
+    </select>
+    <insert id="add">
+        INSERT INTO product_type
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            <if test="type.typeId != null">
+                type_id,
+            </if>
+            type_name
+        </trim>
+        <trim prefix="VALUES (" suffix=")" suffixOverrides=",">
+            <if test="type.typeId != null">
+                #{type.typeId},
+            </if>
+           #{type.typeName}
+        </trim>
+    </insert>
+    <update id="update">
+        UPDATE product_type
+        <set>
+            <if test="type.typeId != null">
+                type_id = #{type.typeId},
+            </if>
+            <if test="type.typeName != null">
+                type_name = #{type.typeName}
+            </if>
+        </set>
+        WHERE type_id = #{typeId}
+    </update>
+    <delete id="delete">
+        DELETE FROM product_type
+        WHERE type_id = #{typeId}
+    </delete>
+</mapper>
