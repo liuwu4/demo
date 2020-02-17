@@ -27,4 +27,17 @@
             </if>
         </where>
     </select>
+    <insert id="insert">
+        INSERT INTO address(address_name, login_id)
+        VALUES(#{address.addressName}, #{address.loginId})
+    </insert>
+    <update id="update">
+        UPDATE address
+        SET address_name = #{address.addressName}
+        WHERE address_id = #{address.addressId}
+    </update>
+    <delete id="delete">
+        DELETE FROM address
+        WHERE login_id = #{loginId} AND address_id = #{addressId}
+    </delete>
 </mapper>

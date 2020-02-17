@@ -26,4 +26,26 @@ public interface AddressMapper {
      * @return
      */
     List<Address> collectionLogin(@Param("id") Integer id);
+
+    /**
+     * 添加地址
+     * @param address 地址信息
+     * @return
+     */
+    int insert(@Param("address") Address address);
+
+    /**
+     * 修改地址
+     * @param address 地址信息
+     * @return
+     */
+    int update(@Param("address") Address address);
+
+    /**
+     * 删除用户地址
+     * @param loginId
+     * @param addressId
+     * @return
+     */
+    int delete(@Param("loginId") Integer loginId, @Param("addressId") Integer addressId);
 }
