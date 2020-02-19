@@ -1,6 +1,7 @@
 package cn.example.demo.interceptor;
 
 import org.springframework.context.annotation.Configuration;
+import org.springframework.web.servlet.config.annotation.CorsRegistry;
 import org.springframework.web.servlet.config.annotation.InterceptorRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 
@@ -11,6 +12,9 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
  */
 @Configuration
 public class InterceptorConfigure implements WebMvcConfigurer {
+    /**
+     * 拦截url
+     */
     @Override
     public void addInterceptors(InterceptorRegistry registry) {
         String [] pathLists= {
@@ -19,10 +23,22 @@ public class InterceptorConfigure implements WebMvcConfigurer {
                 "/**/*.png",
                 "/**/*.jpg",
                 "/**/*.html",
-                "/login"
         };
        registry.addInterceptor(new InterceptorConfig())
                .addPathPatterns("/**")
                .excludePathPatterns(pathLists);
+    }
+
+    /**
+     * 配置接口跨域
+     */
+    @Override
+    public void addCorsMappings(CorsRegistry registry) {
+        registry.addMapping("/**")
+                .allowedOrigins("*")
+                .allowCredentials(true)
+                .allowedMethods("*")
+                .maxAge(3600)
+        ;
     }
 }
