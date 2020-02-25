@@ -16,6 +16,6 @@ public class GenerateToken {
      * @return string
      */
     public String generate(Customer customer){
-        return JWT.create().withAudience(customer.getPhone()).sign(Algorithm.HMAC256(customer.getAccount()));
+        return JWT.create().withAudience(customer.getPhone()).sign(Algorithm.HMAC256(customer.getPassword()));
     }
 }
