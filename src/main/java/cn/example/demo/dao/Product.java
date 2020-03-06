@@ -22,7 +22,7 @@ import java.util.Date;
 @JsonIgnoreProperties({" hibernateLazyInitializer","handler"})
 public class Product implements Serializable {
     @ApiModelProperty(value = "产品编号", required = true)
-    private Integer no;
+    private String no;
     @ApiModelProperty(value = "产品类型", required = true)
     private Integer type;
     @ApiModelProperty(value = "类型信息[用户查看类型信息]", required = false)
