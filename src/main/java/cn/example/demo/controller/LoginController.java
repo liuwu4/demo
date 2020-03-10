@@ -32,10 +32,10 @@ public class LoginController {
     @PostMapping("/login")
     public Map<String, Object> sing(@RequestBody(required = true) Login login){
         Customer customer = loginService.result(login);
-        log.info("login:"+ login);
-        String token = generateToken.generate(customer);
-        log.info("token:"+ token);
-        return responseManage.response(token);
+//        log.info("login:"+ login);
+//        String token = generateToken.generate(customer);
+//        log.info("token:"+ token);
+        return responseManage.response(customer);
     }
 
     @GetMapping("/user/check")
