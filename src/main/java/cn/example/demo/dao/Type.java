@@ -18,6 +18,8 @@ import lombok.NoArgsConstructor;
 public class Type {
     @ApiModelProperty(value = "类型编号", required = false)
     private Integer typeId;
+    @ApiModelProperty(value = "用户定义编号", required = true)
+    private String typeNum;
     @ApiModelProperty(value = "类型名称", required = true)
     private String typeName;
 }

@@ -32,9 +32,18 @@
             <if test="type.typeId != null">
                 #{type.typeId},
             </if>
-           #{type.typeName}
+            #{type.typeName}
         </trim>
     </insert>
+
+    <insert id="excel">
+        INSERT INTO product_type(type_num, type_name)   VALUES
+        <foreach collection="type" item="item" separator=",">
+         (#{item.typeNum}, #{item.typeName})
+        </foreach>
+
+    </insert>
+
     <update id="update">
         UPDATE product_type
         <set>

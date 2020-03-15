@@ -35,16 +35,23 @@ public interface TypeMapper {
 
     /**
      * 修改
-     * @param type
-     * @param typeId
-     * @return
+     * @param type 对象
+     * @param typeId id
+     * @return int
      */
     int update(@Param("type") Type type, Integer typeId);
 
     /**
      * 删除
-     * @param typeId
-     * @return
+     * @param typeId id
+     * @return int
      */
     int delete(@Param("typeId") Integer typeId);
+
+    /**
+     * 批量导入
+     * @param type list
+     * @return int
+     */
+    int excel(@Param("type")List<Type> type);
 }
