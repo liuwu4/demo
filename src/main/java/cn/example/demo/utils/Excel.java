@@ -1,6 +1,8 @@
 package cn.example.demo.utils;
 
 import cn.example.demo.dao.Type;
+import org.apache.poi.hssf.usermodel.HSSFRow;
+import org.apache.poi.hssf.usermodel.HSSFSheet;
 import org.apache.poi.hssf.usermodel.HSSFWorkbook;
 import org.apache.poi.ss.usermodel.Sheet;
 import org.apache.poi.ss.usermodel.Workbook;
@@ -23,12 +25,13 @@ public class Excel {
 
     /**
      * 读取表格内容
+     *
      * @param file 路径
      * @return list
      */
 
     public List readExcel(String file, int index) {
-        List  list = new ArrayList();
+        List list = new ArrayList();
         try {
             FileInputStream excel = new FileInputStream(file);
             boolean flag = isFormat(file);
@@ -37,7 +40,7 @@ public class Excel {
             } else {
                 workbook = new XSSFWorkbook(excel);
             }
-           list = readSheet(workbook);
+            list = readSheet(workbook);
         } catch (FileNotFoundException e) {
             log.info("io读取excel文件异常");
             e.printStackTrace();
@@ -47,7 +50,6 @@ public class Excel {
         }
         return list;
     }
-
 
     public List readExcel(MultipartFile file) {
         String fileName = file.getOriginalFilename();
@@ -68,6 +70,19 @@ public class Excel {
         }
         return list;
     }
+
+    public HSSFWorkbook generateExcel() {
+        HSSFWorkbook hssfWorkbook = new HSSFWorkbook();
+
+        HSSFSheet hssfSheet = hssfWorkbook.createSheet("类型");
+        HSSFRow row = hssfSheet.createRow(0);
+        row.createCell(0).setCellValue("类型编号");
+        row.createCell(1).setCellValue("类型名称");
+        hssfSheet.autoSizeColumn(4);
+
+        return hssfWorkbook;
+    }
+
     /**
      * 读取sheet
      *

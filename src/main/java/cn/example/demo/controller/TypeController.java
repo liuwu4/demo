@@ -7,12 +7,17 @@ import cn.example.demo.utils.ResponseManage;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiImplicitParam;
 import io.swagger.annotations.ApiOperation;
+import org.apache.poi.hssf.usermodel.HSSFWorkbook;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 
+import javax.servlet.http.HttpServletResponse;
+import java.io.IOException;
+import java.io.OutputStream;
+import java.net.URLEncoder;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
@@ -49,7 +54,7 @@ public class TypeController {
         return responseManage.response(typeService.add(type));
     }
 
-    @PostMapping("/import")
+    @PostMapping("/type/import")
     @ApiOperation(value = "批量导入")
     public Map<String, Object> importExcel(@RequestBody MultipartFile file) {
         log.info("开始批量导入");
@@ -58,10 +63,30 @@ public class TypeController {
         int result = 0;
         for (ArrayList<Type> types : list) {
             log.info(types.toString());
-            result = typeService.excel(types);
+            result += typeService.excel(types);
             log.info("导入结果:" + result);
         }
         return responseManage.response(result);
+    }
+
+    @GetMapping("/type/download")
+    @ApiOperation(value = "导出格式[.xls]")
+    @ApiImplicitParam(value = "类型id", name = "typeId", required = false)
+    public void download(HttpServletResponse response, @RequestParam(required = false) String typeId) {
+        HSSFWorkbook hssfWorkbook = new Excel().generateExcel();
+        try {
+            OutputStream outputStream = response.getOutputStream();
+            response.setContentType("application/vnd.ms-excel;charset=UTF-8");
+            String fileName = URLEncoder.encode("类型模板", "utf-8");
+            response.setHeader("Content-disposition", "attachment;filename=" + fileName + ".xls");//默认Excel名称
+            hssfWorkbook.write(outputStream);
+            outputStream.flush();
+            outputStream.close();
+        } catch (IOException e) {
+            log.info("加载表格模板异常");
+            e.printStackTrace();
+        }
+
     }
 
     @PutMapping("/type/{typeId}")
