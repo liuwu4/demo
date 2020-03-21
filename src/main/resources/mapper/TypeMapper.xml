@@ -5,10 +5,14 @@
     <resultMap id="info" type="cn.example.demo.dao.Type">
         <id property="typeId" column="type_id"/>
         <result property="typeName" column="type_name"/>
+        <result property="typeNum" column="type_num"/>
     </resultMap>
-    <select id="type" resultMap="info">
-        SELECT type_id, type_name
+    <sql id="col">
+        SELECT type_id, type_num, type_name
         FROM product_type
+    </sql>
+    <select id="type" resultMap="info">
+        <include refid="col"/>
         <where>
             <if test="typeId != null">
                 type_id = #{typeId}
@@ -16,8 +20,7 @@
         </where>
     </select>
     <select id="selectType" resultMap="info">
-        SELECT type_id, type_name
-        FROM product_type
+        <include refid="col"/>
         WHERE type_id = #{typeId}
     </select>
     <insert id="add">

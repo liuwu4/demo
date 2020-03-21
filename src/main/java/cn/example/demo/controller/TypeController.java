@@ -1,6 +1,7 @@
 package cn.example.demo.controller;
 
 import cn.example.demo.dao.Type;
+import cn.example.demo.exception.StatusEnum;
 import cn.example.demo.service.TypeService;
 import cn.example.demo.utils.Excel;
 import cn.example.demo.utils.ResponseManage;
@@ -18,9 +19,7 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.io.OutputStream;
 import java.net.URLEncoder;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 /**
  * @author liuwu4
@@ -57,16 +56,29 @@ public class TypeController {
     @PostMapping("/type/import")
     @ApiOperation(value = "批量导入")
     public Map<String, Object> importExcel(@RequestBody MultipartFile file) {
+        Map<String, Object> map = new HashMap<>(16);
         log.info("开始批量导入");
-        List<ArrayList<Type>> list = new Excel().readExcel(file);
-        log.info("读取批量导入结束:" + list);
+        List<List<Type>> readExcel = new Excel().readExcel(file);
+        log.info("读取批量导入结束:" + readExcel);
         int result = 0;
-        for (ArrayList<Type> types : list) {
-            log.info(types.toString());
-            result += typeService.excel(types);
-            log.info("导入结果:" + result);
+        Iterator<Type> iterator =readExcel.get(0).iterator();
+        List<Type> types = new ArrayList<>();
+        while (iterator.hasNext()){
+            Type type = iterator.next();
+            if((type.getTypeNum() == null || "".equals(type.getTypeNum())) && (type.getTypeName() == null || "".equals(type.getTypeName()))){
+                iterator.remove();
+            } else {
+                types.add(type);
+            }
         }
-        return responseManage.response(result);
+        if(types.size() !=0){
+            result = typeService.excel(types);
+            map.put("result", result);
+        } else {
+            map.put("result", result);
+            map.put("warning", StatusEnum.EXCEL_NULL);
+        }
+        return responseManage.response(map);
     }
 
     @GetMapping("/type/download")

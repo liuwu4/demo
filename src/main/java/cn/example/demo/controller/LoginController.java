@@ -30,24 +30,23 @@ public class LoginController {
 
     @ApiOperation(value = "登录")
     @PostMapping("/login")
-    public Map<String, Object> sing(@RequestBody(required = true) Login login){
+    public Map<String, Object> sing(@RequestBody(required = true) Login login) {
         Customer customer = loginService.result(login);
-//        log.info("login:"+ login);
-//        String token = generateToken.generate(customer);
-//        log.info("token:"+ token);
-        return responseManage.response(customer);
+        log.info("login:" + login);
+        String token = generateToken.generate(customer);
+        log.info("token:" + token);
+        return responseManage.response(token);
     }
 
     @GetMapping("/user/check")
     @ApiOperation(nickname = "phone", value = "校验账号是否存在 phone")
-    public Map<String, Object> check(@RequestParam(required = true) String phone){
+    public Map<String, Object> check(@RequestParam(required = true) String phone) {
         return responseManage.response(loginService.check(phone));
     }
 
-
     @ApiOperation(value = "重置密码")
     @PutMapping("/reset")
-    public Map<String, Object> reset(@RequestBody Login customer){
+    public Map<String, Object> reset(@RequestBody Login customer) {
         return responseManage.response(loginService.reset(customer));
     }
 }

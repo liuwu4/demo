@@ -31,9 +31,10 @@ public class Excel {
      */
 
     public List readExcel(String file, int index) {
-        List list = new ArrayList();
+        List list = new ArrayList<>();
         try {
             FileInputStream excel = new FileInputStream(file);
+
             boolean flag = isFormat(file);
             if (flag) {
                 workbook = new HSSFWorkbook(excel);
@@ -54,7 +55,7 @@ public class Excel {
     public List readExcel(MultipartFile file) {
         String fileName = file.getOriginalFilename();
         FileInputStream fileInputStream = null;
-        List list = new ArrayList();
+        List list = new ArrayList<>();
         try {
             fileInputStream = (FileInputStream) file.getInputStream();
             boolean flag = isFormat(fileName);
@@ -63,6 +64,7 @@ public class Excel {
             } else {
                 workbook = new XSSFWorkbook(fileInputStream);
             }
+            log.info("read:" + fileInputStream.read());
             list = readSheet(workbook);
         } catch (IOException e) {
             log.info("读取输入流异常");
@@ -73,7 +75,6 @@ public class Excel {
 
     public HSSFWorkbook generateExcel() {
         HSSFWorkbook hssfWorkbook = new HSSFWorkbook();
-
         HSSFSheet hssfSheet = hssfWorkbook.createSheet("类型");
         HSSFRow row = hssfSheet.createRow(0);
         row.createCell(0).setCellValue("类型编号");
@@ -91,6 +92,7 @@ public class Excel {
     private List<List> readSheet(Workbook workbook) {
         int number = workbook.getNumberOfSheets();
         List<List> list = new ArrayList<>();
+        log.info("sheet:" + number);
         for (int i = 0; i < number; i++) {
             Sheet sheet = workbook.getSheetAt(i);
             list.add(readRowCell(sheet));
@@ -109,7 +111,6 @@ public class Excel {
         int rowNum = sheet.getLastRowNum();
         for (int i = 1; i < rowNum; i++) {
             Type type = new Type();
-            // 列数
             type.setTypeNum(sheet.getRow(i).getCell(0).getStringCellValue());
             type.setTypeName(sheet.getRow(i).getCell(1).getStringCellValue());
             typeList.add(type);
