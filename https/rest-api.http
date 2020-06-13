@@ -1,0 +1,7 @@
+### 请求所有的用户信息
+GET {{ baseUrl }}/users
+Accept: application/json
+
+### 校验用户是否存在
+GET {{ baseUrl }}/users?customerId=1
+Accept: application/json

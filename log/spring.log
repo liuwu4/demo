@@ -1,0 +1,24 @@
+2020-06-13 16:57:36.144  INFO 19756 --- [Test worker] cn.example.demo.DemoApplicationTests     : Starting DemoApplicationTests on PC7018 with PID 19756 (started by Administrator in D:\workspace\demo)
+2020-06-13 16:57:36.152  INFO 19756 --- [Test worker] cn.example.demo.DemoApplicationTests     : No active profile set, falling back to default profiles: default
+2020-06-13 16:57:39.241  INFO 19756 --- [Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-06-13 16:57:39.247  INFO 19756 --- [Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2020-06-13 16:57:39.341  INFO 19756 --- [Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 54ms. Found 0 Redis repository interfaces.
+2020-06-13 16:57:40.301  INFO 19756 --- [Test worker] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-06-13 16:57:41.103  INFO 19756 --- [Test worker] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
+2020-06-13 16:57:42.182  INFO 19756 --- [Test worker] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2020-06-13 16:57:44.386  INFO 19756 --- [Test worker] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2020-06-13 16:57:45.569  INFO 19756 --- [Test worker] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-06-13 16:57:48.955  INFO 19756 --- [Test worker] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2020-06-13 16:57:49.053  INFO 19756 --- [Test worker] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2020-06-13 16:57:49.225  INFO 19756 --- [Test worker] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2020-06-13 16:57:49.842  INFO 19756 --- [Test worker] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: updateUsingPUT_1
+2020-06-13 16:57:50.134  INFO 19756 --- [Test worker] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: deleteUsingDELETE_1
+2020-06-13 16:57:50.241  INFO 19756 --- [Test worker] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: updateUsingPUT_2
+2020-06-13 16:57:50.260  INFO 19756 --- [Test worker] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: deleteUsingDELETE_2
+2020-06-13 16:57:50.407  INFO 19756 --- [Test worker] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: updateUsingPUT_3
+2020-06-13 16:57:50.633  INFO 19756 --- [Test worker] cn.example.demo.DemoApplicationTests     : Started DemoApplicationTests in 16.416 seconds (JVM running for 23.592)
+2020-06-13 16:57:52.912  INFO 19756 --- [Test worker] cn.example.demo.utils.Excel              : sheet:1
+2020-06-13 16:57:52.914  INFO 19756 --- [Test worker] cn.example.demo.DemoApplicationTests     : types:[Type(typeId=null, typeNum=25023123, typeName=测试范德萨的123), Type(typeId=null, typeNum=123, typeName=)]
+2020-06-13 16:57:55.686  INFO 19756 --- [Test worker] cn.example.demo.DemoApplicationTests     : token:eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIxNTA4MjAwMDg1NSJ9.3ZSITFVrXHzNb804mQXnXTYiHX38Mowkih302vyT9K8
+2020-06-13 16:57:55.796  INFO 19756 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-06-13 16:57:55.849  INFO 19756 --- [SpringContextShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closed
