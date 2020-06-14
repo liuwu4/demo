@@ -11,7 +11,6 @@ import java.util.List;
  * 17:14
  * description:
  */
-@Service
 public interface ProductMapper {
     /**
      * 获取产品

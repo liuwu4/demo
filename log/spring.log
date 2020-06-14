@@ -1,24 +1,933 @@
-2020-06-13 16:57:36.144  INFO 19756 --- [Test worker] cn.example.demo.DemoApplicationTests     : Starting DemoApplicationTests on PC7018 with PID 19756 (started by Administrator in D:\workspace\demo)
-2020-06-13 16:57:36.152  INFO 19756 --- [Test worker] cn.example.demo.DemoApplicationTests     : No active profile set, falling back to default profiles: default
-2020-06-13 16:57:39.241  INFO 19756 --- [Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
-2020-06-13 16:57:39.247  INFO 19756 --- [Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
-2020-06-13 16:57:39.341  INFO 19756 --- [Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 54ms. Found 0 Redis repository interfaces.
-2020-06-13 16:57:40.301  INFO 19756 --- [Test worker] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2020-06-13 16:57:41.103  INFO 19756 --- [Test worker] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
-2020-06-13 16:57:42.182  INFO 19756 --- [Test worker] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
-2020-06-13 16:57:44.386  INFO 19756 --- [Test worker] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
-2020-06-13 16:57:45.569  INFO 19756 --- [Test worker] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
-2020-06-13 16:57:48.955  INFO 19756 --- [Test worker] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
-2020-06-13 16:57:49.053  INFO 19756 --- [Test worker] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
-2020-06-13 16:57:49.225  INFO 19756 --- [Test worker] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
-2020-06-13 16:57:49.842  INFO 19756 --- [Test worker] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: updateUsingPUT_1
-2020-06-13 16:57:50.134  INFO 19756 --- [Test worker] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: deleteUsingDELETE_1
-2020-06-13 16:57:50.241  INFO 19756 --- [Test worker] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: updateUsingPUT_2
-2020-06-13 16:57:50.260  INFO 19756 --- [Test worker] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: deleteUsingDELETE_2
-2020-06-13 16:57:50.407  INFO 19756 --- [Test worker] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: updateUsingPUT_3
-2020-06-13 16:57:50.633  INFO 19756 --- [Test worker] cn.example.demo.DemoApplicationTests     : Started DemoApplicationTests in 16.416 seconds (JVM running for 23.592)
-2020-06-13 16:57:52.912  INFO 19756 --- [Test worker] cn.example.demo.utils.Excel              : sheet:1
-2020-06-13 16:57:52.914  INFO 19756 --- [Test worker] cn.example.demo.DemoApplicationTests     : types:[Type(typeId=null, typeNum=25023123, typeName=测试范德萨的123), Type(typeId=null, typeNum=123, typeName=)]
-2020-06-13 16:57:55.686  INFO 19756 --- [Test worker] cn.example.demo.DemoApplicationTests     : token:eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIxNTA4MjAwMDg1NSJ9.3ZSITFVrXHzNb804mQXnXTYiHX38Mowkih302vyT9K8
-2020-06-13 16:57:55.796  INFO 19756 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
-2020-06-13 16:57:55.849  INFO 19756 --- [SpringContextShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closed
+2020-06-14 20:40:24.455  INFO 9860 --- [main] cn.example.demo.DemoApplication          : Starting DemoApplication on PC7018 with PID 9860 (D:\workspace\demo\build\classes\java\main started by Administrator in D:\workspace\demo)
+2020-06-14 20:40:24.484  INFO 9860 --- [main] cn.example.demo.DemoApplication          : No active profile set, falling back to default profiles: default
+2020-06-14 20:40:27.238  INFO 9860 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-06-14 20:40:27.243  INFO 9860 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2020-06-14 20:40:27.309  INFO 9860 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 36ms. Found 0 Redis repository interfaces.
+2020-06-14 20:40:27.886  INFO 9860 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-06-14 20:40:28.474  INFO 9860 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 7012 (http)
+2020-06-14 20:40:28.500  INFO 9860 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-06-14 20:40:28.500  INFO 9860 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.29]
+2020-06-14 20:40:28.504  INFO 9860 --- [main] o.a.catalina.core.AprLifecycleListener   : An older version [1.2.18] of the APR based Apache Tomcat Native library is installed, while Tomcat recommends a minimum version of [1.2.23]
+2020-06-14 20:40:28.504  INFO 9860 --- [main] o.a.catalina.core.AprLifecycleListener   : Loaded APR based Apache Tomcat Native library [1.2.18] using APR version [1.6.5].
+2020-06-14 20:40:28.505  INFO 9860 --- [main] o.a.catalina.core.AprLifecycleListener   : APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+2020-06-14 20:40:28.505  INFO 9860 --- [main] o.a.catalina.core.AprLifecycleListener   : APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+2020-06-14 20:40:28.564  INFO 9860 --- [main] o.a.catalina.core.AprLifecycleListener   : OpenSSL successfully initialized [OpenSSL 1.1.1  11 Sep 2018]
+2020-06-14 20:40:29.955  INFO 9860 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/api]    : Initializing Spring embedded WebApplicationContext
+2020-06-14 20:40:29.956  INFO 9860 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 5141 ms
+2020-06-14 20:40:32.959  INFO 9860 --- [main] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
+2020-06-14 20:40:38.528 ERROR 9860 --- [main] com.alibaba.druid.pool.DruidDataSource   : init datasource error, url: jdbc:mysql://127.0.0.1:3306/profile?characterEncoding=utf8&serverTimezone=Asia/Shanghai
+
+com.mysql.cj.jdbc.exceptions.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at com.mysql.cj.jdbc.exceptions.SQLError.createCommunicationsException(SQLError.java:174) ~[mysql-connector-java-8.0.15.jar:8.0.15]
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:64) ~[mysql-connector-java-8.0.15.jar:8.0.15]
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:835) ~[mysql-connector-java-8.0.15.jar:8.0.15]
+	at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:455) ~[mysql-connector-java-8.0.15.jar:8.0.15]
+	at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:240) ~[mysql-connector-java-8.0.15.jar:8.0.15]
+	at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:199) ~[mysql-connector-java-8.0.15.jar:8.0.15]
+	at com.alibaba.druid.filter.FilterChainImpl.connection_connect(FilterChainImpl.java:156) ~[druid-1.1.10.jar:1.1.10]
+	at com.alibaba.druid.filter.FilterAdapter.connection_connect(FilterAdapter.java:786) ~[druid-1.1.10.jar:1.1.10]
+	at com.alibaba.druid.filter.FilterChainImpl.connection_connect(FilterChainImpl.java:150) ~[druid-1.1.10.jar:1.1.10]
+	at com.alibaba.druid.filter.stat.StatFilter.connection_connect(StatFilter.java:218) ~[druid-1.1.10.jar:1.1.10]
+	at com.alibaba.druid.filter.FilterChainImpl.connection_connect(FilterChainImpl.java:150) ~[druid-1.1.10.jar:1.1.10]
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1560) ~[druid-1.1.10.jar:1.1.10]
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1623) ~[druid-1.1.10.jar:1.1.10]
+	at com.alibaba.druid.pool.DruidDataSource.init(DruidDataSource.java:861) ~[druid-1.1.10.jar:1.1.10]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_171]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_171]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_171]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[na:1.8.0_171]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeCustomInitMethod(AbstractAutowireCapableBeanFactory.java:1922) [spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1864) [spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1792) [spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:595) [spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:517) [spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:323) [spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:321) [spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202) [spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1287) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1207) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:885) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:789) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:539) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1338) [spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1177) [spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:557) [spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:517) [spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:323) [spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:321) [spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202) [spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1287) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1207) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireByType(AbstractAutowireCapableBeanFactory.java:1511) [spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1406) [spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:594) [spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:517) [spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:323) [spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:321) [spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202) [spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1287) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1207) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:640) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:116) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:399) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1422) [spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:594) [spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:517) [spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:323) [spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:321) [spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202) [spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1287) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1207) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredMethodElement.inject(AutowiredAnnotationBeanPostProcessor.java:715) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:116) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:399) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1422) [spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:594) [spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:517) [spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:323) [spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:321) [spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202) [spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:879) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:878) ~[spring-context-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:550) ~[spring-context-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:141) ~[spring-boot-2.2.2.RELEASE.jar:2.2.2.RELEASE]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:747) ~[spring-boot-2.2.2.RELEASE.jar:2.2.2.RELEASE]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:397) ~[spring-boot-2.2.2.RELEASE.jar:2.2.2.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315) ~[spring-boot-2.2.2.RELEASE.jar:2.2.2.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1226) ~[spring-boot-2.2.2.RELEASE.jar:2.2.2.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1215) ~[spring-boot-2.2.2.RELEASE.jar:2.2.2.RELEASE]
+	at cn.example.demo.DemoApplication.main(DemoApplication.java:16) ~[main/:na]
+Caused by: com.mysql.cj.exceptions.CJCommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[na:1.8.0_171]
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62) ~[na:1.8.0_171]
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[na:1.8.0_171]
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423) ~[na:1.8.0_171]
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:61) ~[mysql-connector-java-8.0.15.jar:8.0.15]
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:105) ~[mysql-connector-java-8.0.15.jar:8.0.15]
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:151) ~[mysql-connector-java-8.0.15.jar:8.0.15]
+	at com.mysql.cj.exceptions.ExceptionFactory.createCommunicationsException(ExceptionFactory.java:167) ~[mysql-connector-java-8.0.15.jar:8.0.15]
+	at com.mysql.cj.protocol.a.NativeProtocol.readMessage(NativeProtocol.java:562) ~[mysql-connector-java-8.0.15.jar:8.0.15]
+	at com.mysql.cj.protocol.a.NativeProtocol.readServerCapabilities(NativeProtocol.java:514) ~[mysql-connector-java-8.0.15.jar:8.0.15]
+	at com.mysql.cj.protocol.a.NativeProtocol.beforeHandshake(NativeProtocol.java:404) ~[mysql-connector-java-8.0.15.jar:8.0.15]
+	at com.mysql.cj.protocol.a.NativeProtocol.connect(NativeProtocol.java:1447) ~[mysql-connector-java-8.0.15.jar:8.0.15]
+	at com.mysql.cj.NativeSession.connect(NativeSession.java:165) ~[mysql-connector-java-8.0.15.jar:8.0.15]
+	at com.mysql.cj.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:955) ~[mysql-connector-java-8.0.15.jar:8.0.15]
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:825) ~[mysql-connector-java-8.0.15.jar:8.0.15]
+	... 85 common frames omitted
+Caused by: java.io.EOFException: Can not read response from server. Expected to read 4 bytes, read 0 bytes before connection was unexpectedly lost.
+	at com.mysql.cj.protocol.FullReadInputStream.readFully(FullReadInputStream.java:67) ~[mysql-connector-java-8.0.15.jar:8.0.15]
+	at com.mysql.cj.protocol.a.SimplePacketReader.readHeader(SimplePacketReader.java:63) ~[mysql-connector-java-8.0.15.jar:8.0.15]
+	at com.mysql.cj.protocol.a.SimplePacketReader.readHeader(SimplePacketReader.java:45) ~[mysql-connector-java-8.0.15.jar:8.0.15]
+	at com.mysql.cj.protocol.a.NativeProtocol.readMessage(NativeProtocol.java:556) ~[mysql-connector-java-8.0.15.jar:8.0.15]
+	... 91 common frames omitted
+
+2020-06-14 20:40:38.555 ERROR 9860 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} init error
+
+com.mysql.cj.jdbc.exceptions.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at com.mysql.cj.jdbc.exceptions.SQLError.createCommunicationsException(SQLError.java:174) ~[mysql-connector-java-8.0.15.jar:8.0.15]
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:64) ~[mysql-connector-java-8.0.15.jar:8.0.15]
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:835) ~[mysql-connector-java-8.0.15.jar:8.0.15]
+	at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:455) ~[mysql-connector-java-8.0.15.jar:8.0.15]
+	at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:240) ~[mysql-connector-java-8.0.15.jar:8.0.15]
+	at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:199) ~[mysql-connector-java-8.0.15.jar:8.0.15]
+	at com.alibaba.druid.filter.FilterChainImpl.connection_connect(FilterChainImpl.java:156) ~[druid-1.1.10.jar:1.1.10]
+	at com.alibaba.druid.filter.FilterAdapter.connection_connect(FilterAdapter.java:786) ~[druid-1.1.10.jar:1.1.10]
+	at com.alibaba.druid.filter.FilterChainImpl.connection_connect(FilterChainImpl.java:150) ~[druid-1.1.10.jar:1.1.10]
+	at com.alibaba.druid.filter.stat.StatFilter.connection_connect(StatFilter.java:218) ~[druid-1.1.10.jar:1.1.10]
+	at com.alibaba.druid.filter.FilterChainImpl.connection_connect(FilterChainImpl.java:150) ~[druid-1.1.10.jar:1.1.10]
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1560) ~[druid-1.1.10.jar:1.1.10]
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1623) ~[druid-1.1.10.jar:1.1.10]
+	at com.alibaba.druid.pool.DruidDataSource.init(DruidDataSource.java:861) ~[druid-1.1.10.jar:1.1.10]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_171]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_171]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_171]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[na:1.8.0_171]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeCustomInitMethod(AbstractAutowireCapableBeanFactory.java:1922) [spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1864) [spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1792) [spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:595) [spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:517) [spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:323) [spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:321) [spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202) [spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1287) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1207) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:885) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:789) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:539) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1338) [spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1177) [spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:557) [spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:517) [spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:323) [spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:321) [spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202) [spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1287) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1207) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireByType(AbstractAutowireCapableBeanFactory.java:1511) [spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1406) [spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:594) [spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:517) [spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:323) [spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:321) [spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202) [spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1287) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1207) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:640) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:116) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:399) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1422) [spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:594) [spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:517) [spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:323) [spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:321) [spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202) [spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1287) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1207) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredMethodElement.inject(AutowiredAnnotationBeanPostProcessor.java:715) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:116) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:399) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1422) [spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:594) [spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:517) [spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:323) [spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:321) [spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202) [spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:879) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:878) ~[spring-context-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:550) ~[spring-context-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:141) ~[spring-boot-2.2.2.RELEASE.jar:2.2.2.RELEASE]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:747) ~[spring-boot-2.2.2.RELEASE.jar:2.2.2.RELEASE]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:397) ~[spring-boot-2.2.2.RELEASE.jar:2.2.2.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315) ~[spring-boot-2.2.2.RELEASE.jar:2.2.2.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1226) ~[spring-boot-2.2.2.RELEASE.jar:2.2.2.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1215) ~[spring-boot-2.2.2.RELEASE.jar:2.2.2.RELEASE]
+	at cn.example.demo.DemoApplication.main(DemoApplication.java:16) ~[main/:na]
+Caused by: com.mysql.cj.exceptions.CJCommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[na:1.8.0_171]
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62) ~[na:1.8.0_171]
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[na:1.8.0_171]
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423) ~[na:1.8.0_171]
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:61) ~[mysql-connector-java-8.0.15.jar:8.0.15]
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:105) ~[mysql-connector-java-8.0.15.jar:8.0.15]
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:151) ~[mysql-connector-java-8.0.15.jar:8.0.15]
+	at com.mysql.cj.exceptions.ExceptionFactory.createCommunicationsException(ExceptionFactory.java:167) ~[mysql-connector-java-8.0.15.jar:8.0.15]
+	at com.mysql.cj.protocol.a.NativeProtocol.readMessage(NativeProtocol.java:562) ~[mysql-connector-java-8.0.15.jar:8.0.15]
+	at com.mysql.cj.protocol.a.NativeProtocol.readServerCapabilities(NativeProtocol.java:514) ~[mysql-connector-java-8.0.15.jar:8.0.15]
+	at com.mysql.cj.protocol.a.NativeProtocol.beforeHandshake(NativeProtocol.java:404) ~[mysql-connector-java-8.0.15.jar:8.0.15]
+	at com.mysql.cj.protocol.a.NativeProtocol.connect(NativeProtocol.java:1447) ~[mysql-connector-java-8.0.15.jar:8.0.15]
+	at com.mysql.cj.NativeSession.connect(NativeSession.java:165) ~[mysql-connector-java-8.0.15.jar:8.0.15]
+	at com.mysql.cj.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:955) ~[mysql-connector-java-8.0.15.jar:8.0.15]
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:825) ~[mysql-connector-java-8.0.15.jar:8.0.15]
+	... 85 common frames omitted
+Caused by: java.io.EOFException: Can not read response from server. Expected to read 4 bytes, read 0 bytes before connection was unexpectedly lost.
+	at com.mysql.cj.protocol.FullReadInputStream.readFully(FullReadInputStream.java:67) ~[mysql-connector-java-8.0.15.jar:8.0.15]
+	at com.mysql.cj.protocol.a.SimplePacketReader.readHeader(SimplePacketReader.java:63) ~[mysql-connector-java-8.0.15.jar:8.0.15]
+	at com.mysql.cj.protocol.a.SimplePacketReader.readHeader(SimplePacketReader.java:45) ~[mysql-connector-java-8.0.15.jar:8.0.15]
+	at com.mysql.cj.protocol.a.NativeProtocol.readMessage(NativeProtocol.java:556) ~[mysql-connector-java-8.0.15.jar:8.0.15]
+	... 91 common frames omitted
+
+2020-06-14 20:40:38.595  INFO 9860 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2020-06-14 20:40:38.604  WARN 9860 --- [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'addressController': Unsatisfied dependency expressed through method 'setAddressService' parameter 0; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'addressService': Unsatisfied dependency expressed through field 'addressMapper'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'addressMapper' defined in file [D:\workspace\demo\build\classes\java\main\cn\example\demo\mapper\AddressMapper.class]: Unsatisfied dependency expressed through bean property 'sqlSessionFactory'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'sqlSessionFactory' defined in class path resource [org/mybatis/spring/boot/autoconfigure/MybatisAutoConfiguration.class]: Unsatisfied dependency expressed through method 'sqlSessionFactory' parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'dataSource' defined in class path resource [com/alibaba/druid/spring/boot/autoconfigure/DruidDataSourceAutoConfigure.class]: Invocation of init method failed; nested exception is com.mysql.cj.jdbc.exceptions.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+2020-06-14 20:40:38.685 ERROR 9860 --- [Druid-ConnectionPool-Create-1410514922] com.alibaba.druid.pool.DruidDataSource   : create connection SQLException, url: jdbc:mysql://127.0.0.1:3306/profile?characterEncoding=utf8&serverTimezone=Asia/Shanghai, errorCode 0, state 08S01
+
+com.mysql.cj.jdbc.exceptions.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at com.mysql.cj.jdbc.exceptions.SQLError.createCommunicationsException(SQLError.java:174) ~[mysql-connector-java-8.0.15.jar:8.0.15]
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:64) ~[mysql-connector-java-8.0.15.jar:8.0.15]
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:835) ~[mysql-connector-java-8.0.15.jar:8.0.15]
+	at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:455) ~[mysql-connector-java-8.0.15.jar:8.0.15]
+	at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:240) ~[mysql-connector-java-8.0.15.jar:8.0.15]
+	at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:199) ~[mysql-connector-java-8.0.15.jar:8.0.15]
+	at com.alibaba.druid.filter.FilterChainImpl.connection_connect(FilterChainImpl.java:156) ~[druid-1.1.10.jar:1.1.10]
+	at com.alibaba.druid.filter.FilterAdapter.connection_connect(FilterAdapter.java:786) ~[druid-1.1.10.jar:1.1.10]
+	at com.alibaba.druid.filter.FilterChainImpl.connection_connect(FilterChainImpl.java:150) ~[druid-1.1.10.jar:1.1.10]
+	at com.alibaba.druid.filter.stat.StatFilter.connection_connect(StatFilter.java:218) ~[druid-1.1.10.jar:1.1.10]
+	at com.alibaba.druid.filter.FilterChainImpl.connection_connect(FilterChainImpl.java:150) ~[druid-1.1.10.jar:1.1.10]
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1560) ~[druid-1.1.10.jar:1.1.10]
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1623) ~[druid-1.1.10.jar:1.1.10]
+	at com.alibaba.druid.pool.DruidDataSource$CreateConnectionThread.run(DruidDataSource.java:2468) ~[druid-1.1.10.jar:1.1.10]
+Caused by: com.mysql.cj.exceptions.CJCommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[na:1.8.0_171]
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62) ~[na:1.8.0_171]
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[na:1.8.0_171]
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423) ~[na:1.8.0_171]
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:61) ~[mysql-connector-java-8.0.15.jar:8.0.15]
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:105) ~[mysql-connector-java-8.0.15.jar:8.0.15]
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:151) ~[mysql-connector-java-8.0.15.jar:8.0.15]
+	at com.mysql.cj.exceptions.ExceptionFactory.createCommunicationsException(ExceptionFactory.java:167) ~[mysql-connector-java-8.0.15.jar:8.0.15]
+	at com.mysql.cj.protocol.a.NativeProtocol.readMessage(NativeProtocol.java:562) ~[mysql-connector-java-8.0.15.jar:8.0.15]
+	at com.mysql.cj.protocol.a.NativeProtocol.readServerCapabilities(NativeProtocol.java:514) ~[mysql-connector-java-8.0.15.jar:8.0.15]
+	at com.mysql.cj.protocol.a.NativeProtocol.beforeHandshake(NativeProtocol.java:404) ~[mysql-connector-java-8.0.15.jar:8.0.15]
+	at com.mysql.cj.protocol.a.NativeProtocol.connect(NativeProtocol.java:1447) ~[mysql-connector-java-8.0.15.jar:8.0.15]
+	at com.mysql.cj.NativeSession.connect(NativeSession.java:165) ~[mysql-connector-java-8.0.15.jar:8.0.15]
+	at com.mysql.cj.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:955) ~[mysql-connector-java-8.0.15.jar:8.0.15]
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:825) ~[mysql-connector-java-8.0.15.jar:8.0.15]
+	... 11 common frames omitted
+Caused by: java.io.EOFException: Can not read response from server. Expected to read 4 bytes, read 0 bytes before connection was unexpectedly lost.
+	at com.mysql.cj.protocol.FullReadInputStream.readFully(FullReadInputStream.java:67) ~[mysql-connector-java-8.0.15.jar:8.0.15]
+	at com.mysql.cj.protocol.a.SimplePacketReader.readHeader(SimplePacketReader.java:63) ~[mysql-connector-java-8.0.15.jar:8.0.15]
+	at com.mysql.cj.protocol.a.SimplePacketReader.readHeader(SimplePacketReader.java:45) ~[mysql-connector-java-8.0.15.jar:8.0.15]
+	at com.mysql.cj.protocol.a.NativeProtocol.readMessage(NativeProtocol.java:556) ~[mysql-connector-java-8.0.15.jar:8.0.15]
+	... 17 common frames omitted
+
+2020-06-14 20:40:38.697 ERROR 9860 --- [Druid-ConnectionPool-Create-1410514922] com.alibaba.druid.pool.DruidDataSource   : create connection SQLException, url: jdbc:mysql://127.0.0.1:3306/profile?characterEncoding=utf8&serverTimezone=Asia/Shanghai, errorCode 0, state 08S01
+
+com.mysql.cj.jdbc.exceptions.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at com.mysql.cj.jdbc.exceptions.SQLError.createCommunicationsException(SQLError.java:174) ~[mysql-connector-java-8.0.15.jar:8.0.15]
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:64) ~[mysql-connector-java-8.0.15.jar:8.0.15]
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:835) ~[mysql-connector-java-8.0.15.jar:8.0.15]
+	at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:455) ~[mysql-connector-java-8.0.15.jar:8.0.15]
+	at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:240) ~[mysql-connector-java-8.0.15.jar:8.0.15]
+	at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:199) ~[mysql-connector-java-8.0.15.jar:8.0.15]
+	at com.alibaba.druid.filter.FilterChainImpl.connection_connect(FilterChainImpl.java:156) ~[druid-1.1.10.jar:1.1.10]
+	at com.alibaba.druid.filter.FilterAdapter.connection_connect(FilterAdapter.java:786) ~[druid-1.1.10.jar:1.1.10]
+	at com.alibaba.druid.filter.FilterChainImpl.connection_connect(FilterChainImpl.java:150) ~[druid-1.1.10.jar:1.1.10]
+	at com.alibaba.druid.filter.stat.StatFilter.connection_connect(StatFilter.java:218) ~[druid-1.1.10.jar:1.1.10]
+	at com.alibaba.druid.filter.FilterChainImpl.connection_connect(FilterChainImpl.java:150) ~[druid-1.1.10.jar:1.1.10]
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1560) ~[druid-1.1.10.jar:1.1.10]
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1623) ~[druid-1.1.10.jar:1.1.10]
+	at com.alibaba.druid.pool.DruidDataSource$CreateConnectionThread.run(DruidDataSource.java:2468) ~[druid-1.1.10.jar:1.1.10]
+Caused by: com.mysql.cj.exceptions.CJCommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[na:1.8.0_171]
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62) ~[na:1.8.0_171]
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[na:1.8.0_171]
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423) ~[na:1.8.0_171]
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:61) ~[mysql-connector-java-8.0.15.jar:8.0.15]
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:105) ~[mysql-connector-java-8.0.15.jar:8.0.15]
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:151) ~[mysql-connector-java-8.0.15.jar:8.0.15]
+	at com.mysql.cj.exceptions.ExceptionFactory.createCommunicationsException(ExceptionFactory.java:167) ~[mysql-connector-java-8.0.15.jar:8.0.15]
+	at com.mysql.cj.protocol.a.NativeProtocol.readMessage(NativeProtocol.java:562) ~[mysql-connector-java-8.0.15.jar:8.0.15]
+	at com.mysql.cj.protocol.a.NativeProtocol.readServerCapabilities(NativeProtocol.java:514) ~[mysql-connector-java-8.0.15.jar:8.0.15]
+	at com.mysql.cj.protocol.a.NativeProtocol.beforeHandshake(NativeProtocol.java:404) ~[mysql-connector-java-8.0.15.jar:8.0.15]
+	at com.mysql.cj.protocol.a.NativeProtocol.connect(NativeProtocol.java:1447) ~[mysql-connector-java-8.0.15.jar:8.0.15]
+	at com.mysql.cj.NativeSession.connect(NativeSession.java:165) ~[mysql-connector-java-8.0.15.jar:8.0.15]
+	at com.mysql.cj.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:955) ~[mysql-connector-java-8.0.15.jar:8.0.15]
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:825) ~[mysql-connector-java-8.0.15.jar:8.0.15]
+	... 11 common frames omitted
+Caused by: java.io.EOFException: Can not read response from server. Expected to read 4 bytes, read 0 bytes before connection was unexpectedly lost.
+	at com.mysql.cj.protocol.FullReadInputStream.readFully(FullReadInputStream.java:67) ~[mysql-connector-java-8.0.15.jar:8.0.15]
+	at com.mysql.cj.protocol.a.SimplePacketReader.readHeader(SimplePacketReader.java:63) ~[mysql-connector-java-8.0.15.jar:8.0.15]
+	at com.mysql.cj.protocol.a.SimplePacketReader.readHeader(SimplePacketReader.java:45) ~[mysql-connector-java-8.0.15.jar:8.0.15]
+	at com.mysql.cj.protocol.a.NativeProtocol.readMessage(NativeProtocol.java:556) ~[mysql-connector-java-8.0.15.jar:8.0.15]
+	... 17 common frames omitted
+
+2020-06-14 20:40:38.706  INFO 9860 --- [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2020-06-14 20:40:38.755  INFO 9860 --- [main] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2020-06-14 20:40:38.815 ERROR 9860 --- [main] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'addressController': Unsatisfied dependency expressed through method 'setAddressService' parameter 0; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'addressService': Unsatisfied dependency expressed through field 'addressMapper'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'addressMapper' defined in file [D:\workspace\demo\build\classes\java\main\cn\example\demo\mapper\AddressMapper.class]: Unsatisfied dependency expressed through bean property 'sqlSessionFactory'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'sqlSessionFactory' defined in class path resource [org/mybatis/spring/boot/autoconfigure/MybatisAutoConfiguration.class]: Unsatisfied dependency expressed through method 'sqlSessionFactory' parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'dataSource' defined in class path resource [com/alibaba/druid/spring/boot/autoconfigure/DruidDataSourceAutoConfigure.class]: Invocation of init method failed; nested exception is com.mysql.cj.jdbc.exceptions.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredMethodElement.inject(AutowiredAnnotationBeanPostProcessor.java:723) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:116) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:399) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1422) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:594) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:517) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:323) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:321) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:879) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:878) ~[spring-context-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:550) ~[spring-context-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:141) ~[spring-boot-2.2.2.RELEASE.jar:2.2.2.RELEASE]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:747) [spring-boot-2.2.2.RELEASE.jar:2.2.2.RELEASE]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:397) [spring-boot-2.2.2.RELEASE.jar:2.2.2.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315) [spring-boot-2.2.2.RELEASE.jar:2.2.2.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1226) [spring-boot-2.2.2.RELEASE.jar:2.2.2.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1215) [spring-boot-2.2.2.RELEASE.jar:2.2.2.RELEASE]
+	at cn.example.demo.DemoApplication.main(DemoApplication.java:16) [main/:na]
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'addressService': Unsatisfied dependency expressed through field 'addressMapper'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'addressMapper' defined in file [D:\workspace\demo\build\classes\java\main\cn\example\demo\mapper\AddressMapper.class]: Unsatisfied dependency expressed through bean property 'sqlSessionFactory'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'sqlSessionFactory' defined in class path resource [org/mybatis/spring/boot/autoconfigure/MybatisAutoConfiguration.class]: Unsatisfied dependency expressed through method 'sqlSessionFactory' parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'dataSource' defined in class path resource [com/alibaba/druid/spring/boot/autoconfigure/DruidDataSourceAutoConfigure.class]: Invocation of init method failed; nested exception is com.mysql.cj.jdbc.exceptions.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:643) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:116) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:399) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1422) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:594) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:517) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:323) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:321) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1287) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1207) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredMethodElement.inject(AutowiredAnnotationBeanPostProcessor.java:715) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	... 19 common frames omitted
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'addressMapper' defined in file [D:\workspace\demo\build\classes\java\main\cn\example\demo\mapper\AddressMapper.class]: Unsatisfied dependency expressed through bean property 'sqlSessionFactory'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'sqlSessionFactory' defined in class path resource [org/mybatis/spring/boot/autoconfigure/MybatisAutoConfiguration.class]: Unsatisfied dependency expressed through method 'sqlSessionFactory' parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'dataSource' defined in class path resource [com/alibaba/druid/spring/boot/autoconfigure/DruidDataSourceAutoConfigure.class]: Invocation of init method failed; nested exception is com.mysql.cj.jdbc.exceptions.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireByType(AbstractAutowireCapableBeanFactory.java:1526) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1406) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:594) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:517) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:323) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:321) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1287) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1207) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:640) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	... 32 common frames omitted
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'sqlSessionFactory' defined in class path resource [org/mybatis/spring/boot/autoconfigure/MybatisAutoConfiguration.class]: Unsatisfied dependency expressed through method 'sqlSessionFactory' parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'dataSource' defined in class path resource [com/alibaba/druid/spring/boot/autoconfigure/DruidDataSourceAutoConfigure.class]: Invocation of init method failed; nested exception is com.mysql.cj.jdbc.exceptions.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:798) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:539) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1338) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1177) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:557) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:517) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:323) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:321) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1287) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1207) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireByType(AbstractAutowireCapableBeanFactory.java:1511) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	... 43 common frames omitted
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'dataSource' defined in class path resource [com/alibaba/druid/spring/boot/autoconfigure/DruidDataSourceAutoConfigure.class]: Invocation of init method failed; nested exception is com.mysql.cj.jdbc.exceptions.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1796) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:595) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:517) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:323) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:321) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1287) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1207) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:885) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:789) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	... 56 common frames omitted
+Caused by: com.mysql.cj.jdbc.exceptions.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at com.mysql.cj.jdbc.exceptions.SQLError.createCommunicationsException(SQLError.java:174) ~[mysql-connector-java-8.0.15.jar:8.0.15]
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:64) ~[mysql-connector-java-8.0.15.jar:8.0.15]
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:835) ~[mysql-connector-java-8.0.15.jar:8.0.15]
+	at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:455) ~[mysql-connector-java-8.0.15.jar:8.0.15]
+	at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:240) ~[mysql-connector-java-8.0.15.jar:8.0.15]
+	at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:199) ~[mysql-connector-java-8.0.15.jar:8.0.15]
+	at com.alibaba.druid.filter.FilterChainImpl.connection_connect(FilterChainImpl.java:156) ~[druid-1.1.10.jar:1.1.10]
+	at com.alibaba.druid.filter.FilterAdapter.connection_connect(FilterAdapter.java:786) ~[druid-1.1.10.jar:1.1.10]
+	at com.alibaba.druid.filter.FilterChainImpl.connection_connect(FilterChainImpl.java:150) ~[druid-1.1.10.jar:1.1.10]
+	at com.alibaba.druid.filter.stat.StatFilter.connection_connect(StatFilter.java:218) ~[druid-1.1.10.jar:1.1.10]
+	at com.alibaba.druid.filter.FilterChainImpl.connection_connect(FilterChainImpl.java:150) ~[druid-1.1.10.jar:1.1.10]
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1560) ~[druid-1.1.10.jar:1.1.10]
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1623) ~[druid-1.1.10.jar:1.1.10]
+	at com.alibaba.druid.pool.DruidDataSource.init(DruidDataSource.java:861) ~[druid-1.1.10.jar:1.1.10]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_171]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_171]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_171]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[na:1.8.0_171]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeCustomInitMethod(AbstractAutowireCapableBeanFactory.java:1922) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1864) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1792) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	... 67 common frames omitted
+Caused by: com.mysql.cj.exceptions.CJCommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[na:1.8.0_171]
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62) ~[na:1.8.0_171]
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[na:1.8.0_171]
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423) ~[na:1.8.0_171]
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:61) ~[mysql-connector-java-8.0.15.jar:8.0.15]
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:105) ~[mysql-connector-java-8.0.15.jar:8.0.15]
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:151) ~[mysql-connector-java-8.0.15.jar:8.0.15]
+	at com.mysql.cj.exceptions.ExceptionFactory.createCommunicationsException(ExceptionFactory.java:167) ~[mysql-connector-java-8.0.15.jar:8.0.15]
+	at com.mysql.cj.protocol.a.NativeProtocol.readMessage(NativeProtocol.java:562) ~[mysql-connector-java-8.0.15.jar:8.0.15]
+	at com.mysql.cj.protocol.a.NativeProtocol.readServerCapabilities(NativeProtocol.java:514) ~[mysql-connector-java-8.0.15.jar:8.0.15]
+	at com.mysql.cj.protocol.a.NativeProtocol.beforeHandshake(NativeProtocol.java:404) ~[mysql-connector-java-8.0.15.jar:8.0.15]
+	at com.mysql.cj.protocol.a.NativeProtocol.connect(NativeProtocol.java:1447) ~[mysql-connector-java-8.0.15.jar:8.0.15]
+	at com.mysql.cj.NativeSession.connect(NativeSession.java:165) ~[mysql-connector-java-8.0.15.jar:8.0.15]
+	at com.mysql.cj.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:955) ~[mysql-connector-java-8.0.15.jar:8.0.15]
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:825) ~[mysql-connector-java-8.0.15.jar:8.0.15]
+	... 85 common frames omitted
+Caused by: java.io.EOFException: Can not read response from server. Expected to read 4 bytes, read 0 bytes before connection was unexpectedly lost.
+	at com.mysql.cj.protocol.FullReadInputStream.readFully(FullReadInputStream.java:67) ~[mysql-connector-java-8.0.15.jar:8.0.15]
+	at com.mysql.cj.protocol.a.SimplePacketReader.readHeader(SimplePacketReader.java:63) ~[mysql-connector-java-8.0.15.jar:8.0.15]
+	at com.mysql.cj.protocol.a.SimplePacketReader.readHeader(SimplePacketReader.java:45) ~[mysql-connector-java-8.0.15.jar:8.0.15]
+	at com.mysql.cj.protocol.a.NativeProtocol.readMessage(NativeProtocol.java:556) ~[mysql-connector-java-8.0.15.jar:8.0.15]
+	... 91 common frames omitted
+
+2020-06-14 20:42:45.205  INFO 2752 --- [main] cn.example.demo.DemoApplication          : Starting DemoApplication on PC7018 with PID 2752 (D:\workspace\demo\build\classes\java\main started by Administrator in D:\workspace\demo)
+2020-06-14 20:42:45.217  INFO 2752 --- [main] cn.example.demo.DemoApplication          : No active profile set, falling back to default profiles: default
+2020-06-14 20:42:47.228  INFO 2752 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-06-14 20:42:47.234  INFO 2752 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2020-06-14 20:42:47.297  INFO 2752 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 37ms. Found 0 Redis repository interfaces.
+2020-06-14 20:42:47.813  INFO 2752 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-06-14 20:42:48.249  INFO 2752 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 7012 (http)
+2020-06-14 20:42:48.262  INFO 2752 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-06-14 20:42:48.263  INFO 2752 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.29]
+2020-06-14 20:42:48.265  INFO 2752 --- [main] o.a.catalina.core.AprLifecycleListener   : An older version [1.2.18] of the APR based Apache Tomcat Native library is installed, while Tomcat recommends a minimum version of [1.2.23]
+2020-06-14 20:42:48.266  INFO 2752 --- [main] o.a.catalina.core.AprLifecycleListener   : Loaded APR based Apache Tomcat Native library [1.2.18] using APR version [1.6.5].
+2020-06-14 20:42:48.266  INFO 2752 --- [main] o.a.catalina.core.AprLifecycleListener   : APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+2020-06-14 20:42:48.267  INFO 2752 --- [main] o.a.catalina.core.AprLifecycleListener   : APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+2020-06-14 20:42:48.272  INFO 2752 --- [main] o.a.catalina.core.AprLifecycleListener   : OpenSSL successfully initialized [OpenSSL 1.1.1  11 Sep 2018]
+2020-06-14 20:42:48.469  INFO 2752 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/api]    : Initializing Spring embedded WebApplicationContext
+2020-06-14 20:42:48.470  INFO 2752 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 3118 ms
+2020-06-14 20:42:48.802  INFO 2752 --- [main] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
+2020-06-14 20:42:49.662  INFO 2752 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2020-06-14 20:42:50.852  INFO 2752 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2020-06-14 20:42:51.031  INFO 2752 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-06-14 20:42:51.857  INFO 2752 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2020-06-14 20:42:51.892  INFO 2752 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2020-06-14 20:42:51.963  INFO 2752 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2020-06-14 20:42:52.221  INFO 2752 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: updateUsingPUT_1
+2020-06-14 20:42:52.254  INFO 2752 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: deleteUsingDELETE_1
+2020-06-14 20:42:52.282  INFO 2752 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: updateUsingPUT_2
+2020-06-14 20:42:52.292  INFO 2752 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: deleteUsingDELETE_2
+2020-06-14 20:42:52.344  INFO 2752 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: updateUsingPUT_3
+2020-06-14 20:42:52.475  INFO 2752 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 7012 (http) with context path '/api'
+2020-06-14 20:42:52.481  INFO 2752 --- [main] cn.example.demo.DemoApplication          : Started DemoApplication in 8.446 seconds (JVM running for 11.957)
+2020-06-14 21:01:24.439  INFO 19180 --- [main] cn.example.demo.DemoApplication          : Starting DemoApplication on PC7018 with PID 19180 (D:\workspace\demo\build\classes\java\main started by Administrator in D:\workspace\demo)
+2020-06-14 21:01:24.459  INFO 19180 --- [main] cn.example.demo.DemoApplication          : No active profile set, falling back to default profiles: default
+2020-06-14 21:01:26.580  INFO 19180 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-06-14 21:01:26.584  INFO 19180 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2020-06-14 21:01:26.650  INFO 19180 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 38ms. Found 0 Redis repository interfaces.
+2020-06-14 21:01:27.250  INFO 19180 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-06-14 21:01:27.792  INFO 19180 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 7012 (http)
+2020-06-14 21:01:27.817  INFO 19180 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-06-14 21:01:27.818  INFO 19180 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.29]
+2020-06-14 21:01:27.822  INFO 19180 --- [main] o.a.catalina.core.AprLifecycleListener   : An older version [1.2.18] of the APR based Apache Tomcat Native library is installed, while Tomcat recommends a minimum version of [1.2.23]
+2020-06-14 21:01:27.822  INFO 19180 --- [main] o.a.catalina.core.AprLifecycleListener   : Loaded APR based Apache Tomcat Native library [1.2.18] using APR version [1.6.5].
+2020-06-14 21:01:27.822  INFO 19180 --- [main] o.a.catalina.core.AprLifecycleListener   : APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+2020-06-14 21:01:27.823  INFO 19180 --- [main] o.a.catalina.core.AprLifecycleListener   : APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+2020-06-14 21:01:27.830  INFO 19180 --- [main] o.a.catalina.core.AprLifecycleListener   : OpenSSL successfully initialized [OpenSSL 1.1.1  11 Sep 2018]
+2020-06-14 21:01:28.105  INFO 19180 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/api]    : Initializing Spring embedded WebApplicationContext
+2020-06-14 21:01:28.106  INFO 19180 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 3463 ms
+2020-06-14 21:01:28.420  INFO 19180 --- [main] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
+2020-06-14 21:01:29.086  INFO 19180 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2020-06-14 21:01:30.181  INFO 19180 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2020-06-14 21:01:30.357  INFO 19180 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-06-14 21:01:31.069  INFO 19180 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2020-06-14 21:01:31.106  INFO 19180 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2020-06-14 21:01:31.174  INFO 19180 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2020-06-14 21:01:31.493  INFO 19180 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: updateUsingPUT_1
+2020-06-14 21:01:31.528  INFO 19180 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: deleteUsingDELETE_1
+2020-06-14 21:01:31.561  INFO 19180 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: updateUsingPUT_2
+2020-06-14 21:01:31.570  INFO 19180 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: deleteUsingDELETE_2
+2020-06-14 21:01:31.620  INFO 19180 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: updateUsingPUT_3
+2020-06-14 21:01:31.711  INFO 19180 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 7012 (http) with context path '/api'
+2020-06-14 21:01:31.716  INFO 19180 --- [main] cn.example.demo.DemoApplication          : Started DemoApplication in 8.39 seconds (JVM running for 12.159)
+2020-06-14 21:01:38.135  INFO 19180 --- [http-nio-7012-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/api]    : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-06-14 21:01:38.135  INFO 19180 --- [http-nio-7012-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-06-14 21:01:38.148  INFO 19180 --- [http-nio-7012-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 12 ms
+2020-06-14 21:01:38.935  INFO 19180 --- [http-nio-7012-exec-1] c.e.demo.controller.LoginController      : login:Customer(id=1, account=null, nickname=admin, password=123, sex=1, phone=15082000855, address=1, addressInfo=null, email=1234, status=null, time=Wed Jan 08 00:00:00 CST 2020)
+2020-06-14 21:01:41.666  INFO 19180 --- [http-nio-7012-exec-1] c.e.demo.controller.LoginController      : token:eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIxNTA4MjAwMDg1NSJ9.3ZSITFVrXHzNb804mQXnXTYiHX38Mowkih302vyT9K8
+2020-06-14 21:08:52.811  INFO 8480 --- [Test worker] cn.example.demo.DemoApplicationTests     : Starting DemoApplicationTests on PC7018 with PID 8480 (started by Administrator in D:\workspace\demo)
+2020-06-14 21:08:52.818  INFO 8480 --- [Test worker] cn.example.demo.DemoApplicationTests     : No active profile set, falling back to default profiles: default
+2020-06-14 21:08:57.520  INFO 8480 --- [Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-06-14 21:08:57.526  INFO 8480 --- [Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2020-06-14 21:08:57.636  INFO 8480 --- [Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 70ms. Found 0 Redis repository interfaces.
+2020-06-14 21:08:59.327  INFO 8480 --- [Test worker] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-06-14 21:09:00.321  INFO 8480 --- [Test worker] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
+2020-06-14 21:09:01.964  INFO 8480 --- [Test worker] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2020-06-14 21:09:04.095  INFO 8480 --- [Test worker] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2020-06-14 21:09:04.988  INFO 8480 --- [Test worker] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-06-14 21:09:06.867  INFO 8480 --- [Test worker] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2020-06-14 21:09:06.939  INFO 8480 --- [Test worker] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2020-06-14 21:09:07.031  INFO 8480 --- [Test worker] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2020-06-14 21:09:07.451  INFO 8480 --- [Test worker] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: updateUsingPUT_1
+2020-06-14 21:09:07.507  INFO 8480 --- [Test worker] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: deleteUsingDELETE_1
+2020-06-14 21:09:07.566  INFO 8480 --- [Test worker] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: updateUsingPUT_2
+2020-06-14 21:09:07.583  INFO 8480 --- [Test worker] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: deleteUsingDELETE_2
+2020-06-14 21:09:07.654  INFO 8480 --- [Test worker] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: updateUsingPUT_3
+2020-06-14 21:09:07.737  INFO 8480 --- [Test worker] cn.example.demo.DemoApplicationTests     : Started DemoApplicationTests in 15.941 seconds (JVM running for 21.27)
+2020-06-14 21:09:10.198  INFO 8480 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-06-14 21:09:10.332  INFO 8480 --- [SpringContextShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closed
+2020-06-14 21:11:29.761  INFO 10020 --- [main] cn.example.demo.DemoApplication          : Starting DemoApplication on PC7018 with PID 10020 (D:\workspace\demo\build\classes\java\main started by Administrator in D:\workspace\demo)
+2020-06-14 21:11:29.767  INFO 10020 --- [main] cn.example.demo.DemoApplication          : No active profile set, falling back to default profiles: default
+2020-06-14 21:11:31.533  INFO 10020 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-06-14 21:11:31.538  INFO 10020 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2020-06-14 21:11:31.601  INFO 10020 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 39ms. Found 0 Redis repository interfaces.
+2020-06-14 21:11:32.053  INFO 10020 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-06-14 21:11:32.465  INFO 10020 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 7012 (http)
+2020-06-14 21:11:32.480  INFO 10020 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-06-14 21:11:32.481  INFO 10020 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.29]
+2020-06-14 21:11:32.484  INFO 10020 --- [main] o.a.catalina.core.AprLifecycleListener   : An older version [1.2.18] of the APR based Apache Tomcat Native library is installed, while Tomcat recommends a minimum version of [1.2.23]
+2020-06-14 21:11:32.484  INFO 10020 --- [main] o.a.catalina.core.AprLifecycleListener   : Loaded APR based Apache Tomcat Native library [1.2.18] using APR version [1.6.5].
+2020-06-14 21:11:32.485  INFO 10020 --- [main] o.a.catalina.core.AprLifecycleListener   : APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+2020-06-14 21:11:32.485  INFO 10020 --- [main] o.a.catalina.core.AprLifecycleListener   : APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+2020-06-14 21:11:32.493  INFO 10020 --- [main] o.a.catalina.core.AprLifecycleListener   : OpenSSL successfully initialized [OpenSSL 1.1.1  11 Sep 2018]
+2020-06-14 21:11:32.685  INFO 10020 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/api]    : Initializing Spring embedded WebApplicationContext
+2020-06-14 21:11:32.686  INFO 10020 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2814 ms
+2020-06-14 21:11:32.945  INFO 10020 --- [main] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
+2020-06-14 21:11:33.537  INFO 10020 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2020-06-14 21:11:34.317  INFO 10020 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2020-06-14 21:11:34.476  INFO 10020 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-06-14 21:11:35.151  INFO 10020 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2020-06-14 21:11:35.178  INFO 10020 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2020-06-14 21:11:35.247  INFO 10020 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2020-06-14 21:11:35.459  INFO 10020 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: updateUsingPUT_1
+2020-06-14 21:11:35.492  INFO 10020 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: deleteUsingDELETE_1
+2020-06-14 21:11:35.521  INFO 10020 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: updateUsingPUT_2
+2020-06-14 21:11:35.529  INFO 10020 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: deleteUsingDELETE_2
+2020-06-14 21:11:35.570  INFO 10020 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: updateUsingPUT_3
+2020-06-14 21:11:35.633  INFO 10020 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 7012 (http) with context path '/api'
+2020-06-14 21:11:35.640  INFO 10020 --- [main] cn.example.demo.DemoApplication          : Started DemoApplication in 6.694 seconds (JVM running for 10.023)
+2020-06-14 21:11:43.300  INFO 10020 --- [http-nio-7012-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/api]    : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-06-14 21:11:43.301  INFO 10020 --- [http-nio-7012-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-06-14 21:11:43.323  INFO 10020 --- [http-nio-7012-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 20 ms
+2020-06-14 21:11:43.748  INFO 10020 --- [http-nio-7012-exec-2] c.e.demo.controller.LoginController      : login:Customer(id=1, account=null, nickname=admin, password=123, sex=1, phone=15082000855, address=1, addressInfo=null, email=1234, status=null, time=Wed Jan 08 00:00:00 CST 2020)
+2020-06-14 21:11:46.315  INFO 10020 --- [http-nio-7012-exec-2] c.e.demo.controller.LoginController      : token:eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIxNTA4MjAwMDg1NSJ9.3ZSITFVrXHzNb804mQXnXTYiHX38Mowkih302vyT9K8
+2020-06-14 21:12:37.234  INFO 8668 --- [Test worker] cn.example.demo.DemoApplicationTests     : Starting DemoApplicationTests on PC7018 with PID 8668 (started by Administrator in D:\workspace\demo)
+2020-06-14 21:12:37.239  INFO 8668 --- [Test worker] cn.example.demo.DemoApplicationTests     : No active profile set, falling back to default profiles: default
+2020-06-14 21:12:39.854  INFO 8668 --- [Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-06-14 21:12:39.860  INFO 8668 --- [Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2020-06-14 21:12:39.949  INFO 8668 --- [Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 52ms. Found 0 Redis repository interfaces.
+2020-06-14 21:12:40.750  INFO 8668 --- [Test worker] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-06-14 21:12:41.549  INFO 8668 --- [Test worker] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
+2020-06-14 21:12:42.808  INFO 8668 --- [Test worker] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2020-06-14 21:12:44.911  INFO 8668 --- [Test worker] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2020-06-14 21:12:45.764  INFO 8668 --- [Test worker] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-06-14 21:12:47.623  INFO 8668 --- [Test worker] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2020-06-14 21:12:47.680  INFO 8668 --- [Test worker] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2020-06-14 21:12:47.768  INFO 8668 --- [Test worker] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2020-06-14 21:12:48.105  INFO 8668 --- [Test worker] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: updateUsingPUT_1
+2020-06-14 21:12:48.172  INFO 8668 --- [Test worker] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: deleteUsingDELETE_1
+2020-06-14 21:12:48.233  INFO 8668 --- [Test worker] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: updateUsingPUT_2
+2020-06-14 21:12:48.253  INFO 8668 --- [Test worker] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: deleteUsingDELETE_2
+2020-06-14 21:12:48.337  INFO 8668 --- [Test worker] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: updateUsingPUT_3
+2020-06-14 21:12:48.394  INFO 8668 --- [Test worker] cn.example.demo.DemoApplicationTests     : Started DemoApplicationTests in 11.986 seconds (JVM running for 16.848)
+2020-06-14 21:12:49.583  INFO 8668 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-06-14 21:12:49.603  INFO 8668 --- [SpringContextShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closed
+2020-06-14 21:16:46.925  INFO 2380 --- [Test worker] cn.example.demo.DemoApplicationTests     : Starting DemoApplicationTests on PC7018 with PID 2380 (started by Administrator in D:\workspace\demo)
+2020-06-14 21:16:46.931  INFO 2380 --- [Test worker] cn.example.demo.DemoApplicationTests     : No active profile set, falling back to default profiles: default
+2020-06-14 21:16:50.091  INFO 2380 --- [Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-06-14 21:16:50.098  INFO 2380 --- [Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2020-06-14 21:16:50.210  INFO 2380 --- [Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 74ms. Found 0 Redis repository interfaces.
+2020-06-14 21:16:51.083  INFO 2380 --- [Test worker] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-06-14 21:16:51.828  INFO 2380 --- [Test worker] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
+2020-06-14 21:16:52.708  INFO 2380 --- [Test worker] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2020-06-14 21:16:54.723  INFO 2380 --- [Test worker] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2020-06-14 21:16:55.582  INFO 2380 --- [Test worker] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-06-14 21:16:57.361  INFO 2380 --- [Test worker] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2020-06-14 21:16:57.415  INFO 2380 --- [Test worker] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2020-06-14 21:16:57.505  INFO 2380 --- [Test worker] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2020-06-14 21:16:57.851  INFO 2380 --- [Test worker] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: updateUsingPUT_1
+2020-06-14 21:16:57.903  INFO 2380 --- [Test worker] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: deleteUsingDELETE_1
+2020-06-14 21:16:57.971  INFO 2380 --- [Test worker] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: updateUsingPUT_2
+2020-06-14 21:16:57.985  INFO 2380 --- [Test worker] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: deleteUsingDELETE_2
+2020-06-14 21:16:58.062  INFO 2380 --- [Test worker] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: updateUsingPUT_3
+2020-06-14 21:16:58.178  INFO 2380 --- [Test worker] cn.example.demo.DemoApplicationTests     : Started DemoApplicationTests in 12.197 seconds (JVM running for 17.568)
+2020-06-14 21:16:59.509  INFO 2380 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-06-14 21:16:59.536  INFO 2380 --- [SpringContextShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closed
+2020-06-14 21:22:15.630  INFO 19028 --- [Test worker] cn.example.demo.DemoApplicationTests     : Starting DemoApplicationTests on PC7018 with PID 19028 (started by Administrator in D:\workspace\demo)
+2020-06-14 21:22:15.634  INFO 19028 --- [Test worker] cn.example.demo.DemoApplicationTests     : No active profile set, falling back to default profiles: default
+2020-06-14 21:22:18.340  INFO 19028 --- [Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-06-14 21:22:18.346  INFO 19028 --- [Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2020-06-14 21:22:18.434  INFO 19028 --- [Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 54ms. Found 0 Redis repository interfaces.
+2020-06-14 21:22:19.357  INFO 19028 --- [Test worker] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-06-14 21:22:20.128  INFO 19028 --- [Test worker] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
+2020-06-14 21:22:21.393  INFO 19028 --- [Test worker] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2020-06-14 21:22:23.763  INFO 19028 --- [Test worker] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2020-06-14 21:22:24.770  INFO 19028 --- [Test worker] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-06-14 21:22:26.551  INFO 19028 --- [Test worker] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2020-06-14 21:22:26.609  INFO 19028 --- [Test worker] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2020-06-14 21:22:26.702  INFO 19028 --- [Test worker] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2020-06-14 21:22:27.158  INFO 19028 --- [Test worker] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: updateUsingPUT_1
+2020-06-14 21:22:27.231  INFO 19028 --- [Test worker] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: deleteUsingDELETE_1
+2020-06-14 21:22:27.291  INFO 19028 --- [Test worker] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: updateUsingPUT_2
+2020-06-14 21:22:27.318  INFO 19028 --- [Test worker] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: deleteUsingDELETE_2
+2020-06-14 21:22:27.402  INFO 19028 --- [Test worker] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: updateUsingPUT_3
+2020-06-14 21:22:27.511  INFO 19028 --- [Test worker] cn.example.demo.DemoApplicationTests     : Started DemoApplicationTests in 12.766 seconds (JVM running for 17.442)
+2020-06-14 21:22:28.963  INFO 19028 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-06-14 21:22:28.984  INFO 19028 --- [SpringContextShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closed
+2020-06-14 21:46:28.899  INFO 9272 --- [Test worker] cn.example.demo.DemoApplicationTests     : Starting DemoApplicationTests on PC7018 with PID 9272 (started by Administrator in D:\workspace\demo)
+2020-06-14 21:46:28.904  INFO 9272 --- [Test worker] cn.example.demo.DemoApplicationTests     : No active profile set, falling back to default profiles: default
+2020-06-14 21:46:32.503  INFO 9272 --- [Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-06-14 21:46:32.512  INFO 9272 --- [Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2020-06-14 21:46:32.679  INFO 9272 --- [Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 108ms. Found 0 Redis repository interfaces.
+2020-06-14 21:46:33.922  INFO 9272 --- [Test worker] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-06-14 21:46:35.085  INFO 9272 --- [Test worker] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
+2020-06-14 21:46:36.549  INFO 9272 --- [Test worker] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2020-06-14 21:46:39.473  INFO 9272 --- [Test worker] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2020-06-14 21:46:40.929  INFO 9272 --- [Test worker] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-06-14 21:46:43.694  INFO 9272 --- [Test worker] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2020-06-14 21:46:43.793  INFO 9272 --- [Test worker] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2020-06-14 21:46:43.996  INFO 9272 --- [Test worker] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2020-06-14 21:46:44.539  INFO 9272 --- [Test worker] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: updateUsingPUT_1
+2020-06-14 21:46:44.610  INFO 9272 --- [Test worker] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: deleteUsingDELETE_1
+2020-06-14 21:46:44.734  INFO 9272 --- [Test worker] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: updateUsingPUT_2
+2020-06-14 21:46:44.769  INFO 9272 --- [Test worker] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: deleteUsingDELETE_2
+2020-06-14 21:46:44.862  INFO 9272 --- [Test worker] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: updateUsingPUT_3
+2020-06-14 21:46:44.959  INFO 9272 --- [Test worker] cn.example.demo.DemoApplicationTests     : Started DemoApplicationTests in 17.148 seconds (JVM running for 23.872)
+2020-06-14 21:46:46.605  INFO 9272 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-06-14 21:46:46.727  INFO 9272 --- [SpringContextShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closed
+2020-06-14 21:47:37.273  INFO 9076 --- [Test worker] cn.example.demo.DemoApplicationTests     : Starting DemoApplicationTests on PC7018 with PID 9076 (started by Administrator in D:\workspace\demo)
+2020-06-14 21:47:37.277  INFO 9076 --- [Test worker] cn.example.demo.DemoApplicationTests     : No active profile set, falling back to default profiles: default
+2020-06-14 21:47:41.151  INFO 9076 --- [Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-06-14 21:47:41.158  INFO 9076 --- [Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2020-06-14 21:47:41.292  INFO 9076 --- [Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 90ms. Found 0 Redis repository interfaces.
+2020-06-14 21:47:42.658  INFO 9076 --- [Test worker] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-06-14 21:47:43.857  INFO 9076 --- [Test worker] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
+2020-06-14 21:47:45.267  INFO 9076 --- [Test worker] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2020-06-14 21:47:48.136  INFO 9076 --- [Test worker] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2020-06-14 21:47:49.723  INFO 9076 --- [Test worker] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-06-14 21:47:52.506  INFO 9076 --- [Test worker] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2020-06-14 21:47:52.579  INFO 9076 --- [Test worker] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2020-06-14 21:47:52.743  INFO 9076 --- [Test worker] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2020-06-14 21:47:53.221  INFO 9076 --- [Test worker] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: updateUsingPUT_1
+2020-06-14 21:47:53.325  INFO 9076 --- [Test worker] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: deleteUsingDELETE_1
+2020-06-14 21:47:53.416  INFO 9076 --- [Test worker] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: updateUsingPUT_2
+2020-06-14 21:47:53.429  INFO 9076 --- [Test worker] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: deleteUsingDELETE_2
+2020-06-14 21:47:53.550  INFO 9076 --- [Test worker] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: updateUsingPUT_3
+2020-06-14 21:47:53.669  INFO 9076 --- [Test worker] cn.example.demo.DemoApplicationTests     : Started DemoApplicationTests in 17.457 seconds (JVM running for 24.07)
+2020-06-14 21:47:55.010  INFO 9076 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-06-14 21:47:55.039  INFO 9076 --- [SpringContextShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closed
+2020-06-14 21:49:07.369  INFO 17160 --- [Test worker] cn.example.demo.DemoApplicationTests     : Starting DemoApplicationTests on PC7018 with PID 17160 (started by Administrator in D:\workspace\demo)
+2020-06-14 21:49:07.375  INFO 17160 --- [Test worker] cn.example.demo.DemoApplicationTests     : No active profile set, falling back to default profiles: default
+2020-06-14 21:49:09.996  INFO 17160 --- [Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-06-14 21:49:10.003  INFO 17160 --- [Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2020-06-14 21:49:10.092  INFO 17160 --- [Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 55ms. Found 0 Redis repository interfaces.
+2020-06-14 21:49:10.900  INFO 17160 --- [Test worker] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-06-14 21:49:11.611  INFO 17160 --- [Test worker] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
+2020-06-14 21:49:12.494  INFO 17160 --- [Test worker] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2020-06-14 21:49:14.470  INFO 17160 --- [Test worker] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2020-06-14 21:49:15.497  INFO 17160 --- [Test worker] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-06-14 21:49:17.126  INFO 17160 --- [Test worker] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2020-06-14 21:49:17.175  INFO 17160 --- [Test worker] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2020-06-14 21:49:17.276  INFO 17160 --- [Test worker] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2020-06-14 21:49:17.641  INFO 17160 --- [Test worker] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: updateUsingPUT_1
+2020-06-14 21:49:17.696  INFO 17160 --- [Test worker] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: deleteUsingDELETE_1
+2020-06-14 21:49:17.756  INFO 17160 --- [Test worker] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: updateUsingPUT_2
+2020-06-14 21:49:17.770  INFO 17160 --- [Test worker] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: deleteUsingDELETE_2
+2020-06-14 21:49:17.846  INFO 17160 --- [Test worker] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: updateUsingPUT_3
+2020-06-14 21:49:17.900  INFO 17160 --- [Test worker] cn.example.demo.DemoApplicationTests     : Started DemoApplicationTests in 11.282 seconds (JVM running for 16.049)
+2020-06-14 21:49:19.037  INFO 17160 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-06-14 21:49:19.075  INFO 17160 --- [SpringContextShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closed
+2020-06-14 21:53:03.015  INFO 18208 --- [Test worker] cn.example.demo.DemoApplicationTests     : Starting DemoApplicationTests on PC7018 with PID 18208 (started by Administrator in D:\workspace\demo)
+2020-06-14 21:53:03.021  INFO 18208 --- [Test worker] cn.example.demo.DemoApplicationTests     : No active profile set, falling back to default profiles: default
+2020-06-14 21:53:05.909  INFO 18208 --- [Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-06-14 21:53:05.915  INFO 18208 --- [Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2020-06-14 21:53:06.009  INFO 18208 --- [Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 57ms. Found 0 Redis repository interfaces.
+2020-06-14 21:53:06.810  INFO 18208 --- [Test worker] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-06-14 21:53:07.543  INFO 18208 --- [Test worker] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
+2020-06-14 21:53:08.477  INFO 18208 --- [Test worker] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2020-06-14 21:53:10.540  INFO 18208 --- [Test worker] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2020-06-14 21:53:11.445  INFO 18208 --- [Test worker] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-06-14 21:53:13.132  INFO 18208 --- [Test worker] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2020-06-14 21:53:13.188  INFO 18208 --- [Test worker] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2020-06-14 21:53:13.276  INFO 18208 --- [Test worker] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2020-06-14 21:53:13.619  INFO 18208 --- [Test worker] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: updateUsingPUT_1
+2020-06-14 21:53:13.676  INFO 18208 --- [Test worker] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: deleteUsingDELETE_1
+2020-06-14 21:53:13.740  INFO 18208 --- [Test worker] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: updateUsingPUT_2
+2020-06-14 21:53:13.757  INFO 18208 --- [Test worker] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: deleteUsingDELETE_2
+2020-06-14 21:53:13.849  INFO 18208 --- [Test worker] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: updateUsingPUT_3
+2020-06-14 21:53:13.905  INFO 18208 --- [Test worker] cn.example.demo.DemoApplicationTests     : Started DemoApplicationTests in 11.706 seconds (JVM running for 16.421)
+2020-06-14 21:53:15.084  INFO 18208 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-06-14 21:53:15.127  INFO 18208 --- [SpringContextShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closed
+2020-06-14 21:54:55.164  INFO 5212 --- [Test worker] cn.example.demo.DemoApplicationTests     : Starting DemoApplicationTests on PC7018 with PID 5212 (started by Administrator in D:\workspace\demo)
+2020-06-14 21:54:55.169  INFO 5212 --- [Test worker] cn.example.demo.DemoApplicationTests     : No active profile set, falling back to default profiles: default
+2020-06-14 21:54:57.842  INFO 5212 --- [Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-06-14 21:54:57.849  INFO 5212 --- [Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2020-06-14 21:54:57.936  INFO 5212 --- [Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 52ms. Found 0 Redis repository interfaces.
+2020-06-14 21:54:58.838  INFO 5212 --- [Test worker] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-06-14 21:54:59.645  INFO 5212 --- [Test worker] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
+2020-06-14 21:55:00.700  INFO 5212 --- [Test worker] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2020-06-14 21:55:02.569  INFO 5212 --- [Test worker] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2020-06-14 21:55:03.429  INFO 5212 --- [Test worker] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-06-14 21:55:09.210  INFO 5212 --- [Test worker] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2020-06-14 21:55:09.407  INFO 5212 --- [Test worker] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2020-06-14 21:55:09.672  INFO 5212 --- [Test worker] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2020-06-14 21:55:10.261  INFO 5212 --- [Test worker] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: updateUsingPUT_1
+2020-06-14 21:55:10.406  INFO 5212 --- [Test worker] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: deleteUsingDELETE_1
+2020-06-14 21:55:10.601  INFO 5212 --- [Test worker] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: updateUsingPUT_2
+2020-06-14 21:55:10.633  INFO 5212 --- [Test worker] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: deleteUsingDELETE_2
+2020-06-14 21:55:10.891  INFO 5212 --- [Test worker] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: updateUsingPUT_3
+2020-06-14 21:55:10.983  INFO 5212 --- [Test worker] cn.example.demo.DemoApplicationTests     : Started DemoApplicationTests in 16.575 seconds (JVM running for 21.225)
+2020-06-14 21:55:12.655  INFO 5212 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-06-14 21:55:12.673  INFO 5212 --- [SpringContextShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closed
+2020-06-14 22:08:30.321  INFO 6228 --- [Test worker] cn.example.demo.DemoApplicationTests     : Starting DemoApplicationTests on PC7018 with PID 6228 (started by Administrator in D:\workspace\demo)
+2020-06-14 22:08:30.325  INFO 6228 --- [Test worker] cn.example.demo.DemoApplicationTests     : No active profile set, falling back to default profiles: default
+2020-06-14 22:08:32.923  INFO 6228 --- [Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-06-14 22:08:32.929  INFO 6228 --- [Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2020-06-14 22:08:33.014  INFO 6228 --- [Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 52ms. Found 0 Redis repository interfaces.
+2020-06-14 22:08:33.793  INFO 6228 --- [Test worker] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-06-14 22:08:34.451  INFO 6228 --- [Test worker] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
+2020-06-14 22:08:35.318  INFO 6228 --- [Test worker] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2020-06-14 22:08:36.983  INFO 6228 --- [Test worker] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2020-06-14 22:08:37.796  INFO 6228 --- [Test worker] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-06-14 22:08:39.429  INFO 6228 --- [Test worker] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2020-06-14 22:08:39.503  INFO 6228 --- [Test worker] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2020-06-14 22:08:39.584  INFO 6228 --- [Test worker] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2020-06-14 22:08:40.017  INFO 6228 --- [Test worker] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: updateUsingPUT_1
+2020-06-14 22:08:40.087  INFO 6228 --- [Test worker] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: deleteUsingDELETE_1
+2020-06-14 22:08:40.155  INFO 6228 --- [Test worker] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: updateUsingPUT_2
+2020-06-14 22:08:40.168  INFO 6228 --- [Test worker] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: deleteUsingDELETE_2
+2020-06-14 22:08:40.270  INFO 6228 --- [Test worker] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: updateUsingPUT_3
+2020-06-14 22:08:40.328  INFO 6228 --- [Test worker] cn.example.demo.DemoApplicationTests     : Started DemoApplicationTests in 10.794 seconds (JVM running for 15.291)
+2020-06-14 22:08:41.240  INFO 6228 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-06-14 22:08:41.259  INFO 6228 --- [SpringContextShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closed
+2020-06-14 22:09:17.819  INFO 6536 --- [Test worker] cn.example.demo.DemoApplicationTests     : Starting DemoApplicationTests on PC7018 with PID 6536 (started by Administrator in D:\workspace\demo)
+2020-06-14 22:09:17.822  INFO 6536 --- [Test worker] cn.example.demo.DemoApplicationTests     : No active profile set, falling back to default profiles: default
+2020-06-14 22:09:20.302  INFO 6536 --- [Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-06-14 22:09:20.308  INFO 6536 --- [Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2020-06-14 22:09:20.391  INFO 6536 --- [Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 52ms. Found 0 Redis repository interfaces.
+2020-06-14 22:09:21.177  INFO 6536 --- [Test worker] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-06-14 22:09:21.904  INFO 6536 --- [Test worker] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
+2020-06-14 22:09:22.946  INFO 6536 --- [Test worker] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2020-06-14 22:09:24.643  INFO 6536 --- [Test worker] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2020-06-14 22:09:25.434  INFO 6536 --- [Test worker] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-06-14 22:09:27.160  INFO 6536 --- [Test worker] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2020-06-14 22:09:27.217  INFO 6536 --- [Test worker] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2020-06-14 22:09:27.322  INFO 6536 --- [Test worker] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2020-06-14 22:09:27.827  INFO 6536 --- [Test worker] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: updateUsingPUT_1
+2020-06-14 22:09:27.920  INFO 6536 --- [Test worker] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: deleteUsingDELETE_1
+2020-06-14 22:09:27.982  INFO 6536 --- [Test worker] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: updateUsingPUT_2
+2020-06-14 22:09:28.003  INFO 6536 --- [Test worker] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: deleteUsingDELETE_2
+2020-06-14 22:09:28.088  INFO 6536 --- [Test worker] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: updateUsingPUT_3
+2020-06-14 22:09:28.144  INFO 6536 --- [Test worker] cn.example.demo.DemoApplicationTests     : Started DemoApplicationTests in 11.157 seconds (JVM running for 15.754)
+2020-06-14 22:09:29.424  INFO 6536 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-06-14 22:09:29.449  INFO 6536 --- [SpringContextShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closed
+2020-06-14 22:14:48.575  INFO 7820 --- [Test worker] cn.example.demo.DemoApplicationTests     : Starting DemoApplicationTests on PC7018 with PID 7820 (started by Administrator in D:\workspace\demo)
+2020-06-14 22:14:48.579  INFO 7820 --- [Test worker] cn.example.demo.DemoApplicationTests     : No active profile set, falling back to default profiles: default
+2020-06-14 22:14:51.406  INFO 7820 --- [Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-06-14 22:14:51.414  INFO 7820 --- [Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2020-06-14 22:14:51.502  INFO 7820 --- [Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 54ms. Found 0 Redis repository interfaces.
+2020-06-14 22:14:52.264  INFO 7820 --- [Test worker] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-06-14 22:14:52.930  INFO 7820 --- [Test worker] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
+2020-06-14 22:14:53.797  INFO 7820 --- [Test worker] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2020-06-14 22:14:56.390  INFO 7820 --- [Test worker] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2020-06-14 22:14:57.478  INFO 7820 --- [Test worker] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-06-14 22:14:59.218  INFO 7820 --- [Test worker] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2020-06-14 22:14:59.267  INFO 7820 --- [Test worker] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2020-06-14 22:14:59.400  INFO 7820 --- [Test worker] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2020-06-14 22:14:59.775  INFO 7820 --- [Test worker] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: updateUsingPUT_1
+2020-06-14 22:14:59.836  INFO 7820 --- [Test worker] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: deleteUsingDELETE_1
+2020-06-14 22:14:59.905  INFO 7820 --- [Test worker] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: updateUsingPUT_2
+2020-06-14 22:14:59.926  INFO 7820 --- [Test worker] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: deleteUsingDELETE_2
+2020-06-14 22:15:00.001  INFO 7820 --- [Test worker] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: updateUsingPUT_3
+2020-06-14 22:15:00.104  INFO 7820 --- [Test worker] cn.example.demo.DemoApplicationTests     : Started DemoApplicationTests in 12.428 seconds (JVM running for 17.004)
+2020-06-14 22:15:01.147  INFO 7820 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-06-14 22:15:01.168  INFO 7820 --- [SpringContextShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closed
+2020-06-14 22:15:27.731  INFO 19984 --- [Test worker] cn.example.demo.DemoApplicationTests     : Starting DemoApplicationTests on PC7018 with PID 19984 (started by Administrator in D:\workspace\demo)
+2020-06-14 22:15:27.737  INFO 19984 --- [Test worker] cn.example.demo.DemoApplicationTests     : No active profile set, falling back to default profiles: default
+2020-06-14 22:15:30.247  INFO 19984 --- [Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-06-14 22:15:30.253  INFO 19984 --- [Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2020-06-14 22:15:30.342  INFO 19984 --- [Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 54ms. Found 0 Redis repository interfaces.
+2020-06-14 22:15:31.132  INFO 19984 --- [Test worker] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-06-14 22:15:31.854  INFO 19984 --- [Test worker] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
+2020-06-14 22:15:32.774  INFO 19984 --- [Test worker] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2020-06-14 22:15:34.525  INFO 19984 --- [Test worker] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2020-06-14 22:15:35.334  INFO 19984 --- [Test worker] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-06-14 22:15:36.881  INFO 19984 --- [Test worker] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2020-06-14 22:15:36.940  INFO 19984 --- [Test worker] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2020-06-14 22:15:37.027  INFO 19984 --- [Test worker] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2020-06-14 22:15:37.352  INFO 19984 --- [Test worker] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: updateUsingPUT_1
+2020-06-14 22:15:37.407  INFO 19984 --- [Test worker] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: deleteUsingDELETE_1
+2020-06-14 22:15:37.459  INFO 19984 --- [Test worker] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: updateUsingPUT_2
+2020-06-14 22:15:37.472  INFO 19984 --- [Test worker] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: deleteUsingDELETE_2
+2020-06-14 22:15:37.539  INFO 19984 --- [Test worker] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: updateUsingPUT_3
+2020-06-14 22:15:37.585  INFO 19984 --- [Test worker] cn.example.demo.DemoApplicationTests     : Started DemoApplicationTests in 10.56 seconds (JVM running for 15.044)
+2020-06-14 22:15:38.443  INFO 19984 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-06-14 22:15:38.460  INFO 19984 --- [SpringContextShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closed
+2020-06-14 22:16:01.803  INFO 2604 --- [Test worker] cn.example.demo.DemoApplicationTests     : Starting DemoApplicationTests on PC7018 with PID 2604 (started by Administrator in D:\workspace\demo)
+2020-06-14 22:16:01.806  INFO 2604 --- [Test worker] cn.example.demo.DemoApplicationTests     : No active profile set, falling back to default profiles: default
+2020-06-14 22:16:04.285  INFO 2604 --- [Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-06-14 22:16:04.292  INFO 2604 --- [Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2020-06-14 22:16:04.372  INFO 2604 --- [Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 49ms. Found 0 Redis repository interfaces.
+2020-06-14 22:16:05.220  INFO 2604 --- [Test worker] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-06-14 22:16:05.888  INFO 2604 --- [Test worker] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
+2020-06-14 22:16:06.726  INFO 2604 --- [Test worker] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2020-06-14 22:16:08.483  INFO 2604 --- [Test worker] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2020-06-14 22:16:09.391  INFO 2604 --- [Test worker] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-06-14 22:16:10.985  INFO 2604 --- [Test worker] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2020-06-14 22:16:11.041  INFO 2604 --- [Test worker] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2020-06-14 22:16:11.127  INFO 2604 --- [Test worker] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2020-06-14 22:16:11.442  INFO 2604 --- [Test worker] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: updateUsingPUT_1
+2020-06-14 22:16:11.498  INFO 2604 --- [Test worker] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: deleteUsingDELETE_1
+2020-06-14 22:16:11.559  INFO 2604 --- [Test worker] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: updateUsingPUT_2
+2020-06-14 22:16:11.572  INFO 2604 --- [Test worker] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: deleteUsingDELETE_2
+2020-06-14 22:16:11.652  INFO 2604 --- [Test worker] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: updateUsingPUT_3
+2020-06-14 22:16:11.701  INFO 2604 --- [Test worker] cn.example.demo.DemoApplicationTests     : Started DemoApplicationTests in 10.73 seconds (JVM running for 15.305)
+2020-06-14 22:16:12.648  INFO 2604 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-06-14 22:16:12.663  INFO 2604 --- [SpringContextShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closed
+2020-06-14 22:16:56.745  INFO 8060 --- [Test worker] cn.example.demo.DemoApplicationTests     : Starting DemoApplicationTests on PC7018 with PID 8060 (started by Administrator in D:\workspace\demo)
+2020-06-14 22:16:56.750  INFO 8060 --- [Test worker] cn.example.demo.DemoApplicationTests     : No active profile set, falling back to default profiles: default
+2020-06-14 22:16:59.161  INFO 8060 --- [Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-06-14 22:16:59.167  INFO 8060 --- [Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2020-06-14 22:16:59.247  INFO 8060 --- [Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 51ms. Found 0 Redis repository interfaces.
+2020-06-14 22:17:00.108  INFO 8060 --- [Test worker] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-06-14 22:17:00.808  INFO 8060 --- [Test worker] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
+2020-06-14 22:17:01.607  INFO 8060 --- [Test worker] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2020-06-14 22:17:03.429  INFO 8060 --- [Test worker] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2020-06-14 22:17:04.291  INFO 8060 --- [Test worker] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-06-14 22:17:05.807  INFO 8060 --- [Test worker] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2020-06-14 22:17:05.863  INFO 8060 --- [Test worker] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2020-06-14 22:17:05.943  INFO 8060 --- [Test worker] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2020-06-14 22:17:06.263  INFO 8060 --- [Test worker] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: updateUsingPUT_1
+2020-06-14 22:17:06.316  INFO 8060 --- [Test worker] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: deleteUsingDELETE_1
+2020-06-14 22:17:06.378  INFO 8060 --- [Test worker] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: updateUsingPUT_2
+2020-06-14 22:17:06.389  INFO 8060 --- [Test worker] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: deleteUsingDELETE_2
+2020-06-14 22:17:06.460  INFO 8060 --- [Test worker] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: updateUsingPUT_3
+2020-06-14 22:17:06.510  INFO 8060 --- [Test worker] cn.example.demo.DemoApplicationTests     : Started DemoApplicationTests in 10.609 seconds (JVM running for 15.159)
+2020-06-14 22:17:07.434  INFO 8060 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-06-14 22:17:07.452  INFO 8060 --- [SpringContextShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closed
+2020-06-14 22:17:32.382  INFO 5416 --- [Test worker] cn.example.demo.DemoApplicationTests     : Starting DemoApplicationTests on PC7018 with PID 5416 (started by Administrator in D:\workspace\demo)
+2020-06-14 22:17:32.392  INFO 5416 --- [Test worker] cn.example.demo.DemoApplicationTests     : No active profile set, falling back to default profiles: default
+2020-06-14 22:17:34.802  INFO 5416 --- [Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-06-14 22:17:34.808  INFO 5416 --- [Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2020-06-14 22:17:34.895  INFO 5416 --- [Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 50ms. Found 0 Redis repository interfaces.
+2020-06-14 22:17:35.707  INFO 5416 --- [Test worker] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-06-14 22:17:36.400  INFO 5416 --- [Test worker] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
+2020-06-14 22:17:37.331  INFO 5416 --- [Test worker] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2020-06-14 22:17:39.052  INFO 5416 --- [Test worker] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2020-06-14 22:17:39.901  INFO 5416 --- [Test worker] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-06-14 22:17:41.477  INFO 5416 --- [Test worker] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2020-06-14 22:17:41.531  INFO 5416 --- [Test worker] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2020-06-14 22:17:41.608  INFO 5416 --- [Test worker] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2020-06-14 22:17:41.912  INFO 5416 --- [Test worker] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: updateUsingPUT_1
+2020-06-14 22:17:41.966  INFO 5416 --- [Test worker] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: deleteUsingDELETE_1
+2020-06-14 22:17:42.017  INFO 5416 --- [Test worker] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: updateUsingPUT_2
+2020-06-14 22:17:42.039  INFO 5416 --- [Test worker] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: deleteUsingDELETE_2
+2020-06-14 22:17:42.103  INFO 5416 --- [Test worker] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: updateUsingPUT_3
+2020-06-14 22:17:42.154  INFO 5416 --- [Test worker] cn.example.demo.DemoApplicationTests     : Started DemoApplicationTests in 10.524 seconds (JVM running for 15.028)
+2020-06-14 22:17:43.089  INFO 5416 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-06-14 22:17:43.138  INFO 5416 --- [SpringContextShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closed

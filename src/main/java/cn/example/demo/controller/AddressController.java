@@ -18,44 +18,47 @@ import java.util.Map;
  * @author liuwu4
  * 20:51
  * description:
- *
  */
 @RestController
 @Api(tags = "地址")
 public class AddressController {
 
     private static final Logger log = LoggerFactory.getLogger(AddressController.class);
-    private ResponseManage responseManage = new ResponseManage();
+    private final ResponseManage responseManage = new ResponseManage();
+    private AddressService addressService;
 
     @Autowired
-    private AddressService addressService;
+    public void setAddressService(AddressService addressService) {
+        this.addressService = addressService;
+    }
 
     @GetMapping("/address")
     @ApiOperation("获取地址信息")
     @ApiImplicitParam(name = "loginId", value = "用户id", required = false)
-    public Map<String, Object> address(@RequestParam(required = false) Integer loginId){
-        log.info("loginId"+loginId);
+    public Map<String, Object> address(@RequestParam(required = false) Integer loginId) {
+        log.info("loginId" + loginId);
         return responseManage.response(addressService.address(loginId));
     }
 
     @PostMapping("/address")
     @ApiOperation(value = "新增地址")
-    public Map<String, Object> insert(@RequestBody(required = true)Address address){
+    public Map<String, Object> insert(@RequestBody(required = true) Address address) {
         return responseManage.response(addressService.insert(address));
     }
 
     @PutMapping("/address")
     @ApiOperation(value = "修改地址")
-    public Map<String, Object> update(@RequestBody(required = true) Address address){
+    public Map<String, Object> update(@RequestBody(required = true) Address address) {
         return responseManage.response(addressService.update(address));
     }
+
     @DeleteMapping("/address/{loginId}")
     @ApiOperation(value = "删除用户地址")
     @ApiImplicitParams({
             @ApiImplicitParam(name = "loginId", value = "用户id", required = true),
             @ApiImplicitParam(name = "addressId", value = "地址id", required = true)
     })
-    public Map<String, Object> delete(@PathVariable(required = true)Integer loginId, @RequestParam(required = true) Integer addressId){
+    public Map<String, Object> delete(@PathVariable(required = true) Integer loginId, @RequestParam(required = true) Integer addressId) {
         return responseManage.response(addressService.delete(loginId, addressId));
     }
 }

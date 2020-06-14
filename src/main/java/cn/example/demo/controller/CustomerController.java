@@ -2,6 +2,7 @@ package cn.example.demo.controller;
 
 import cn.example.demo.dao.Customer;
 import cn.example.demo.service.CustomerService;
+import cn.example.demo.utils.Encryption;
 import cn.example.demo.utils.ResponseManage;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiImplicitParam;
@@ -22,23 +23,31 @@ import java.util.Map;
 @RestController
 @Api(tags = "所有的用户信息")
 public class CustomerController {
-    @Autowired
-    private CustomerService customerService;
-    private ResponseManage responseManage = new ResponseManage();
-
     private static final Logger LOG = LoggerFactory.getLogger(CustomerController.class);
+    private final ResponseManage responseManage = new ResponseManage();
+    private final Encryption encryption = new Encryption();
+    private CustomerService customerService;
+
+    @Autowired
+    public void setCustomerService(CustomerService customerService) {
+        this.customerService = customerService;
+    }
+
     @GetMapping("/users")
     @ApiOperation(value = "查询用户信息")
     @ApiImplicitParam(name = "customerId", value = "检查用户是否存在[id]", required = false)
-    public Map<String, Object> users(@RequestParam(required = false) String customerId){
-        LOG.info("查询用户"+ customerId);
+    public Map<String, Object> users(@RequestParam(required = false) String customerId) {
+        LOG.info("查询用户" + customerId);
         return responseManage.response(customerService.customer(customerId));
     }
 
     @PostMapping("/user")
     @ApiOperation(value = "新增用户")
-    public Map<String, Object> users(@RequestBody(required = true) Customer customer){
-        LOG.info("新增"+ customer);
+    public Map<String, Object> users(@RequestBody(required = true) Customer customer) {
+        LOG.info("新增" + customer);
+        if (customer.getPassword() != null) {
+            customer.setPassword(encryption.generatorEncryption(customer.getPassword()));
+        }
         return responseManage.response(customerService.inset(customer));
     }
 
@@ -51,15 +60,18 @@ public class CustomerController {
     })
     public Map<String, Object> users(@PathVariable String account,
                                      @RequestParam Integer status,
-                                     @RequestParam(required = false) Integer enable){
-        LOG.info("禁用账号|删除账号"+ account+"\t"+ status+"\t"+enable);
+                                     @RequestParam(required = false) Integer enable) {
+        LOG.info("禁用账号|删除账号" + account + "\t" + status + "\t" + enable);
         return responseManage.response(customerService.modify(account, status, enable));
     }
 
     @PutMapping("/user")
     @ApiOperation(value = "修改账号信息[id原样返回]")
-    public Map<String, Object> update(@RequestBody Customer customer){
-        LOG.info("修改账号信息:"+ customer);
+    public Map<String, Object> update(@RequestBody Customer customer) {
+        LOG.info("修改账号信息:" + customer);
+        if (customer.getPassword() != null) {
+            customer.setPassword(encryption.generatorEncryption(customer.getPassword()));
+        }
         return responseManage.response(customerService.updateCustomer(customer));
     }
 

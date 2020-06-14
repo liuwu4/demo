@@ -2,7 +2,6 @@ package cn.example.demo.mapper;
 
 import cn.example.demo.dao.Type;
 import org.apache.ibatis.annotations.Param;
-import org.springframework.stereotype.Service;
 
 import java.util.List;
 
@@ -11,19 +10,18 @@ import java.util.List;
  * 09:43
  * description:
  */
-@Service
 public interface TypeMapper {
     /**
      * 查询类型
      * @param typeId 类型id
-     * @return
+     * @return list<type>
      */
     List<Type> type(@Param("typeId") Integer typeId);
 
     /**
      * 联合查询type
-     * @param typeId
-     * @return
+     * @param typeId 类型唯一标识
+     * @return type
      */
     Type selectType(@Param("TypeId") Integer typeId);
     /**

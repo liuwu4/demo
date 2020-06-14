@@ -30,10 +30,14 @@ import java.util.*;
 @Api(tags = "操作类型")
 public class TypeController {
 
-    @Autowired
+    private static final Logger log = LoggerFactory.getLogger(TypeController.class);
     TypeService typeService;
     ResponseManage responseManage = new ResponseManage();
-    private static final Logger log = LoggerFactory.getLogger(TypeController.class);
+
+    @Autowired
+    public void setTypeService(TypeService typeService) {
+        this.typeService = typeService;
+    }
 
     @GetMapping("/types")
     @ApiOperation(value = "查询所有类型")
@@ -61,17 +65,17 @@ public class TypeController {
         List<List<Type>> readExcel = new Excel().readExcel(file);
         log.info("读取批量导入结束:" + readExcel);
         int result = 0;
-        Iterator<Type> iterator =readExcel.get(0).iterator();
+        Iterator<Type> iterator = readExcel.get(0).iterator();
         List<Type> types = new ArrayList<>();
-        while (iterator.hasNext()){
+        while (iterator.hasNext()) {
             Type type = iterator.next();
-            if((type.getTypeNum() == null || "".equals(type.getTypeNum())) && (type.getTypeName() == null || "".equals(type.getTypeName()))){
+            if ((type.getTypeNum() == null || "".equals(type.getTypeNum())) && (type.getTypeName() == null || "".equals(type.getTypeName()))) {
                 iterator.remove();
             } else {
                 types.add(type);
             }
         }
-        if(types.size() !=0){
+        if (types.size() != 0) {
             result = typeService.excel(types);
             map.put("result", result);
         } else {

@@ -10,7 +10,6 @@ import org.springframework.stereotype.Service;
  * 13:00
  * description:
  */
-@Service
 public interface LoginMapper {
 
     /**

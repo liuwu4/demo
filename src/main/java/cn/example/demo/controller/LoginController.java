@@ -3,6 +3,7 @@ package cn.example.demo.controller;
 import cn.example.demo.dao.Customer;
 import cn.example.demo.dao.Login;
 import cn.example.demo.service.LoginService;
+import cn.example.demo.utils.Encryption;
 import cn.example.demo.utils.GenerateToken;
 import cn.example.demo.utils.ResponseManage;
 import io.swagger.annotations.Api;
@@ -22,17 +23,24 @@ import java.util.Map;
 @RestController
 @Api(tags = "登录, 修改密码, 找回密码")
 public class LoginController {
-    @Autowired
     LoginService loginService;
+
+    @Autowired
+    public void setLoginService(LoginService loginService) {
+        this.loginService = loginService;
+    }
+
     public Logger log = LoggerFactory.getLogger(LoginController.class);
-    private ResponseManage responseManage = new ResponseManage();
-    private GenerateToken generateToken = new GenerateToken();
+    private final ResponseManage responseManage = new ResponseManage();
+    private final GenerateToken generateToken = new GenerateToken();
+    private final Encryption encryption = new Encryption();
 
     @ApiOperation(value = "登录")
     @PostMapping("/login")
     public Map<String, Object> sing(@RequestBody(required = true) Login login) {
+        login.setPassword(encryption.generatorEncryption(login.getPassword()));
         Customer customer = loginService.result(login);
-        log.info("login:" + login);
+        log.info("login:" + customer);
         String token = generateToken.generate(customer);
         log.info("token:" + token);
         return responseManage.response(token);

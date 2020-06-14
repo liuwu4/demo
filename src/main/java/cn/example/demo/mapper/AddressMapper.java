@@ -2,7 +2,6 @@ package cn.example.demo.mapper;
 
 import cn.example.demo.dao.Address;
 import org.apache.ibatis.annotations.Param;
-import org.springframework.stereotype.Service;
 
 import java.util.List;
 
@@ -11,7 +10,6 @@ import java.util.List;
  * 20:53
  * description:
  */
-@Service
 public interface AddressMapper {
     /**
      * 获取地址
