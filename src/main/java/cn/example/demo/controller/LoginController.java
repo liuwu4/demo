@@ -55,6 +55,9 @@ public class LoginController {
     @ApiOperation(value = "重置密码")
     @PutMapping("/reset")
     public Map<String, Object> reset(@RequestBody Login customer) {
+        if(customer.getPassword().isEmpty()){
+            customer.setPassword(encryption.generatorEncryption(customer.getPassword()));
+        }
         return responseManage.response(loginService.reset(customer));
     }
 }

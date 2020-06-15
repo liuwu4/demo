@@ -42,9 +42,15 @@ public interface CustomerMapper {
 
     /**
      * 更新账号信息
-     * @param customer
-     * @return
+     * @param customer 用户信息
+     * @return int
      */
     int updateCustomer(@Param("customer") Customer customer);
 
+    /**
+     * 批量更新密码
+     * @param customerList 用户信息
+     * @return int
+     */
+    int batchUpdatePassword(@Param("customerList") List<Customer> customerList);
 }

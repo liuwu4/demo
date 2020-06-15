@@ -13,6 +13,7 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
 import java.util.Map;
 
 /**
@@ -74,5 +75,20 @@ public class CustomerController {
         }
         return responseManage.response(customerService.updateCustomer(customer));
     }
+
+//    @PutMapping("/batchUpdatePassword")
+//    @ApiOperation(value = "批量更新密码")
+    public Map<String, Object> batchUpdatePassword(@RequestBody(required = true) List<Customer> customerList) {
+        LOG.info("批量修改密码:--------" + customerList);
+        for (int i = 0; i < customerList.size(); i++) {
+            Customer customer = customerList.get(i);
+            customer.setPhone(customerList.get(i).getPhone());
+            customer.setPassword(encryption.generatorEncryption(customerList.get(i).getPassword()));
+            customerList.set(i, customer);
+        }
+        LOG.info("转换后批量修改密码:--------" + customerList);
+        return responseManage.response(customerService.batchUpdatePassword(customerList));
+    }
+
 
 }

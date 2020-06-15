@@ -85,6 +85,15 @@
             </if>
         </trim>
     </insert>
+    <update id="batchUpdatePassword">
+        <foreach collection="customerList" index="index" item="item"  open="" close="" separator=";">
+            UPDATE login
+            <set>
+                password = #{item.password}
+            </set>
+            WHERE phone = #{item.phone}
+        </foreach>
+    </update>
     <update id="update">
         UPDATE login
         SET status = #{value}

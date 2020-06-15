@@ -2,6 +2,16 @@
 GET {{ baseUrl }}/users
 Accept: application/json
 
+> {% client.global.set("userList", response.body.data); %}
+
+###
+PUT {{ baseUrl }}/batchUpdatePassword
+Accept: */*
+Content-Type: application/json
+
+ {{ userList }}
+
+###
 ### 校验用户是否存在
 GET {{ baseUrl }}/users?customerId=1
 Accept: application/json

@@ -58,4 +58,7 @@ public class CustomerService {
         return customerMapper.updateCustomer(customer);
     }
 
+    public int batchUpdatePassword(List<Customer> customerList) {
+        return customerMapper.batchUpdatePassword(customerList);
+    }
 }
