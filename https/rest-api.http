@@ -9,7 +9,6 @@ PUT {{ baseUrl }}/batchUpdatePassword
 Accept: */*
 Content-Type: application/json
 
- {{ userList }}
 
 ###
 ### 校验用户是否存在

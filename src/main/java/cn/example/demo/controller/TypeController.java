@@ -4,7 +4,7 @@ import cn.example.demo.dao.Type;
 import cn.example.demo.exception.StatusEnum;
 import cn.example.demo.service.TypeService;
 import cn.example.demo.utils.Excel;
-import cn.example.demo.utils.ResponseManage;
+import cn.example.demo.utils.HttpUtils;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiImplicitParam;
 import io.swagger.annotations.ApiOperation;
@@ -32,7 +32,7 @@ public class TypeController {
 
     private static final Logger log = LoggerFactory.getLogger(TypeController.class);
     TypeService typeService;
-    ResponseManage responseManage = new ResponseManage();
+    HttpUtils httpUtils = new HttpUtils();
 
     @Autowired
     public void setTypeService(TypeService typeService) {
@@ -42,19 +42,19 @@ public class TypeController {
     @GetMapping("/types")
     @ApiOperation(value = "查询所有类型")
     public Map<String, Object> type() {
-        return responseManage.response(typeService.type(null));
+        return httpUtils.response(typeService.type(null));
     }
 
     @GetMapping("/type/{typeId}")
     @ApiOperation(value = "查询指定类型")
     public Map<String, Object> search(@PathVariable(required = true) Integer typeId) {
-        return responseManage.response(typeService.type(typeId));
+        return httpUtils.response(typeService.type(typeId));
     }
 
     @PostMapping("/type")
     @ApiOperation(value = "新增类型")
     public Map<String, Object> add(@RequestBody Type type) {
-        return responseManage.response(typeService.add(type));
+        return httpUtils.response(typeService.add(type));
     }
 
     @PostMapping("/type/import")
@@ -82,7 +82,7 @@ public class TypeController {
             map.put("result", result);
             map.put("warning", StatusEnum.EXCEL_NULL);
         }
-        return responseManage.response(map);
+        return httpUtils.response(map);
     }
 
     @GetMapping("/type/download")
@@ -109,14 +109,14 @@ public class TypeController {
     @ApiOperation(value = "修改")
     @ApiImplicitParam(name = "typeId", value = "类型Id", required = true)
     public Map<String, Object> update(@RequestBody Type type, @PathVariable(required = true) Integer typeId) {
-        return responseManage.response(typeService.update(type, typeId));
+        return httpUtils.response(typeService.update(type, typeId));
     }
 
     @DeleteMapping("/type/{typeId}")
     @ApiOperation(value = "删除")
     @ApiImplicitParam(name = "typeId", value = "类型Id", required = true)
     public Map<String, Object> delete(@PathVariable(required = true) Integer typeId) {
-        return responseManage.response(typeService.delete(typeId));
+        return httpUtils.response(typeService.delete(typeId));
     }
 
 

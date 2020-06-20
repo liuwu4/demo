@@ -2,7 +2,7 @@ package cn.example.demo.controller;
 
 import cn.example.demo.dao.Product;
 import cn.example.demo.service.ProductService;
-import cn.example.demo.utils.ResponseManage;
+import cn.example.demo.utils.HttpUtils;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiImplicitParam;
 import io.swagger.annotations.ApiImplicitParams;
@@ -21,7 +21,7 @@ import java.util.Map;
 @RestController
 public class ProductController {
     private ProductService productService;
-    private final ResponseManage responseManage = new ResponseManage();
+    private final HttpUtils httpUtils = new HttpUtils();
 
     @Autowired
     public void setProductService(ProductService productService) {
@@ -31,28 +31,28 @@ public class ProductController {
     @GetMapping(value = {"/products"})
     @ApiOperation(value = "查询所有产品信息")
     public Map<String, Object> products() {
-        return responseManage.response(productService.products(null));
+        return httpUtils.response(productService.products(null));
     }
 
     @GetMapping(value = {"/product/{no}"})
     @ApiOperation(value = "查询no产品信息")
     @ApiImplicitParam(name = "no", value = "查询no产品的具体信息", required = true)
     public Map<String, Object> product(@PathVariable(required = true) Integer no) {
-        return responseManage.response(productService.products(no));
+        return httpUtils.response(productService.products(no));
     }
 
     @PostMapping("/product")
     @ApiOperation(value = "新增产品信息")
     public Map<String, Object> product(@RequestBody(required = true) Product product) {
         System.out.println(product);
-        return responseManage.response(productService.product(product));
+        return httpUtils.response(productService.product(product));
     }
 
     @DeleteMapping("/product/{no}")
     @ApiOperation(value = "删除产品")
     @ApiImplicitParam(name = "no", value = "产品编号", required = true)
     public Map<String, Object> delete(@PathVariable(required = true) Integer no) {
-        return responseManage.response(productService.delete(no));
+        return httpUtils.response(productService.delete(no));
     }
 
     @PutMapping("product/{no}")
@@ -73,6 +73,6 @@ public class ProductController {
     })
     @ApiImplicitParam(name = "no", value = "产品编号", required = true)
     public Map<String, Object> update(@RequestBody(required = true) Product product, @PathVariable Integer no) {
-        return responseManage.response(productService.update(product, no));
+        return httpUtils.response(productService.update(product, no));
     }
 }

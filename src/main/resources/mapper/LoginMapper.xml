@@ -11,7 +11,7 @@
     <select id="result" resultMap="customer">
         <include refid="info"/>
         FROM login
-        WHERE phone = ${login.account} AND password=${login.password}
+        WHERE phone = #{login.account} AND password=#{login.password}
     </select>
     <select id="check" resultMap="customer">
         <include refid="info"/>

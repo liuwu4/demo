@@ -2,15 +2,14 @@
 POST {{baseUrl}}/login
 Accept: */*
 Content-Type: application/json
-Authorization: Bearer {{ token }}
+Authorization:
 
-{"account": "15082000855", "password": "123"}
+{"account": "15082000855", "password": "123456"}
 
 > {% client.global.set("token", response.body.data); %}
 
 ### 请求产品信息
 GET {{baseUrl}}/products
 Accept: application/json
-Authorization: Bearer {{ token }}
-
+Authorization: 123456
 ###

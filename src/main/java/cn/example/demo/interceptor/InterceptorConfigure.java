@@ -23,10 +23,13 @@ public class InterceptorConfigure implements WebMvcConfigurer {
                 "/**/*.png",
                 "/**/*.jpg",
                 "/**/*.html",
+                "/login",
+                "/swagger-resources/**",
+                "/swagger-ui.html/**"
         };
        registry.addInterceptor(new InterceptorConfig())
-               .addPathPatterns("/**")
-               .excludePathPatterns(pathLists);
+               .excludePathPatterns(pathLists)
+               .addPathPatterns("/**");
     }
 
     /**

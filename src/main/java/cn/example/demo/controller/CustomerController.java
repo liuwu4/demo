@@ -3,7 +3,7 @@ package cn.example.demo.controller;
 import cn.example.demo.dao.Customer;
 import cn.example.demo.service.CustomerService;
 import cn.example.demo.utils.Encryption;
-import cn.example.demo.utils.ResponseManage;
+import cn.example.demo.utils.HttpUtils;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiImplicitParam;
 import io.swagger.annotations.ApiImplicitParams;
@@ -25,7 +25,7 @@ import java.util.Map;
 @Api(tags = "所有的用户信息")
 public class CustomerController {
     private static final Logger LOG = LoggerFactory.getLogger(CustomerController.class);
-    private final ResponseManage responseManage = new ResponseManage();
+    private final HttpUtils httpUtils = new HttpUtils();
     private final Encryption encryption = new Encryption();
     private CustomerService customerService;
 
@@ -39,7 +39,7 @@ public class CustomerController {
     @ApiImplicitParam(name = "customerId", value = "检查用户是否存在[id]", required = false)
     public Map<String, Object> users(@RequestParam(required = false) String customerId) {
         LOG.info("查询用户" + customerId);
-        return responseManage.response(customerService.customer(customerId));
+        return httpUtils.response(customerService.customer(customerId));
     }
 
     @PostMapping("/user")
@@ -49,7 +49,7 @@ public class CustomerController {
         if (customer.getPassword() != null) {
             customer.setPassword(encryption.generatorEncryption(customer.getPassword()));
         }
-        return responseManage.response(customerService.inset(customer));
+        return httpUtils.response(customerService.inset(customer));
     }
 
     @DeleteMapping("/user/{account}")
@@ -63,7 +63,7 @@ public class CustomerController {
                                      @RequestParam Integer status,
                                      @RequestParam(required = false) Integer enable) {
         LOG.info("禁用账号|删除账号" + account + "\t" + status + "\t" + enable);
-        return responseManage.response(customerService.modify(account, status, enable));
+        return httpUtils.response(customerService.modify(account, status, enable));
     }
 
     @PutMapping("/user")
@@ -73,11 +73,11 @@ public class CustomerController {
         if (customer.getPassword() != null) {
             customer.setPassword(encryption.generatorEncryption(customer.getPassword()));
         }
-        return responseManage.response(customerService.updateCustomer(customer));
+        return httpUtils.response(customerService.updateCustomer(customer));
     }
 
-//    @PutMapping("/batchUpdatePassword")
-//    @ApiOperation(value = "批量更新密码")
+    @PutMapping("/batchUpdatePassword")
+    @ApiOperation(value = "批量更新密码")
     public Map<String, Object> batchUpdatePassword(@RequestBody(required = true) List<Customer> customerList) {
         LOG.info("批量修改密码:--------" + customerList);
         for (int i = 0; i < customerList.size(); i++) {
@@ -87,7 +87,7 @@ public class CustomerController {
             customerList.set(i, customer);
         }
         LOG.info("转换后批量修改密码:--------" + customerList);
-        return responseManage.response(customerService.batchUpdatePassword(customerList));
+        return httpUtils.response(customerService.batchUpdatePassword(customerList));
     }
 
 

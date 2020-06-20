@@ -5,7 +5,7 @@ import cn.example.demo.dao.Login;
 import cn.example.demo.service.LoginService;
 import cn.example.demo.utils.Encryption;
 import cn.example.demo.utils.GenerateToken;
-import cn.example.demo.utils.ResponseManage;
+import cn.example.demo.utils.HttpUtils;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import org.slf4j.Logger;
@@ -31,7 +31,7 @@ public class LoginController {
     }
 
     public Logger log = LoggerFactory.getLogger(LoginController.class);
-    private final ResponseManage responseManage = new ResponseManage();
+    private final HttpUtils httpUtils = new HttpUtils();
     private final GenerateToken generateToken = new GenerateToken();
     private final Encryption encryption = new Encryption();
 
@@ -43,13 +43,13 @@ public class LoginController {
         log.info("login:" + customer);
         String token = generateToken.generate(customer);
         log.info("token:" + token);
-        return responseManage.response(token);
+        return httpUtils.response(token);
     }
 
     @GetMapping("/user/check")
     @ApiOperation(nickname = "phone", value = "校验账号是否存在 phone")
     public Map<String, Object> check(@RequestParam(required = true) String phone) {
-        return responseManage.response(loginService.check(phone));
+        return httpUtils.response(loginService.check(phone));
     }
 
     @ApiOperation(value = "重置密码")
@@ -58,6 +58,6 @@ public class LoginController {
         if(customer.getPassword().isEmpty()){
             customer.setPassword(encryption.generatorEncryption(customer.getPassword()));
         }
-        return responseManage.response(loginService.reset(customer));
+        return httpUtils.response(loginService.reset(customer));
     }
 }
