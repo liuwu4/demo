@@ -37,7 +37,7 @@ class DemoApplicationTests {
 
     @Test
     public void redisStart() {
-        log.info("reis:" + redisUtil.getValues("token"));
+        log.info("reis:" + redisUtil.getValues("user:15082000855:token"));
     }
 
     @Test

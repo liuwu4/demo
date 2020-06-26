@@ -6,6 +6,7 @@ import cn.example.demo.service.LoginService;
 import cn.example.demo.utils.Encryption;
 import cn.example.demo.utils.GenerateToken;
 import cn.example.demo.utils.HttpUtils;
+import cn.example.demo.utils.RedisUtil;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import org.slf4j.Logger;
@@ -23,6 +24,8 @@ import java.util.Map;
 @RestController
 @Api(tags = "登录, 修改密码, 找回密码")
 public class LoginController {
+    @Autowired
+    RedisUtil redisUtil;
     LoginService loginService;
 
     @Autowired
@@ -42,7 +45,11 @@ public class LoginController {
         Customer customer = loginService.result(login);
         log.info("login:" + customer);
         String token = generateToken.generate(customer);
-        log.info("token:" + token);
+        StringBuilder stringBuilder = new StringBuilder();
+        stringBuilder.append("user:")
+                .append(login.getAccount())
+                .append(":token");
+        redisUtil.setValue(stringBuilder.toStrsrcing(), token, 30);
         return httpUtils.response(token);
     }
 
@@ -55,7 +62,7 @@ public class LoginController {
     @ApiOperation(value = "重置密码")
     @PutMapping("/reset")
     public Map<String, Object> reset(@RequestBody Login customer) {
-        if(customer.getPassword().isEmpty()){
+        if (customer.getPassword().isEmpty()) {
             customer.setPassword(encryption.generatorEncryption(customer.getPassword()));
         }
         return httpUtils.response(loginService.reset(customer));

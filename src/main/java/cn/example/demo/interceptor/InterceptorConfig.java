@@ -1,8 +1,11 @@
 package cn.example.demo.interceptor;
 
+import cn.example.demo.utils.GenerateToken;
 import cn.example.demo.utils.HttpUtils;
+import cn.example.demo.utils.RedisUtil;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import org.springframework.web.servlet.HandlerInterceptor;
 import org.springframework.web.servlet.ModelAndView;
@@ -20,6 +23,9 @@ import java.io.PrintWriter;
 @Component
 public class InterceptorConfig implements HandlerInterceptor {
     private final static Logger log = LoggerFactory.getLogger(InterceptorConfig.class);
+    GenerateToken generateToken = new GenerateToken();
+    @Autowired
+    RedisUtil redisUtil;
 
     @Override
     public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) throws Exception {
@@ -34,7 +40,21 @@ public class InterceptorConfig implements HandlerInterceptor {
             writeResponseBody(401, "当前用户的token信息无效", response);
             return false;
         }
+        String isRedisEffective = tokenIsRedis(authorization);
+        if (isRedisEffective.isEmpty()) {
+            writeResponseBody(401, "当前用户token过期, 请重新登录!", response);
+            return false;
+        }
         return true;
+    }
+
+    private String tokenIsRedis(String authorization) {
+        String account = generateToken.parseToken(authorization);
+        StringBuilder stringBuilder = new StringBuilder();
+        stringBuilder.append("user:")
+                .append(account)
+                .append(":token");
+        return redisUtil.getValues(stringBuilder.toString()).get(stringBuilder.toString()).toString();
     }
 
 

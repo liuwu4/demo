@@ -1,5 +1,6 @@
 package cn.example.demo.interceptor;
 
+import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.servlet.config.annotation.CorsRegistry;
 import org.springframework.web.servlet.config.annotation.InterceptorRegistry;
@@ -13,23 +14,33 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 @Configuration
 public class InterceptorConfigure implements WebMvcConfigurer {
     /**
+     * 这里需要先将限流拦截器入住，不然无法获取到拦截器中的redistemplate
+     *
+     * @return
+     */
+    @Bean
+    public InterceptorConfig getAccessLimitIntercept() {
+        return new InterceptorConfig();
+    }
+
+    /**
      * 拦截url
      */
     @Override
     public void addInterceptors(InterceptorRegistry registry) {
-        String [] pathLists= {
+        String[] pathLists = {
                 "/**/*.css",
                 "/**/*.js",
                 "/**/*.png",
                 "/**/*.jpg",
                 "/**/*.html",
-                "/login",
+                "/login/**",
                 "/swagger-resources/**",
                 "/swagger-ui.html/**"
         };
-       registry.addInterceptor(new InterceptorConfig())
-               .excludePathPatterns(pathLists)
-               .addPathPatterns("/**");
+        registry.addInterceptor(getAccessLimitIntercept())
+                .excludePathPatterns(pathLists)
+                .addPathPatterns("/**");
     }
 
     /**
