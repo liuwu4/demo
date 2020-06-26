@@ -49,7 +49,7 @@ public class LoginController {
         stringBuilder.append("user:")
                 .append(login.getAccount())
                 .append(":token");
-        redisUtil.setValue(stringBuilder.toStrsrcing(), token, 30);
+        redisUtil.setValue(stringBuilder.toString(), token, 30);
         return httpUtils.response(token);
     }
 
