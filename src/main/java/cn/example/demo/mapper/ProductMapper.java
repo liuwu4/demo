@@ -2,7 +2,7 @@ package cn.example.demo.mapper;
 
 import cn.example.demo.dao.Product;
 import org.apache.ibatis.annotations.Param;
-import org.springframework.stereotype.Service;
+import org.springframework.stereotype.Repository;
 
 import java.util.List;
 
@@ -11,9 +11,11 @@ import java.util.List;
  * 17:14
  * description:
  */
+@Repository
 public interface ProductMapper {
     /**
      * 获取产品
+     *
      * @param no 搜索特定的产品
      * @return list
      */
@@ -21,6 +23,7 @@ public interface ProductMapper {
 
     /**
      * 新增
+     *
      * @param product 产品信息
      * @return int
      */
@@ -28,6 +31,7 @@ public interface ProductMapper {
 
     /**
      * 删除产品
+     *
      * @param no 编号
      * @return int
      */
@@ -35,6 +39,7 @@ public interface ProductMapper {
 
     /**
      * 更新产品信息
+     *
      * @param product 产品内容
      * @return int
      */

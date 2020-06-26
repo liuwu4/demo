@@ -1,526 +1,364 @@
-2020-06-21 00:01:25.200  INFO 16852 --- [main] cn.example.demo.DemoApplication          : Starting DemoApplication on PC7018 with PID 16852 (D:\workspace\demo\build\classes\java\main started by Administrator in D:\workspace\demo)
-2020-06-21 00:01:25.221  INFO 16852 --- [main] cn.example.demo.DemoApplication          : No active profile set, falling back to default profiles: default
-2020-06-21 00:01:27.898  INFO 16852 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
-2020-06-21 00:01:27.903  INFO 16852 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
-2020-06-21 00:01:28.014  INFO 16852 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 71ms. Found 0 Redis repository interfaces.
-2020-06-21 00:01:28.747  INFO 16852 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2020-06-21 00:01:29.253  INFO 16852 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 7012 (http)
-2020-06-21 00:01:29.273  INFO 16852 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2020-06-21 00:01:29.273  INFO 16852 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.29]
-2020-06-21 00:01:29.277  INFO 16852 --- [main] o.a.catalina.core.AprLifecycleListener   : An older version [1.2.18] of the APR based Apache Tomcat Native library is installed, while Tomcat recommends a minimum version of [1.2.23]
-2020-06-21 00:01:29.277  INFO 16852 --- [main] o.a.catalina.core.AprLifecycleListener   : Loaded APR based Apache Tomcat Native library [1.2.18] using APR version [1.6.5].
-2020-06-21 00:01:29.278  INFO 16852 --- [main] o.a.catalina.core.AprLifecycleListener   : APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
-2020-06-21 00:01:29.279  INFO 16852 --- [main] o.a.catalina.core.AprLifecycleListener   : APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
-2020-06-21 00:01:29.286  INFO 16852 --- [main] o.a.catalina.core.AprLifecycleListener   : OpenSSL successfully initialized [OpenSSL 1.1.1  11 Sep 2018]
-2020-06-21 00:01:29.547  INFO 16852 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/api]    : Initializing Spring embedded WebApplicationContext
-2020-06-21 00:01:29.548  INFO 16852 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 4058 ms
-2020-06-21 00:01:29.860  INFO 16852 --- [main] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
-2020-06-21 00:01:30.550  INFO 16852 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
-2020-06-21 00:01:31.618  INFO 16852 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
-2020-06-21 00:01:31.821  INFO 16852 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
-2020-06-21 00:01:32.636  INFO 16852 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
-2020-06-21 00:01:32.672  INFO 16852 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
-2020-06-21 00:01:32.758  INFO 16852 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
-2020-06-21 00:01:33.027  INFO 16852 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: updateUsingPUT_1
-2020-06-21 00:01:33.062  INFO 16852 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: deleteUsingDELETE_1
-2020-06-21 00:01:33.099  INFO 16852 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: updateUsingPUT_2
-2020-06-21 00:01:33.108  INFO 16852 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: deleteUsingDELETE_2
-2020-06-21 00:01:33.157  INFO 16852 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: updateUsingPUT_3
-2020-06-21 00:01:33.240  INFO 16852 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 7012 (http) with context path '/api'
-2020-06-21 00:01:33.246  INFO 16852 --- [main] cn.example.demo.DemoApplication          : Started DemoApplication in 9.071 seconds (JVM running for 13.525)
-2020-06-21 00:01:58.465  INFO 16852 --- [http-nio-7012-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/api]    : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2020-06-21 00:01:58.466  INFO 16852 --- [http-nio-7012-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2020-06-21 00:01:58.482  INFO 16852 --- [http-nio-7012-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 16 ms
-2020-06-21 00:01:58.522  INFO 16852 --- [http-nio-7012-exec-1] c.e.demo.interceptor.InterceptorConfig   : preHandle-------request:
-2020-06-21 00:01:58.522  INFO 16852 --- [http-nio-7012-exec-1] c.e.demo.interceptor.InterceptorConfig   : authorization-------------;
-2020-06-21 00:01:58.522  INFO 16852 --- [http-nio-7012-exec-1] c.e.demo.interceptor.InterceptorConfig   : -----------------------用户token 不存在----------------------
-2020-06-21 00:02:29.498  INFO 7820 --- [main] cn.example.demo.DemoApplication          : Starting DemoApplication on PC7018 with PID 7820 (D:\workspace\demo\build\classes\java\main started by Administrator in D:\workspace\demo)
-2020-06-21 00:02:29.505  INFO 7820 --- [main] cn.example.demo.DemoApplication          : No active profile set, falling back to default profiles: default
-2020-06-21 00:02:32.149  INFO 7820 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
-2020-06-21 00:02:32.158  INFO 7820 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
-2020-06-21 00:02:32.246  INFO 7820 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 58ms. Found 0 Redis repository interfaces.
-2020-06-21 00:02:33.069  INFO 7820 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2020-06-21 00:02:33.652  INFO 7820 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 7012 (http)
-2020-06-21 00:02:33.676  INFO 7820 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2020-06-21 00:02:33.676  INFO 7820 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.29]
-2020-06-21 00:02:33.680  INFO 7820 --- [main] o.a.catalina.core.AprLifecycleListener   : An older version [1.2.18] of the APR based Apache Tomcat Native library is installed, while Tomcat recommends a minimum version of [1.2.23]
-2020-06-21 00:02:33.682  INFO 7820 --- [main] o.a.catalina.core.AprLifecycleListener   : Loaded APR based Apache Tomcat Native library [1.2.18] using APR version [1.6.5].
-2020-06-21 00:02:33.682  INFO 7820 --- [main] o.a.catalina.core.AprLifecycleListener   : APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
-2020-06-21 00:02:33.683  INFO 7820 --- [main] o.a.catalina.core.AprLifecycleListener   : APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
-2020-06-21 00:02:33.692  INFO 7820 --- [main] o.a.catalina.core.AprLifecycleListener   : OpenSSL successfully initialized [OpenSSL 1.1.1  11 Sep 2018]
-2020-06-21 00:02:33.972  INFO 7820 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/api]    : Initializing Spring embedded WebApplicationContext
-2020-06-21 00:02:33.973  INFO 7820 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 4299 ms
-2020-06-21 00:02:34.319  INFO 7820 --- [main] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
-2020-06-21 00:02:35.156  INFO 7820 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
-2020-06-21 00:02:36.587  INFO 7820 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
-2020-06-21 00:02:36.969  INFO 7820 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
-2020-06-21 00:02:38.461  INFO 7820 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
-2020-06-21 00:02:38.504  INFO 7820 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
-2020-06-21 00:02:38.626  INFO 7820 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
-2020-06-21 00:02:39.072  INFO 7820 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: updateUsingPUT_1
-2020-06-21 00:02:39.118  INFO 7820 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: deleteUsingDELETE_1
-2020-06-21 00:02:39.227  INFO 7820 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: updateUsingPUT_2
-2020-06-21 00:02:39.235  INFO 7820 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: deleteUsingDELETE_2
-2020-06-21 00:02:39.322  INFO 7820 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: updateUsingPUT_3
-2020-06-21 00:02:39.423  INFO 7820 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 7012 (http) with context path '/api'
-2020-06-21 00:02:39.429  INFO 7820 --- [main] cn.example.demo.DemoApplication          : Started DemoApplication in 11.163 seconds (JVM running for 15.565)
-2020-06-21 00:02:48.711  INFO 7820 --- [http-nio-7012-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/api]    : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2020-06-21 00:02:48.712  INFO 7820 --- [http-nio-7012-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2020-06-21 00:02:48.723  INFO 7820 --- [http-nio-7012-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 10 ms
-2020-06-21 00:02:48.767  INFO 7820 --- [http-nio-7012-exec-2] c.e.demo.interceptor.InterceptorConfig   : preHandle-------request:
-2020-06-21 00:03:18.023  INFO 17032 --- [main] cn.example.demo.DemoApplication          : Starting DemoApplication on PC7018 with PID 17032 (D:\workspace\demo\build\classes\java\main started by Administrator in D:\workspace\demo)
-2020-06-21 00:03:18.032  INFO 17032 --- [main] cn.example.demo.DemoApplication          : No active profile set, falling back to default profiles: default
-2020-06-21 00:03:20.329  INFO 17032 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
-2020-06-21 00:03:20.339  INFO 17032 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
-2020-06-21 00:03:20.417  INFO 17032 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 52ms. Found 0 Redis repository interfaces.
-2020-06-21 00:03:20.998  INFO 17032 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2020-06-21 00:03:21.504  INFO 17032 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 7012 (http)
-2020-06-21 00:03:21.520  INFO 17032 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2020-06-21 00:03:21.521  INFO 17032 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.29]
-2020-06-21 00:03:21.523  INFO 17032 --- [main] o.a.catalina.core.AprLifecycleListener   : An older version [1.2.18] of the APR based Apache Tomcat Native library is installed, while Tomcat recommends a minimum version of [1.2.23]
-2020-06-21 00:03:21.524  INFO 17032 --- [main] o.a.catalina.core.AprLifecycleListener   : Loaded APR based Apache Tomcat Native library [1.2.18] using APR version [1.6.5].
-2020-06-21 00:03:21.524  INFO 17032 --- [main] o.a.catalina.core.AprLifecycleListener   : APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
-2020-06-21 00:03:21.525  INFO 17032 --- [main] o.a.catalina.core.AprLifecycleListener   : APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
-2020-06-21 00:03:21.536  INFO 17032 --- [main] o.a.catalina.core.AprLifecycleListener   : OpenSSL successfully initialized [OpenSSL 1.1.1  11 Sep 2018]
-2020-06-21 00:03:21.805  INFO 17032 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/api]    : Initializing Spring embedded WebApplicationContext
-2020-06-21 00:03:21.806  INFO 17032 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 3624 ms
-2020-06-21 00:03:22.120  INFO 17032 --- [main] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
-2020-06-21 00:03:22.711  INFO 17032 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
-2020-06-21 00:03:23.670  INFO 17032 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
-2020-06-21 00:03:23.855  INFO 17032 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
-2020-06-21 00:03:24.771  INFO 17032 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
-2020-06-21 00:03:24.814  INFO 17032 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
-2020-06-21 00:03:24.895  INFO 17032 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
-2020-06-21 00:03:25.185  INFO 17032 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: updateUsingPUT_1
-2020-06-21 00:03:25.223  INFO 17032 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: deleteUsingDELETE_1
-2020-06-21 00:03:25.256  INFO 17032 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: updateUsingPUT_2
-2020-06-21 00:03:25.266  INFO 17032 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: deleteUsingDELETE_2
-2020-06-21 00:03:25.318  INFO 17032 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: updateUsingPUT_3
-2020-06-21 00:03:25.415  INFO 17032 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 7012 (http) with context path '/api'
-2020-06-21 00:03:25.426  INFO 17032 --- [main] cn.example.demo.DemoApplication          : Started DemoApplication in 8.536 seconds (JVM running for 13.449)
-2020-06-21 00:04:14.839  INFO 17032 --- [http-nio-7012-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/api]    : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2020-06-21 00:04:14.840  INFO 17032 --- [http-nio-7012-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2020-06-21 00:04:14.853  INFO 17032 --- [http-nio-7012-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 12 ms
-2020-06-21 00:04:14.888  INFO 17032 --- [http-nio-7012-exec-2] c.e.demo.interceptor.InterceptorConfig   : preHandle-------request:
-2020-06-21 00:12:57.479  INFO 232 --- [main] cn.example.demo.DemoApplication          : Starting DemoApplication on PC7018 with PID 232 (D:\workspace\demo\build\classes\java\main started by Administrator in D:\workspace\demo)
-2020-06-21 00:12:57.486  INFO 232 --- [main] cn.example.demo.DemoApplication          : No active profile set, falling back to default profiles: default
-2020-06-21 00:12:59.817  INFO 232 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
-2020-06-21 00:12:59.821  INFO 232 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
-2020-06-21 00:12:59.898  INFO 232 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 44ms. Found 0 Redis repository interfaces.
-2020-06-21 00:13:00.461  INFO 232 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2020-06-21 00:13:00.937  INFO 232 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 7012 (http)
-2020-06-21 00:13:00.952  INFO 232 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2020-06-21 00:13:00.952  INFO 232 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.29]
-2020-06-21 00:13:00.955  INFO 232 --- [main] o.a.catalina.core.AprLifecycleListener   : An older version [1.2.18] of the APR based Apache Tomcat Native library is installed, while Tomcat recommends a minimum version of [1.2.23]
-2020-06-21 00:13:00.956  INFO 232 --- [main] o.a.catalina.core.AprLifecycleListener   : Loaded APR based Apache Tomcat Native library [1.2.18] using APR version [1.6.5].
-2020-06-21 00:13:00.956  INFO 232 --- [main] o.a.catalina.core.AprLifecycleListener   : APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
-2020-06-21 00:13:00.957  INFO 232 --- [main] o.a.catalina.core.AprLifecycleListener   : APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
-2020-06-21 00:13:00.965  INFO 232 --- [main] o.a.catalina.core.AprLifecycleListener   : OpenSSL successfully initialized [OpenSSL 1.1.1  11 Sep 2018]
-2020-06-21 00:13:01.189  INFO 232 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/api]    : Initializing Spring embedded WebApplicationContext
-2020-06-21 00:13:01.189  INFO 232 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 3573 ms
-2020-06-21 00:13:01.475  INFO 232 --- [main] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
-2020-06-21 00:13:02.146  INFO 232 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
-2020-06-21 00:13:03.021  INFO 232 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
-2020-06-21 00:13:03.236  INFO 232 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
-2020-06-21 00:13:04.145  INFO 232 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
-2020-06-21 00:13:04.181  INFO 232 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
-2020-06-21 00:13:04.274  INFO 232 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
-2020-06-21 00:13:04.580  INFO 232 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: updateUsingPUT_1
-2020-06-21 00:13:04.615  INFO 232 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: deleteUsingDELETE_1
-2020-06-21 00:13:04.647  INFO 232 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: updateUsingPUT_2
-2020-06-21 00:13:04.654  INFO 232 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: deleteUsingDELETE_2
-2020-06-21 00:13:04.706  INFO 232 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: updateUsingPUT_3
-2020-06-21 00:13:04.807  INFO 232 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 7012 (http) with context path '/api'
-2020-06-21 00:13:04.814  INFO 232 --- [main] cn.example.demo.DemoApplication          : Started DemoApplication in 8.475 seconds (JVM running for 12.546)
-2020-06-21 00:13:12.001  INFO 232 --- [http-nio-7012-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/api]    : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2020-06-21 00:13:12.002  INFO 232 --- [http-nio-7012-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2020-06-21 00:13:12.019  INFO 232 --- [http-nio-7012-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 16 ms
-2020-06-21 00:13:12.064  INFO 232 --- [http-nio-7012-exec-1] c.e.demo.interceptor.InterceptorConfig   : preHandle-------request:null
-2020-06-21 00:13:12.065  INFO 232 --- [http-nio-7012-exec-1] c.e.demo.interceptor.InterceptorConfig   : isHeader--------------false
-2020-06-21 00:13:12.109 ERROR 232 --- [http-nio-7012-exec-1] o.a.c.c.C.[.[.[.[dispatcherServlet]      : Servlet.service() for servlet [dispatcherServlet] in context with path [/api] threw exception [Request processing failed; nested exception is java.lang.NullPointerException] with root cause
+2020-06-26 19:06:29.113  INFO 7364 --- [Test worker] cn.example.demo.DemoApplicationTests     : Starting DemoApplicationTests on PC7018 with PID 7364 (started by Administrator in D:\workspace\demo)
+2020-06-26 19:06:29.159  INFO 7364 --- [Test worker] cn.example.demo.DemoApplicationTests     : No active profile set, falling back to default profiles: default
+2020-06-26 19:06:32.696  INFO 7364 --- [Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-06-26 19:06:32.708  INFO 7364 --- [Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2020-06-26 19:06:32.818  INFO 7364 --- [Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 67ms. Found 0 Redis repository interfaces.
+2020-06-26 19:06:34.089  INFO 7364 --- [Test worker] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-06-26 19:06:34.973  INFO 7364 --- [Test worker] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
+2020-06-26 19:06:37.072  INFO 7364 --- [Test worker] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2020-06-26 19:06:39.500  INFO 7364 --- [Test worker] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2020-06-26 19:06:42.901  INFO 7364 --- [Test worker] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-06-26 19:06:46.234  INFO 7364 --- [Test worker] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2020-06-26 19:06:46.390  INFO 7364 --- [Test worker] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2020-06-26 19:06:46.536  INFO 7364 --- [Test worker] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2020-06-26 19:06:47.257  INFO 7364 --- [Test worker] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: updateUsingPUT_1
+2020-06-26 19:06:47.349  INFO 7364 --- [Test worker] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: deleteUsingDELETE_1
+2020-06-26 19:06:47.458  INFO 7364 --- [Test worker] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: updateUsingPUT_2
+2020-06-26 19:06:47.490  INFO 7364 --- [Test worker] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: deleteUsingDELETE_2
+2020-06-26 19:06:47.623  INFO 7364 --- [Test worker] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: updateUsingPUT_3
+2020-06-26 19:06:47.684  INFO 7364 --- [Test worker] cn.example.demo.DemoApplicationTests     : Started DemoApplicationTests in 19.553 seconds (JVM running for 26.564)
+2020-06-26 19:06:50.989  INFO 7364 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-06-26 19:06:51.005  INFO 7364 --- [SpringContextShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closed
+2020-06-26 19:24:08.500  INFO 18064 --- [Test worker] cn.example.demo.DemoApplicationTests     : Starting DemoApplicationTests on PC7018 with PID 18064 (started by Administrator in D:\workspace\demo)
+2020-06-26 19:24:08.516  INFO 18064 --- [Test worker] cn.example.demo.DemoApplicationTests     : No active profile set, falling back to default profiles: default
+2020-06-26 19:24:11.658  INFO 18064 --- [Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-06-26 19:24:11.666  INFO 18064 --- [Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2020-06-26 19:24:11.753  INFO 18064 --- [Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 53ms. Found 0 Redis repository interfaces.
+2020-06-26 19:24:12.728  INFO 18064 --- [Test worker] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-06-26 19:24:13.730  INFO 18064 --- [Test worker] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
+2020-06-26 19:24:15.830  INFO 18064 --- [Test worker] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2020-06-26 19:24:19.014  INFO 18064 --- [Test worker] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2020-06-26 19:24:20.212  INFO 18064 --- [Test worker] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-06-26 19:24:22.410  INFO 18064 --- [Test worker] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2020-06-26 19:24:22.483  INFO 18064 --- [Test worker] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2020-06-26 19:24:22.574  INFO 18064 --- [Test worker] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2020-06-26 19:24:22.974  INFO 18064 --- [Test worker] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: updateUsingPUT_1
+2020-06-26 19:24:23.031  INFO 18064 --- [Test worker] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: deleteUsingDELETE_1
+2020-06-26 19:24:23.118  INFO 18064 --- [Test worker] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: updateUsingPUT_2
+2020-06-26 19:24:23.149  INFO 18064 --- [Test worker] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: deleteUsingDELETE_2
+2020-06-26 19:24:23.223  INFO 18064 --- [Test worker] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: updateUsingPUT_3
+2020-06-26 19:24:23.290  INFO 18064 --- [Test worker] cn.example.demo.DemoApplicationTests     : Started DemoApplicationTests in 16.121 seconds (JVM running for 23.778)
+2020-06-26 19:24:24.799  INFO 18064 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-06-26 19:24:24.826  INFO 18064 --- [SpringContextShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closed
+2020-06-26 19:33:37.569  INFO 11688 --- [Test worker] cn.example.demo.DemoApplicationTests     : Starting DemoApplicationTests on PC7018 with PID 11688 (started by Administrator in D:\workspace\demo)
+2020-06-26 19:33:37.573  INFO 11688 --- [Test worker] cn.example.demo.DemoApplicationTests     : No active profile set, falling back to default profiles: default
+2020-06-26 19:33:40.215  INFO 11688 --- [Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-06-26 19:33:40.222  INFO 11688 --- [Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2020-06-26 19:33:40.327  INFO 11688 --- [Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 71ms. Found 0 Redis repository interfaces.
+2020-06-26 19:33:41.146  INFO 11688 --- [Test worker] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-06-26 19:33:41.802  INFO 11688 --- [Test worker] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
+2020-06-26 19:33:42.721  INFO 11688 --- [Test worker] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2020-06-26 19:33:44.508  INFO 11688 --- [Test worker] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2020-06-26 19:33:45.331  INFO 11688 --- [Test worker] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-06-26 19:33:46.858  INFO 11688 --- [Test worker] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2020-06-26 19:33:46.912  INFO 11688 --- [Test worker] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2020-06-26 19:33:47.001  INFO 11688 --- [Test worker] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2020-06-26 19:33:47.336  INFO 11688 --- [Test worker] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: updateUsingPUT_1
+2020-06-26 19:33:47.392  INFO 11688 --- [Test worker] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: deleteUsingDELETE_1
+2020-06-26 19:33:47.440  INFO 11688 --- [Test worker] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: updateUsingPUT_2
+2020-06-26 19:33:47.452  INFO 11688 --- [Test worker] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: deleteUsingDELETE_2
+2020-06-26 19:33:47.517  INFO 11688 --- [Test worker] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: updateUsingPUT_3
+2020-06-26 19:33:47.563  INFO 11688 --- [Test worker] cn.example.demo.DemoApplicationTests     : Started DemoApplicationTests in 10.757 seconds (JVM running for 17.182)
+2020-06-26 19:33:48.218 ERROR 11688 --- [Test worker] o.s.test.context.TestContextManager      : Caught exception while allowing TestExecutionListener [org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@68b0926b] to prepare test instance [cn.example.demo.DemoApplicationTests@7f359b27]
 
-java.lang.NullPointerException: null
-	at cn.example.demo.interceptor.InterceptorConfig.preHandle(InterceptorConfig.java:29) ~[main/:na]
-	at org.springframework.web.servlet.HandlerExecutionChain.applyPreHandle(HandlerExecutionChain.java:141) ~[spring-webmvc-5.2.2.RELEASE.jar:5.2.2.RELEASE]
-	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1035) ~[spring-webmvc-5.2.2.RELEASE.jar:5.2.2.RELEASE]
-	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:943) ~[spring-webmvc-5.2.2.RELEASE.jar:5.2.2.RELEASE]
-	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006) ~[spring-webmvc-5.2.2.RELEASE.jar:5.2.2.RELEASE]
-	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898) ~[spring-webmvc-5.2.2.RELEASE.jar:5.2.2.RELEASE]
-	at javax.servlet.http.HttpServlet.service(HttpServlet.java:634) ~[tomcat-embed-core-9.0.29.jar:9.0.29]
-	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883) ~[spring-webmvc-5.2.2.RELEASE.jar:5.2.2.RELEASE]
-	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741) ~[tomcat-embed-core-9.0.29.jar:9.0.29]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231) ~[tomcat-embed-core-9.0.29.jar:9.0.29]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.29.jar:9.0.29]
-	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53) ~[tomcat-embed-websocket-9.0.29.jar:9.0.29]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.29.jar:9.0.29]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.29.jar:9.0.29]
-	at com.alibaba.druid.support.http.WebStatFilter.doFilter(WebStatFilter.java:123) ~[druid-1.1.10.jar:1.1.10]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.29.jar:9.0.29]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.29.jar:9.0.29]
-	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-5.2.2.RELEASE.jar:5.2.2.RELEASE]
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.2.2.RELEASE.jar:5.2.2.RELEASE]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.29.jar:9.0.29]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.29.jar:9.0.29]
-	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-5.2.2.RELEASE.jar:5.2.2.RELEASE]
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.2.2.RELEASE.jar:5.2.2.RELEASE]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.29.jar:9.0.29]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.29.jar:9.0.29]
-	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-5.2.2.RELEASE.jar:5.2.2.RELEASE]
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.2.2.RELEASE.jar:5.2.2.RELEASE]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.29.jar:9.0.29]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.29.jar:9.0.29]
-	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202) ~[tomcat-embed-core-9.0.29.jar:9.0.29]
-	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96) [tomcat-embed-core-9.0.29.jar:9.0.29]
-	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:526) [tomcat-embed-core-9.0.29.jar:9.0.29]
-	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139) [tomcat-embed-core-9.0.29.jar:9.0.29]
-	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) [tomcat-embed-core-9.0.29.jar:9.0.29]
-	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) [tomcat-embed-core-9.0.29.jar:9.0.29]
-	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343) [tomcat-embed-core-9.0.29.jar:9.0.29]
-	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:367) [tomcat-embed-core-9.0.29.jar:9.0.29]
-	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65) [tomcat-embed-core-9.0.29.jar:9.0.29]
-	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:860) [tomcat-embed-core-9.0.29.jar:9.0.29]
-	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1591) [tomcat-embed-core-9.0.29.jar:9.0.29]
-	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) [tomcat-embed-core-9.0.29.jar:9.0.29]
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) [na:1.8.0_171]
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) [na:1.8.0_171]
-	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) [tomcat-embed-core-9.0.29.jar:9.0.29]
-	at java.lang.Thread.run(Thread.java:748) [na:1.8.0_171]
+org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'cn.example.demo.DemoApplicationTests': Unsatisfied dependency expressed through field 'redisTemplate'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'org.springframework.data.redis.core.RedisTemplate<java.lang.String, java.lang.Object>' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:643) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:116) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:399) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1422) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireBeanProperties(AbstractAutowireCapableBeanFactory.java:393) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.injectDependencies(DependencyInjectionTestExecutionListener.java:119) ~[spring-test-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.prepareTestInstance(DependencyInjectionTestExecutionListener.java:83) ~[spring-test-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener.prepareTestInstance(SpringBootDependencyInjectionTestExecutionListener.java:43) ~[spring-boot-test-autoconfigure-2.2.2.RELEASE.jar:2.2.2.RELEASE]
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:244) ~[spring-test-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.test.context.junit.jupiter.SpringExtension.postProcessTestInstance(SpringExtension.java:98) [spring-test-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$invokeTestInstancePostProcessors$5(ClassBasedTestDescriptor.java:337) [junit-jupiter-engine-5.5.2.jar:5.5.2]
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.executeAndMaskThrowable(ClassBasedTestDescriptor.java:342) [junit-jupiter-engine-5.5.2.jar:5.5.2]
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$invokeTestInstancePostProcessors$6(ClassBasedTestDescriptor.java:337) [junit-jupiter-engine-5.5.2.jar:5.5.2]
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:195) ~[na:na]
+	at java.base/java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:177) ~[na:na]
+	at java.base/java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1492) ~[na:na]
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:484) ~[na:na]
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:474) ~[na:na]
+	at java.base/java.util.stream.StreamSpliterators$WrappingSpliterator.forEachRemaining(StreamSpliterators.java:312) ~[na:na]
+	at java.base/java.util.stream.Streams$ConcatSpliterator.forEachRemaining(Streams.java:735) ~[na:na]
+	at java.base/java.util.stream.Streams$ConcatSpliterator.forEachRemaining(Streams.java:734) ~[na:na]
+	at java.base/java.util.stream.ReferencePipeline$Head.forEach(ReferencePipeline.java:658) ~[na:na]
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.invokeTestInstancePostProcessors(ClassBasedTestDescriptor.java:336) [junit-jupiter-engine-5.5.2.jar:5.5.2]
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.instantiateAndPostProcessTestInstance(ClassBasedTestDescriptor.java:259) [junit-jupiter-engine-5.5.2.jar:5.5.2]
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$testInstancesProvider$2(ClassBasedTestDescriptor.java:252) [junit-jupiter-engine-5.5.2.jar:5.5.2]
+	at java.base/java.util.Optional.orElseGet(Optional.java:358) ~[na:na]
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$testInstancesProvider$3(ClassBasedTestDescriptor.java:251) [junit-jupiter-engine-5.5.2.jar:5.5.2]
+	at org.junit.jupiter.engine.execution.TestInstancesProvider.getTestInstances(TestInstancesProvider.java:29) ~[junit-jupiter-engine-5.5.2.jar:5.5.2]
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$prepare$0(TestMethodTestDescriptor.java:106) ~[junit-jupiter-engine-5.5.2.jar:5.5.2]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.5.2.jar:1.5.2]
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.prepare(TestMethodTestDescriptor.java:105) ~[junit-jupiter-engine-5.5.2.jar:5.5.2]
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.prepare(TestMethodTestDescriptor.java:69) ~[junit-jupiter-engine-5.5.2.jar:5.5.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$prepare$1(NodeTestTask.java:107) ~[junit-platform-engine-1.5.2.jar:1.5.2]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.5.2.jar:1.5.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.prepare(NodeTestTask.java:107) ~[junit-platform-engine-1.5.2.jar:1.5.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:75) ~[junit-platform-engine-1.5.2.jar:1.5.2]
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1378) ~[na:na]
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:38) ~[junit-platform-engine-1.5.2.jar:1.5.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$5(NodeTestTask.java:139) ~[junit-platform-engine-1.5.2.jar:1.5.2]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.5.2.jar:1.5.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$7(NodeTestTask.java:125) ~[junit-platform-engine-1.5.2.jar:1.5.2]
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:135) ~[junit-platform-engine-1.5.2.jar:1.5.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:123) ~[junit-platform-engine-1.5.2.jar:1.5.2]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.5.2.jar:1.5.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:122) ~[junit-platform-engine-1.5.2.jar:1.5.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:80) ~[junit-platform-engine-1.5.2.jar:1.5.2]
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1378) ~[na:na]
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:38) ~[junit-platform-engine-1.5.2.jar:1.5.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$5(NodeTestTask.java:139) ~[junit-platform-engine-1.5.2.jar:1.5.2]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.5.2.jar:1.5.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$7(NodeTestTask.java:125) ~[junit-platform-engine-1.5.2.jar:1.5.2]
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:135) ~[junit-platform-engine-1.5.2.jar:1.5.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:123) ~[junit-platform-engine-1.5.2.jar:1.5.2]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.5.2.jar:1.5.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:122) ~[junit-platform-engine-1.5.2.jar:1.5.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:80) ~[junit-platform-engine-1.5.2.jar:1.5.2]
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:32) ~[junit-platform-engine-1.5.2.jar:1.5.2]
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57) ~[junit-platform-engine-1.5.2.jar:1.5.2]
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:51) ~[junit-platform-engine-1.5.2.jar:1.5.2]
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:220) ~[na:na]
+	at org.junit.platform.launcher.core.DefaultLauncher.lambda$execute$6(DefaultLauncher.java:188) ~[na:na]
+	at org.junit.platform.launcher.core.DefaultLauncher.withInterceptedStreams(DefaultLauncher.java:202) ~[na:na]
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:181) ~[na:na]
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:128) ~[na:na]
+	at org.gradle.api.internal.tasks.testing.junitplatform.JUnitPlatformTestClassProcessor$CollectAllTestClassesExecutor.processAllTestClasses(JUnitPlatformTestClassProcessor.java:99) ~[na:na]
+	at org.gradle.api.internal.tasks.testing.junitplatform.JUnitPlatformTestClassProcessor$CollectAllTestClassesExecutor.access$000(JUnitPlatformTestClassProcessor.java:79) ~[na:na]
+	at org.gradle.api.internal.tasks.testing.junitplatform.JUnitPlatformTestClassProcessor.stop(JUnitPlatformTestClassProcessor.java:75) ~[na:na]
+	at org.gradle.api.internal.tasks.testing.SuiteTestClassProcessor.stop(SuiteTestClassProcessor.java:61) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564) ~[na:na]
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:36) ~[na:na]
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24) ~[na:na]
+	at org.gradle.internal.dispatch.ContextClassLoaderDispatch.dispatch(ContextClassLoaderDispatch.java:33) ~[na:na]
+	at org.gradle.internal.dispatch.ProxyDispatchAdapter$DispatchingInvocationHandler.invoke(ProxyDispatchAdapter.java:94) ~[na:na]
+	at com.sun.proxy.$Proxy2.stop(Unknown Source) ~[na:na]
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.stop(TestWorker.java:132) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564) ~[na:na]
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:36) ~[na:na]
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24) ~[na:na]
+	at org.gradle.internal.remote.internal.hub.MessageHubBackedObjectConnection$DispatchWrapper.dispatch(MessageHubBackedObjectConnection.java:182) ~[na:na]
+	at org.gradle.internal.remote.internal.hub.MessageHubBackedObjectConnection$DispatchWrapper.dispatch(MessageHubBackedObjectConnection.java:164) ~[na:na]
+	at org.gradle.internal.remote.internal.hub.MessageHub$Handler.run(MessageHub.java:412) ~[na:na]
+	at org.gradle.internal.concurrent.ExecutorPolicy$CatchAndRecordFailures.onExecute(ExecutorPolicy.java:64) ~[na:na]
+	at org.gradle.internal.concurrent.ManagedExecutorImpl$1.run(ManagedExecutorImpl.java:48) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1135) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635) ~[na:na]
+	at org.gradle.internal.concurrent.ThreadFactoryImpl$ManagedThreadRunnable.run(ThreadFactoryImpl.java:56) ~[na:na]
+	at java.base/java.lang.Thread.run(Thread.java:844) ~[na:na]
+Caused by: org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'org.springframework.data.redis.core.RedisTemplate<java.lang.String, java.lang.Object>' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.raiseNoMatchingBeanFound(DefaultListableBeanFactory.java:1695) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1253) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1207) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:640) ~[spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	... 92 common frames omitted
 
-2020-06-21 00:13:12.131  INFO 232 --- [http-nio-7012-exec-1] c.e.demo.interceptor.InterceptorConfig   : preHandle-------request:null
-2020-06-21 00:13:12.133  INFO 232 --- [http-nio-7012-exec-1] c.e.demo.interceptor.InterceptorConfig   : isHeader--------------false
-2020-06-21 00:13:12.137 ERROR 232 --- [http-nio-7012-exec-1] o.a.c.c.C.[.[.[.[dispatcherServlet]      : Servlet.service() for servlet [dispatcherServlet] threw exception
-
-java.lang.NullPointerException: null
-	at cn.example.demo.interceptor.InterceptorConfig.preHandle(InterceptorConfig.java:29) ~[main/:na]
-	at org.springframework.web.servlet.HandlerExecutionChain.applyPreHandle(HandlerExecutionChain.java:141) ~[spring-webmvc-5.2.2.RELEASE.jar:5.2.2.RELEASE]
-	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1035) ~[spring-webmvc-5.2.2.RELEASE.jar:5.2.2.RELEASE]
-	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:943) ~[spring-webmvc-5.2.2.RELEASE.jar:5.2.2.RELEASE]
-	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006) ~[spring-webmvc-5.2.2.RELEASE.jar:5.2.2.RELEASE]
-	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898) ~[spring-webmvc-5.2.2.RELEASE.jar:5.2.2.RELEASE]
-	at javax.servlet.http.HttpServlet.service(HttpServlet.java:634) ~[tomcat-embed-core-9.0.29.jar:9.0.29]
-	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883) ~[spring-webmvc-5.2.2.RELEASE.jar:5.2.2.RELEASE]
-	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741) ~[tomcat-embed-core-9.0.29.jar:9.0.29]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231) ~[tomcat-embed-core-9.0.29.jar:9.0.29]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.29.jar:9.0.29]
-	at org.apache.catalina.core.ApplicationDispatcher.invoke(ApplicationDispatcher.java:712) [tomcat-embed-core-9.0.29.jar:9.0.29]
-	at org.apache.catalina.core.ApplicationDispatcher.processRequest(ApplicationDispatcher.java:461) [tomcat-embed-core-9.0.29.jar:9.0.29]
-	at org.apache.catalina.core.ApplicationDispatcher.doForward(ApplicationDispatcher.java:384) [tomcat-embed-core-9.0.29.jar:9.0.29]
-	at org.apache.catalina.core.ApplicationDispatcher.forward(ApplicationDispatcher.java:312) [tomcat-embed-core-9.0.29.jar:9.0.29]
-	at org.apache.catalina.core.StandardHostValve.custom(StandardHostValve.java:394) [tomcat-embed-core-9.0.29.jar:9.0.29]
-	at org.apache.catalina.core.StandardHostValve.status(StandardHostValve.java:253) [tomcat-embed-core-9.0.29.jar:9.0.29]
-	at org.apache.catalina.core.StandardHostValve.throwable(StandardHostValve.java:348) [tomcat-embed-core-9.0.29.jar:9.0.29]
-	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:173) [tomcat-embed-core-9.0.29.jar:9.0.29]
-	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) [tomcat-embed-core-9.0.29.jar:9.0.29]
-	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) [tomcat-embed-core-9.0.29.jar:9.0.29]
-	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343) [tomcat-embed-core-9.0.29.jar:9.0.29]
-	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:367) [tomcat-embed-core-9.0.29.jar:9.0.29]
-	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65) [tomcat-embed-core-9.0.29.jar:9.0.29]
-	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:860) [tomcat-embed-core-9.0.29.jar:9.0.29]
-	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1591) [tomcat-embed-core-9.0.29.jar:9.0.29]
-	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) [tomcat-embed-core-9.0.29.jar:9.0.29]
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) [na:1.8.0_171]
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) [na:1.8.0_171]
-	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) [tomcat-embed-core-9.0.29.jar:9.0.29]
-	at java.lang.Thread.run(Thread.java:748) [na:1.8.0_171]
-
-2020-06-21 00:13:12.140 ERROR 232 --- [http-nio-7012-exec-1] o.a.c.c.C.[Tomcat].[localhost]           : Exception Processing ErrorPage[errorCode=0, location=/error]
-
-org.springframework.web.util.NestedServletException: Request processing failed; nested exception is java.lang.NullPointerException
-	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014) ~[spring-webmvc-5.2.2.RELEASE.jar:5.2.2.RELEASE]
-	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898) ~[spring-webmvc-5.2.2.RELEASE.jar:5.2.2.RELEASE]
-	at javax.servlet.http.HttpServlet.service(HttpServlet.java:634) ~[tomcat-embed-core-9.0.29.jar:9.0.29]
-	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883) ~[spring-webmvc-5.2.2.RELEASE.jar:5.2.2.RELEASE]
-	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741) ~[tomcat-embed-core-9.0.29.jar:9.0.29]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231) ~[tomcat-embed-core-9.0.29.jar:9.0.29]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.29.jar:9.0.29]
-	at org.apache.catalina.core.ApplicationDispatcher.invoke(ApplicationDispatcher.java:712) ~[tomcat-embed-core-9.0.29.jar:9.0.29]
-	at org.apache.catalina.core.ApplicationDispatcher.processRequest(ApplicationDispatcher.java:461) ~[tomcat-embed-core-9.0.29.jar:9.0.29]
-	at org.apache.catalina.core.ApplicationDispatcher.doForward(ApplicationDispatcher.java:384) ~[tomcat-embed-core-9.0.29.jar:9.0.29]
-	at org.apache.catalina.core.ApplicationDispatcher.forward(ApplicationDispatcher.java:312) ~[tomcat-embed-core-9.0.29.jar:9.0.29]
-	at org.apache.catalina.core.StandardHostValve.custom(StandardHostValve.java:394) [tomcat-embed-core-9.0.29.jar:9.0.29]
-	at org.apache.catalina.core.StandardHostValve.status(StandardHostValve.java:253) [tomcat-embed-core-9.0.29.jar:9.0.29]
-	at org.apache.catalina.core.StandardHostValve.throwable(StandardHostValve.java:348) [tomcat-embed-core-9.0.29.jar:9.0.29]
-	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:173) [tomcat-embed-core-9.0.29.jar:9.0.29]
-	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) [tomcat-embed-core-9.0.29.jar:9.0.29]
-	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) [tomcat-embed-core-9.0.29.jar:9.0.29]
-	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343) [tomcat-embed-core-9.0.29.jar:9.0.29]
-	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:367) [tomcat-embed-core-9.0.29.jar:9.0.29]
-	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65) [tomcat-embed-core-9.0.29.jar:9.0.29]
-	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:860) [tomcat-embed-core-9.0.29.jar:9.0.29]
-	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1591) [tomcat-embed-core-9.0.29.jar:9.0.29]
-	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) [tomcat-embed-core-9.0.29.jar:9.0.29]
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) [na:1.8.0_171]
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) [na:1.8.0_171]
-	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) [tomcat-embed-core-9.0.29.jar:9.0.29]
-	at java.lang.Thread.run(Thread.java:748) [na:1.8.0_171]
-Caused by: java.lang.NullPointerException: null
-	at cn.example.demo.interceptor.InterceptorConfig.preHandle(InterceptorConfig.java:29) ~[main/:na]
-	at org.springframework.web.servlet.HandlerExecutionChain.applyPreHandle(HandlerExecutionChain.java:141) ~[spring-webmvc-5.2.2.RELEASE.jar:5.2.2.RELEASE]
-	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1035) ~[spring-webmvc-5.2.2.RELEASE.jar:5.2.2.RELEASE]
-	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:943) ~[spring-webmvc-5.2.2.RELEASE.jar:5.2.2.RELEASE]
-	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006) ~[spring-webmvc-5.2.2.RELEASE.jar:5.2.2.RELEASE]
-	... 26 common frames omitted
-
-2020-06-21 00:21:32.498  INFO 16492 --- [main] cn.example.demo.DemoApplication          : Starting DemoApplication on PC7018 with PID 16492 (D:\workspace\demo\build\classes\java\main started by Administrator in D:\workspace\demo)
-2020-06-21 00:21:32.507  INFO 16492 --- [main] cn.example.demo.DemoApplication          : No active profile set, falling back to default profiles: default
-2020-06-21 00:21:34.719  INFO 16492 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
-2020-06-21 00:21:34.724  INFO 16492 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
-2020-06-21 00:21:34.801  INFO 16492 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 42ms. Found 0 Redis repository interfaces.
-2020-06-21 00:21:35.322  INFO 16492 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2020-06-21 00:21:35.971  INFO 16492 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 7012 (http)
-2020-06-21 00:21:35.995  INFO 16492 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2020-06-21 00:21:35.996  INFO 16492 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.29]
-2020-06-21 00:21:35.999  INFO 16492 --- [main] o.a.catalina.core.AprLifecycleListener   : An older version [1.2.18] of the APR based Apache Tomcat Native library is installed, while Tomcat recommends a minimum version of [1.2.23]
-2020-06-21 00:21:36.000  INFO 16492 --- [main] o.a.catalina.core.AprLifecycleListener   : Loaded APR based Apache Tomcat Native library [1.2.18] using APR version [1.6.5].
-2020-06-21 00:21:36.000  INFO 16492 --- [main] o.a.catalina.core.AprLifecycleListener   : APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
-2020-06-21 00:21:36.001  INFO 16492 --- [main] o.a.catalina.core.AprLifecycleListener   : APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
-2020-06-21 00:21:36.011  INFO 16492 --- [main] o.a.catalina.core.AprLifecycleListener   : OpenSSL successfully initialized [OpenSSL 1.1.1  11 Sep 2018]
-2020-06-21 00:21:36.243  INFO 16492 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/api]    : Initializing Spring embedded WebApplicationContext
-2020-06-21 00:21:36.245  INFO 16492 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 3584 ms
-2020-06-21 00:21:36.520  INFO 16492 --- [main] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
-2020-06-21 00:21:37.209  INFO 16492 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
-2020-06-21 00:21:38.074  INFO 16492 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
-2020-06-21 00:21:38.287  INFO 16492 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
-2020-06-21 00:21:39.162  INFO 16492 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
-2020-06-21 00:21:39.195  INFO 16492 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
-2020-06-21 00:21:39.267  INFO 16492 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
-2020-06-21 00:21:39.545  INFO 16492 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: updateUsingPUT_1
-2020-06-21 00:21:39.580  INFO 16492 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: deleteUsingDELETE_1
-2020-06-21 00:21:39.612  INFO 16492 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: updateUsingPUT_2
-2020-06-21 00:21:39.620  INFO 16492 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: deleteUsingDELETE_2
-2020-06-21 00:21:39.666  INFO 16492 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: updateUsingPUT_3
-2020-06-21 00:21:39.746  INFO 16492 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 7012 (http) with context path '/api'
-2020-06-21 00:21:39.752  INFO 16492 --- [main] cn.example.demo.DemoApplication          : Started DemoApplication in 8.851 seconds (JVM running for 13.155)
-2020-06-21 00:21:50.879  INFO 13772 --- [main] cn.example.demo.DemoApplication          : Starting DemoApplication on PC7018 with PID 13772 (D:\workspace\demo\build\classes\java\main started by Administrator in D:\workspace\demo)
-2020-06-21 00:21:50.887  INFO 13772 --- [main] cn.example.demo.DemoApplication          : No active profile set, falling back to default profiles: default
-2020-06-21 00:21:53.215  INFO 13772 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
-2020-06-21 00:21:53.222  INFO 13772 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
-2020-06-21 00:21:53.297  INFO 13772 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 44ms. Found 0 Redis repository interfaces.
-2020-06-21 00:21:53.862  INFO 13772 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2020-06-21 00:21:54.358  INFO 13772 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 7012 (http)
-2020-06-21 00:21:54.374  INFO 13772 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2020-06-21 00:21:54.375  INFO 13772 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.29]
-2020-06-21 00:21:54.379  INFO 13772 --- [main] o.a.catalina.core.AprLifecycleListener   : An older version [1.2.18] of the APR based Apache Tomcat Native library is installed, while Tomcat recommends a minimum version of [1.2.23]
-2020-06-21 00:21:54.380  INFO 13772 --- [main] o.a.catalina.core.AprLifecycleListener   : Loaded APR based Apache Tomcat Native library [1.2.18] using APR version [1.6.5].
-2020-06-21 00:21:54.380  INFO 13772 --- [main] o.a.catalina.core.AprLifecycleListener   : APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
-2020-06-21 00:21:54.381  INFO 13772 --- [main] o.a.catalina.core.AprLifecycleListener   : APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
-2020-06-21 00:21:54.387  INFO 13772 --- [main] o.a.catalina.core.AprLifecycleListener   : OpenSSL successfully initialized [OpenSSL 1.1.1  11 Sep 2018]
-2020-06-21 00:21:54.613  INFO 13772 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/api]    : Initializing Spring embedded WebApplicationContext
-2020-06-21 00:21:54.613  INFO 13772 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 3614 ms
-2020-06-21 00:21:54.907  INFO 13772 --- [main] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
-2020-06-21 00:21:55.456  INFO 13772 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
-2020-06-21 00:21:56.317  INFO 13772 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
-2020-06-21 00:21:56.511  INFO 13772 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
-2020-06-21 00:21:57.306  INFO 13772 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
-2020-06-21 00:21:57.337  INFO 13772 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
-2020-06-21 00:21:57.418  INFO 13772 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
-2020-06-21 00:21:57.686  INFO 13772 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: updateUsingPUT_1
-2020-06-21 00:21:57.728  INFO 13772 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: deleteUsingDELETE_1
-2020-06-21 00:21:57.763  INFO 13772 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: updateUsingPUT_2
-2020-06-21 00:21:57.772  INFO 13772 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: deleteUsingDELETE_2
-2020-06-21 00:21:57.823  INFO 13772 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: updateUsingPUT_3
-2020-06-21 00:21:57.910  INFO 13772 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 7012 (http) with context path '/api'
-2020-06-21 00:21:57.919  INFO 13772 --- [main] cn.example.demo.DemoApplication          : Started DemoApplication in 8.109 seconds (JVM running for 12.002)
-2020-06-21 00:22:04.095  INFO 13772 --- [http-nio-7012-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/api]    : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2020-06-21 00:22:04.095  INFO 13772 --- [http-nio-7012-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2020-06-21 00:22:04.110  INFO 13772 --- [http-nio-7012-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 14 ms
-2020-06-21 00:22:04.152  INFO 13772 --- [http-nio-7012-exec-1] c.e.demo.interceptor.InterceptorConfig   : preHandle-------request:null
-2020-06-21 00:22:12.982  INFO 13772 --- [http-nio-7012-exec-3] c.e.demo.interceptor.InterceptorConfig   : preHandle-------request:
-2020-06-21 00:22:18.109  INFO 13772 --- [http-nio-7012-exec-5] c.e.demo.interceptor.InterceptorConfig   : preHandle-------request:
-2020-06-21 00:22:21.987  INFO 13772 --- [http-nio-7012-exec-6] c.e.demo.interceptor.InterceptorConfig   : preHandle-------request:
-2020-06-21 00:22:32.620  INFO 13772 --- [http-nio-7012-exec-9] c.e.demo.interceptor.InterceptorConfig   : preHandle-------request:13
-2020-06-21 00:32:26.615  INFO 4956 --- [main] cn.example.demo.DemoApplication          : Starting DemoApplication on PC7018 with PID 4956 (D:\workspace\demo\build\classes\java\main started by Administrator in D:\workspace\demo)
-2020-06-21 00:32:26.634  INFO 4956 --- [main] cn.example.demo.DemoApplication          : No active profile set, falling back to default profiles: default
-2020-06-21 00:32:29.291  INFO 4956 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
-2020-06-21 00:32:29.302  INFO 4956 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
-2020-06-21 00:32:29.389  INFO 4956 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 60ms. Found 0 Redis repository interfaces.
-2020-06-21 00:32:30.069  INFO 4956 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2020-06-21 00:32:30.700  INFO 4956 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 7012 (http)
-2020-06-21 00:32:30.731  INFO 4956 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2020-06-21 00:32:30.732  INFO 4956 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.29]
-2020-06-21 00:32:30.735  INFO 4956 --- [main] o.a.catalina.core.AprLifecycleListener   : An older version [1.2.18] of the APR based Apache Tomcat Native library is installed, while Tomcat recommends a minimum version of [1.2.23]
-2020-06-21 00:32:30.735  INFO 4956 --- [main] o.a.catalina.core.AprLifecycleListener   : Loaded APR based Apache Tomcat Native library [1.2.18] using APR version [1.6.5].
-2020-06-21 00:32:30.735  INFO 4956 --- [main] o.a.catalina.core.AprLifecycleListener   : APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
-2020-06-21 00:32:30.736  INFO 4956 --- [main] o.a.catalina.core.AprLifecycleListener   : APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
-2020-06-21 00:32:30.743  INFO 4956 --- [main] o.a.catalina.core.AprLifecycleListener   : OpenSSL successfully initialized [OpenSSL 1.1.1  11 Sep 2018]
-2020-06-21 00:32:31.054  INFO 4956 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/api]    : Initializing Spring embedded WebApplicationContext
-2020-06-21 00:32:31.055  INFO 4956 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 4240 ms
-2020-06-21 00:32:31.372  INFO 4956 --- [main] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
-2020-06-21 00:32:32.125  INFO 4956 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
-2020-06-21 00:32:33.702  INFO 4956 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
-2020-06-21 00:32:34.021  INFO 4956 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
-2020-06-21 00:32:34.951  INFO 4956 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
-2020-06-21 00:32:34.990  INFO 4956 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
-2020-06-21 00:32:35.071  INFO 4956 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
-2020-06-21 00:32:35.371  INFO 4956 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: updateUsingPUT_1
-2020-06-21 00:32:35.413  INFO 4956 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: deleteUsingDELETE_1
-2020-06-21 00:32:35.453  INFO 4956 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: updateUsingPUT_2
-2020-06-21 00:32:35.465  INFO 4956 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: deleteUsingDELETE_2
-2020-06-21 00:32:35.539  INFO 4956 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: updateUsingPUT_3
-2020-06-21 00:32:35.756  INFO 4956 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 7012 (http) with context path '/api'
-2020-06-21 00:32:35.766  INFO 4956 --- [main] cn.example.demo.DemoApplication          : Started DemoApplication in 10.557 seconds (JVM running for 15.011)
-2020-06-21 00:32:41.118  INFO 4956 --- [http-nio-7012-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/api]    : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2020-06-21 00:32:41.119  INFO 4956 --- [http-nio-7012-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2020-06-21 00:32:41.137  INFO 4956 --- [http-nio-7012-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 18 ms
-2020-06-21 00:32:41.837  INFO 4956 --- [http-nio-7012-exec-1] c.e.demo.controller.LoginController      : login:Customer(id=1, account=null, nickname=admin, password=fEqNCco3Yq9h5ZUglD3CZJT4lBs=, sex=1, phone=15082000855, address=1, addressInfo=null, email=1234, status=null, time=Wed Jan 08 00:00:00 CST 2020)
-2020-06-21 00:32:44.934  INFO 4956 --- [http-nio-7012-exec-1] c.e.demo.controller.LoginController      : token:eyJ0eXBlIjoiSldUIiwiYWxnIjoiSFMyNTYiLCJ0eXAiOiJKV1QifQ.eyJhdWQiOiJBUFAiLCJ1c2VyVG9rZW4iOiIxNTA4MjAwMDg1NSIsImlzcyI6IlNlcnZpY2UifQ.PKJS_UHPcYmLTO3I5LJc_MUxOUtnMDGf1DaltG273Jo
-2020-06-21 00:32:49.886  INFO 4956 --- [http-nio-7012-exec-3] c.e.demo.interceptor.InterceptorConfig   : preHandle-------request:13
-2020-06-21 00:33:02.776  INFO 4956 --- [http-nio-7012-exec-5] c.e.demo.interceptor.InterceptorConfig   : preHandle-------request:null
-2020-06-21 00:34:32.317  INFO 4956 --- [http-nio-7012-exec-7] c.e.demo.interceptor.InterceptorConfig   : preHandle-------request:null
-2020-06-21 00:34:46.177  INFO 4956 --- [http-nio-7012-exec-9] c.e.demo.interceptor.InterceptorConfig   : preHandle-------request:null
-2020-06-21 00:34:59.547  INFO 17680 --- [main] cn.example.demo.DemoApplication          : Starting DemoApplication on PC7018 with PID 17680 (D:\workspace\demo\build\classes\java\main started by Administrator in D:\workspace\demo)
-2020-06-21 00:34:59.558  INFO 17680 --- [main] cn.example.demo.DemoApplication          : No active profile set, falling back to default profiles: default
-2020-06-21 00:35:01.898  INFO 17680 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
-2020-06-21 00:35:01.904  INFO 17680 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
-2020-06-21 00:35:01.981  INFO 17680 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 49ms. Found 0 Redis repository interfaces.
-2020-06-21 00:35:02.523  INFO 17680 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2020-06-21 00:35:03.075  INFO 17680 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 7012 (http)
-2020-06-21 00:35:03.091  INFO 17680 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2020-06-21 00:35:03.092  INFO 17680 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.29]
-2020-06-21 00:35:03.095  INFO 17680 --- [main] o.a.catalina.core.AprLifecycleListener   : An older version [1.2.18] of the APR based Apache Tomcat Native library is installed, while Tomcat recommends a minimum version of [1.2.23]
-2020-06-21 00:35:03.095  INFO 17680 --- [main] o.a.catalina.core.AprLifecycleListener   : Loaded APR based Apache Tomcat Native library [1.2.18] using APR version [1.6.5].
-2020-06-21 00:35:03.096  INFO 17680 --- [main] o.a.catalina.core.AprLifecycleListener   : APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
-2020-06-21 00:35:03.096  INFO 17680 --- [main] o.a.catalina.core.AprLifecycleListener   : APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
-2020-06-21 00:35:03.103  INFO 17680 --- [main] o.a.catalina.core.AprLifecycleListener   : OpenSSL successfully initialized [OpenSSL 1.1.1  11 Sep 2018]
-2020-06-21 00:35:03.322  INFO 17680 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/api]    : Initializing Spring embedded WebApplicationContext
-2020-06-21 00:35:03.323  INFO 17680 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 3596 ms
-2020-06-21 00:35:03.661  INFO 17680 --- [main] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
-2020-06-21 00:35:04.352  INFO 17680 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
-2020-06-21 00:35:05.307  INFO 17680 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
-2020-06-21 00:35:05.501  INFO 17680 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
-2020-06-21 00:35:06.442  INFO 17680 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
-2020-06-21 00:35:06.485  INFO 17680 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
-2020-06-21 00:35:06.573  INFO 17680 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
-2020-06-21 00:35:06.882  INFO 17680 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: updateUsingPUT_1
-2020-06-21 00:35:06.916  INFO 17680 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: deleteUsingDELETE_1
-2020-06-21 00:35:06.959  INFO 17680 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: updateUsingPUT_2
-2020-06-21 00:35:06.967  INFO 17680 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: deleteUsingDELETE_2
-2020-06-21 00:35:07.017  INFO 17680 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: updateUsingPUT_3
-2020-06-21 00:35:07.112  INFO 17680 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 7012 (http) with context path '/api'
-2020-06-21 00:35:07.117  INFO 17680 --- [main] cn.example.demo.DemoApplication          : Started DemoApplication in 8.934 seconds (JVM running for 13.141)
-2020-06-21 00:35:14.565  INFO 17680 --- [http-nio-7012-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/api]    : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2020-06-21 00:35:14.565  INFO 17680 --- [http-nio-7012-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2020-06-21 00:35:14.579  INFO 17680 --- [http-nio-7012-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 13 ms
-2020-06-21 00:35:14.618  INFO 17680 --- [http-nio-7012-exec-1] c.e.demo.interceptor.InterceptorConfig   : preHandle-------request:null
-2020-06-21 00:35:14.619  INFO 17680 --- [http-nio-7012-exec-1] cn.example.demo.utils.HttpUtils          : isKey----------------:{host=localhost:7012, connection=Keep-Alive, accept-encoding=gzip,deflate, accept=application/json, user-agent=Apache-HttpClient/4.5.12 (Java/11.0.6)}
-2020-06-21 00:35:23.373  INFO 17680 --- [http-nio-7012-exec-3] c.e.demo.interceptor.InterceptorConfig   : preHandle-------request:
-2020-06-21 00:35:23.374  INFO 17680 --- [http-nio-7012-exec-3] cn.example.demo.utils.HttpUtils          : isKey----------------:{authorization=, host=localhost:7012, connection=Keep-Alive, accept-encoding=gzip,deflate, accept=application/json, user-agent=Apache-HttpClient/4.5.12 (Java/11.0.6)}
-2020-06-21 00:36:42.541  INFO 6156 --- [main] cn.example.demo.DemoApplication          : Starting DemoApplication on PC7018 with PID 6156 (D:\workspace\demo\build\classes\java\main started by Administrator in D:\workspace\demo)
-2020-06-21 00:36:42.550  INFO 6156 --- [main] cn.example.demo.DemoApplication          : No active profile set, falling back to default profiles: default
-2020-06-21 00:36:44.972  INFO 6156 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
-2020-06-21 00:36:44.978  INFO 6156 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
-2020-06-21 00:36:45.068  INFO 6156 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 54ms. Found 0 Redis repository interfaces.
-2020-06-21 00:36:45.641  INFO 6156 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2020-06-21 00:36:46.171  INFO 6156 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 7012 (http)
-2020-06-21 00:36:46.189  INFO 6156 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2020-06-21 00:36:46.190  INFO 6156 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.29]
-2020-06-21 00:36:46.195  INFO 6156 --- [main] o.a.catalina.core.AprLifecycleListener   : An older version [1.2.18] of the APR based Apache Tomcat Native library is installed, while Tomcat recommends a minimum version of [1.2.23]
-2020-06-21 00:36:46.198  INFO 6156 --- [main] o.a.catalina.core.AprLifecycleListener   : Loaded APR based Apache Tomcat Native library [1.2.18] using APR version [1.6.5].
-2020-06-21 00:36:46.199  INFO 6156 --- [main] o.a.catalina.core.AprLifecycleListener   : APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
-2020-06-21 00:36:46.200  INFO 6156 --- [main] o.a.catalina.core.AprLifecycleListener   : APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
-2020-06-21 00:36:46.205  INFO 6156 --- [main] o.a.catalina.core.AprLifecycleListener   : OpenSSL successfully initialized [OpenSSL 1.1.1  11 Sep 2018]
-2020-06-21 00:36:46.454  INFO 6156 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/api]    : Initializing Spring embedded WebApplicationContext
-2020-06-21 00:36:46.454  INFO 6156 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 3740 ms
-2020-06-21 00:36:46.777  INFO 6156 --- [main] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
-2020-06-21 00:36:47.407  INFO 6156 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
-2020-06-21 00:36:48.391  INFO 6156 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
-2020-06-21 00:36:48.604  INFO 6156 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
-2020-06-21 00:36:49.534  INFO 6156 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
-2020-06-21 00:36:49.569  INFO 6156 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
-2020-06-21 00:36:49.681  INFO 6156 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
-2020-06-21 00:36:50.055  INFO 6156 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: updateUsingPUT_1
-2020-06-21 00:36:50.098  INFO 6156 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: deleteUsingDELETE_1
-2020-06-21 00:36:50.136  INFO 6156 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: updateUsingPUT_2
-2020-06-21 00:36:50.147  INFO 6156 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: deleteUsingDELETE_2
-2020-06-21 00:36:50.212  INFO 6156 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: updateUsingPUT_3
-2020-06-21 00:36:50.341  INFO 6156 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 7012 (http) with context path '/api'
-2020-06-21 00:36:50.349  INFO 6156 --- [main] cn.example.demo.DemoApplication          : Started DemoApplication in 8.809 seconds (JVM running for 12.97)
-2020-06-21 00:36:54.802  INFO 6156 --- [http-nio-7012-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/api]    : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2020-06-21 00:36:54.803  INFO 6156 --- [http-nio-7012-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2020-06-21 00:36:54.822  INFO 6156 --- [http-nio-7012-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 17 ms
-2020-06-21 00:36:54.881  INFO 6156 --- [http-nio-7012-exec-1] c.e.demo.interceptor.InterceptorConfig   : preHandle-------request:
-2020-06-21 00:36:54.887  INFO 6156 --- [http-nio-7012-exec-1] cn.example.demo.utils.HttpUtils          : isKey----------------:{authorization=, host=localhost:7012, connection=Keep-Alive, accept-encoding=gzip,deflate, accept=application/json, user-agent=Apache-HttpClient/4.5.12 (Java/11.0.6)}
-2020-06-21 00:37:00.303  INFO 6156 --- [http-nio-7012-exec-3] c.e.demo.interceptor.InterceptorConfig   : preHandle-------request:null
-2020-06-21 00:37:00.305  INFO 6156 --- [http-nio-7012-exec-3] cn.example.demo.utils.HttpUtils          : isKey----------------:{authosrization=, host=localhost:7012, connection=Keep-Alive, accept-encoding=gzip,deflate, accept=application/json, user-agent=Apache-HttpClient/4.5.12 (Java/11.0.6)}
-2020-06-21 00:37:06.981  INFO 6156 --- [http-nio-7012-exec-5] c.e.demo.interceptor.InterceptorConfig   : preHandle-------request:null
-2020-06-21 00:37:06.982  INFO 6156 --- [http-nio-7012-exec-5] cn.example.demo.utils.HttpUtils          : isKey----------------:{host=localhost:7012, connection=Keep-Alive, accept-encoding=gzip,deflate, accept=application/json, user-agent=Apache-HttpClient/4.5.12 (Java/11.0.6)}
-2020-06-21 00:37:12.436  INFO 6156 --- [http-nio-7012-exec-7] c.e.demo.interceptor.InterceptorConfig   : preHandle-------request:
-2020-06-21 00:37:12.437  INFO 6156 --- [http-nio-7012-exec-7] cn.example.demo.utils.HttpUtils          : isKey----------------:{authorization=, host=localhost:7012, connection=Keep-Alive, accept-encoding=gzip,deflate, accept=application/json, user-agent=Apache-HttpClient/4.5.12 (Java/11.0.6)}
-2020-06-21 00:37:19.134  INFO 6156 --- [http-nio-7012-exec-8] c.e.demo.interceptor.InterceptorConfig   : preHandle-------request:123456
-2020-06-21 00:37:19.135  INFO 6156 --- [http-nio-7012-exec-8] cn.example.demo.utils.HttpUtils          : isKey----------------:{authorization=123456, host=localhost:7012, connection=Keep-Alive, accept-encoding=gzip,deflate, accept=application/json, user-agent=Apache-HttpClient/4.5.12 (Java/11.0.6)}
-2020-06-21 00:38:52.887  INFO 6156 --- [http-nio-7012-exec-2] c.e.demo.interceptor.InterceptorConfig   : preHandle-------request:
-2020-06-21 00:38:52.888  INFO 6156 --- [http-nio-7012-exec-2] cn.example.demo.utils.HttpUtils          : isKey----------------:{authorization=, postman-token=db0647fe-5dba-4c46-9127-dcaaa2c0df20, host=localhost:7012, connection=keep-alive, cache-control=no-cache, accept-encoding=gzip, deflate, br, user-agent=PostmanRuntime/7.23.0, accept=*/*}
-2020-06-21 00:39:02.639  INFO 6156 --- [http-nio-7012-exec-3] c.e.demo.interceptor.InterceptorConfig   : preHandle-------request:null
-2020-06-21 00:39:02.639  INFO 6156 --- [http-nio-7012-exec-3] cn.example.demo.utils.HttpUtils          : isKey----------------:{postman-token=292c8cd9-6ba2-43a7-b25d-29406c4f7305, authorizations=, host=localhost:7012, connection=keep-alive, cache-control=no-cache, accept-encoding=gzip, deflate, br, user-agent=PostmanRuntime/7.23.0, accept=*/*}
-2020-06-21 00:41:15.279  INFO 5104 --- [main] cn.example.demo.DemoApplication          : Starting DemoApplication on PC7018 with PID 5104 (D:\workspace\demo\build\classes\java\main started by Administrator in D:\workspace\demo)
-2020-06-21 00:41:15.296  INFO 5104 --- [main] cn.example.demo.DemoApplication          : No active profile set, falling back to default profiles: default
-2020-06-21 00:41:17.541  INFO 5104 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
-2020-06-21 00:41:17.548  INFO 5104 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
-2020-06-21 00:41:17.624  INFO 5104 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 46ms. Found 0 Redis repository interfaces.
-2020-06-21 00:41:18.249  INFO 5104 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2020-06-21 00:41:18.739  INFO 5104 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 7012 (http)
-2020-06-21 00:41:18.757  INFO 5104 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2020-06-21 00:41:18.757  INFO 5104 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.29]
-2020-06-21 00:41:18.761  INFO 5104 --- [main] o.a.catalina.core.AprLifecycleListener   : An older version [1.2.18] of the APR based Apache Tomcat Native library is installed, while Tomcat recommends a minimum version of [1.2.23]
-2020-06-21 00:41:18.762  INFO 5104 --- [main] o.a.catalina.core.AprLifecycleListener   : Loaded APR based Apache Tomcat Native library [1.2.18] using APR version [1.6.5].
-2020-06-21 00:41:18.762  INFO 5104 --- [main] o.a.catalina.core.AprLifecycleListener   : APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
-2020-06-21 00:41:18.763  INFO 5104 --- [main] o.a.catalina.core.AprLifecycleListener   : APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
-2020-06-21 00:41:18.768  INFO 5104 --- [main] o.a.catalina.core.AprLifecycleListener   : OpenSSL successfully initialized [OpenSSL 1.1.1  11 Sep 2018]
-2020-06-21 00:41:19.015  INFO 5104 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/api]    : Initializing Spring embedded WebApplicationContext
-2020-06-21 00:41:19.016  INFO 5104 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 3580 ms
-2020-06-21 00:41:19.365  INFO 5104 --- [main] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
-2020-06-21 00:41:20.052  INFO 5104 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
-2020-06-21 00:41:21.017  INFO 5104 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
-2020-06-21 00:41:21.214  INFO 5104 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
-2020-06-21 00:41:22.104  INFO 5104 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
-2020-06-21 00:41:22.141  INFO 5104 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
-2020-06-21 00:41:22.233  INFO 5104 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
-2020-06-21 00:41:22.551  INFO 5104 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: updateUsingPUT_1
-2020-06-21 00:41:22.589  INFO 5104 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: deleteUsingDELETE_1
-2020-06-21 00:41:22.619  INFO 5104 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: updateUsingPUT_2
-2020-06-21 00:41:22.631  INFO 5104 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: deleteUsingDELETE_2
-2020-06-21 00:41:22.682  INFO 5104 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: updateUsingPUT_3
-2020-06-21 00:41:22.772  INFO 5104 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 7012 (http) with context path '/api'
-2020-06-21 00:41:22.779  INFO 5104 --- [main] cn.example.demo.DemoApplication          : Started DemoApplication in 8.498 seconds (JVM running for 12.499)
-2020-06-21 00:41:33.348  INFO 5104 --- [http-nio-7012-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/api]    : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2020-06-21 00:41:33.349  INFO 5104 --- [http-nio-7012-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2020-06-21 00:41:33.365  INFO 5104 --- [http-nio-7012-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 15 ms
-2020-06-21 00:41:33.401  INFO 5104 --- [http-nio-7012-exec-1] c.e.demo.interceptor.InterceptorConfig   : preHandle-------request:123456
-2020-06-21 00:41:33.809  INFO 5104 --- [http-nio-7012-exec-1] c.e.demo.interceptor.InterceptorConfig   : after----------cn.example.demo.controller.ProductController#products()
-2020-06-21 00:41:58.415  INFO 15064 --- [main] cn.example.demo.DemoApplication          : Starting DemoApplication on PC7018 with PID 15064 (D:\workspace\demo\build\classes\java\main started by Administrator in D:\workspace\demo)
-2020-06-21 00:41:58.424  INFO 15064 --- [main] cn.example.demo.DemoApplication          : No active profile set, falling back to default profiles: default
-2020-06-21 00:42:00.903  INFO 15064 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
-2020-06-21 00:42:00.910  INFO 15064 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
-2020-06-21 00:42:00.986  INFO 15064 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 43ms. Found 0 Redis repository interfaces.
-2020-06-21 00:42:01.912  INFO 15064 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2020-06-21 00:42:02.701  INFO 15064 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 7012 (http)
-2020-06-21 00:42:02.735  INFO 15064 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2020-06-21 00:42:02.735  INFO 15064 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.29]
-2020-06-21 00:42:02.740  INFO 15064 --- [main] o.a.catalina.core.AprLifecycleListener   : An older version [1.2.18] of the APR based Apache Tomcat Native library is installed, while Tomcat recommends a minimum version of [1.2.23]
-2020-06-21 00:42:02.741  INFO 15064 --- [main] o.a.catalina.core.AprLifecycleListener   : Loaded APR based Apache Tomcat Native library [1.2.18] using APR version [1.6.5].
-2020-06-21 00:42:02.742  INFO 15064 --- [main] o.a.catalina.core.AprLifecycleListener   : APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
-2020-06-21 00:42:02.743  INFO 15064 --- [main] o.a.catalina.core.AprLifecycleListener   : APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
-2020-06-21 00:42:02.752  INFO 15064 --- [main] o.a.catalina.core.AprLifecycleListener   : OpenSSL successfully initialized [OpenSSL 1.1.1  11 Sep 2018]
-2020-06-21 00:42:03.027  INFO 15064 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/api]    : Initializing Spring embedded WebApplicationContext
-2020-06-21 00:42:03.028  INFO 15064 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 4451 ms
-2020-06-21 00:42:03.461  INFO 15064 --- [main] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
-2020-06-21 00:42:04.106  INFO 15064 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
-2020-06-21 00:42:05.273  INFO 15064 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
-2020-06-21 00:42:05.546  INFO 15064 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
-2020-06-21 00:42:06.718  INFO 15064 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
-2020-06-21 00:42:06.784  INFO 15064 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
-2020-06-21 00:42:06.909  INFO 15064 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
-2020-06-21 00:42:07.273  INFO 15064 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: updateUsingPUT_1
-2020-06-21 00:42:07.323  INFO 15064 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: deleteUsingDELETE_1
-2020-06-21 00:42:07.367  INFO 15064 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: updateUsingPUT_2
-2020-06-21 00:42:07.376  INFO 15064 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: deleteUsingDELETE_2
-2020-06-21 00:42:07.432  INFO 15064 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: updateUsingPUT_3
-2020-06-21 00:42:07.615  INFO 15064 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 7012 (http) with context path '/api'
-2020-06-21 00:42:07.624  INFO 15064 --- [main] cn.example.demo.DemoApplication          : Started DemoApplication in 10.523 seconds (JVM running for 18.675)
-2020-06-21 00:42:13.629  INFO 15064 --- [http-nio-7012-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/api]    : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2020-06-21 00:42:13.629  INFO 15064 --- [http-nio-7012-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2020-06-21 00:42:13.646  INFO 15064 --- [http-nio-7012-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 16 ms
-2020-06-21 00:42:13.782  INFO 15064 --- [http-nio-7012-exec-1] c.e.demo.interceptor.InterceptorConfig   : preHandle-------request:123456
-2020-06-21 00:43:43.101  INFO 15064 --- [http-nio-7012-exec-1] c.e.demo.interceptor.InterceptorConfig   : after----------cn.example.demo.controller.ProductController#products()
-2020-06-21 00:43:43.673  INFO 15064 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
-2020-06-21 00:43:43.688  INFO 15064 --- [SpringContextShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closed
+2020-06-26 19:33:48.716  INFO 11688 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-06-26 19:33:48.831  INFO 11688 --- [SpringContextShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closed
+2020-06-26 19:46:52.391  INFO 11636 --- [Test worker] cn.example.demo.DemoApplicationTests     : Starting DemoApplicationTests on PC7018 with PID 11636 (started by Administrator in D:\workspace\demo)
+2020-06-26 19:46:52.396  INFO 11636 --- [Test worker] cn.example.demo.DemoApplicationTests     : No active profile set, falling back to default profiles: default
+2020-06-26 19:46:55.104  INFO 11636 --- [Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-06-26 19:46:55.111  INFO 11636 --- [Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2020-06-26 19:46:55.203  INFO 11636 --- [Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 57ms. Found 0 Redis repository interfaces.
+2020-06-26 19:46:56.057  INFO 11636 --- [Test worker] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-06-26 19:46:56.812  INFO 11636 --- [Test worker] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
+2020-06-26 19:46:57.993  INFO 11636 --- [Test worker] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2020-06-26 19:47:00.484  INFO 11636 --- [Test worker] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2020-06-26 19:47:01.329  INFO 11636 --- [Test worker] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-06-26 19:47:02.233  INFO 11636 --- [Test worker] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2020-06-26 19:47:02.287  INFO 11636 --- [Test worker] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2020-06-26 19:47:02.401  INFO 11636 --- [Test worker] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2020-06-26 19:47:02.748  INFO 11636 --- [Test worker] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: updateUsingPUT_1
+2020-06-26 19:47:02.865  INFO 11636 --- [Test worker] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: deleteUsingDELETE_1
+2020-06-26 19:47:02.992  INFO 11636 --- [Test worker] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: updateUsingPUT_2
+2020-06-26 19:47:03.020  INFO 11636 --- [Test worker] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: deleteUsingDELETE_2
+2020-06-26 19:47:03.201  INFO 11636 --- [Test worker] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: updateUsingPUT_3
+2020-06-26 19:47:03.321  INFO 11636 --- [Test worker] cn.example.demo.DemoApplicationTests     : Started DemoApplicationTests in 11.803 seconds (JVM running for 18.41)
+2020-06-26 19:47:04.742  INFO 11636 --- [Test worker] io.lettuce.core.EpollProvider            : Starting without optional epoll library
+2020-06-26 19:47:04.748  INFO 11636 --- [Test worker] io.lettuce.core.KqueueProvider           : Starting without optional kqueue library
+2020-06-26 19:47:13.047  INFO 11636 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-06-26 19:47:13.283  INFO 11636 --- [SpringContextShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closed
+2020-06-26 19:51:17.381  INFO 16820 --- [Test worker] cn.example.demo.DemoApplicationTests     : Starting DemoApplicationTests on PC7018 with PID 16820 (started by Administrator in D:\workspace\demo)
+2020-06-26 19:51:17.391  INFO 16820 --- [Test worker] cn.example.demo.DemoApplicationTests     : No active profile set, falling back to default profiles: default
+2020-06-26 19:51:20.038  INFO 16820 --- [Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-06-26 19:51:20.054  INFO 16820 --- [Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2020-06-26 19:51:20.177  INFO 16820 --- [Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 77ms. Found 0 Redis repository interfaces.
+2020-06-26 19:51:21.102  INFO 16820 --- [Test worker] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-06-26 19:51:21.844  INFO 16820 --- [Test worker] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
+2020-06-26 19:51:22.694  INFO 16820 --- [Test worker] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2020-06-26 19:51:25.510  INFO 16820 --- [Test worker] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2020-06-26 19:51:26.332  INFO 16820 --- [Test worker] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-06-26 19:51:27.226  INFO 16820 --- [Test worker] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2020-06-26 19:51:27.278  INFO 16820 --- [Test worker] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2020-06-26 19:51:27.368  INFO 16820 --- [Test worker] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2020-06-26 19:51:27.763  INFO 16820 --- [Test worker] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: updateUsingPUT_1
+2020-06-26 19:51:27.813  INFO 16820 --- [Test worker] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: deleteUsingDELETE_1
+2020-06-26 19:51:27.871  INFO 16820 --- [Test worker] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: updateUsingPUT_2
+2020-06-26 19:51:27.884  INFO 16820 --- [Test worker] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: deleteUsingDELETE_2
+2020-06-26 19:51:27.948  INFO 16820 --- [Test worker] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: updateUsingPUT_3
+2020-06-26 19:51:27.992  INFO 16820 --- [Test worker] cn.example.demo.DemoApplicationTests     : Started DemoApplicationTests in 11.387 seconds (JVM running for 17.946)
+2020-06-26 19:51:28.790  INFO 16820 --- [Test worker] cn.example.demo.DemoApplicationTests     : reis:null
+2020-06-26 19:51:28.841  INFO 16820 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-06-26 19:51:28.879  INFO 16820 --- [SpringContextShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closed
+2020-06-26 19:53:17.893  INFO 11208 --- [Test worker] cn.example.demo.DemoApplicationTests     : Starting DemoApplicationTests on PC7018 with PID 11208 (started by Administrator in D:\workspace\demo)
+2020-06-26 19:53:17.897  INFO 11208 --- [Test worker] cn.example.demo.DemoApplicationTests     : No active profile set, falling back to default profiles: default
+2020-06-26 19:53:20.403  INFO 11208 --- [Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-06-26 19:53:20.410  INFO 11208 --- [Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2020-06-26 19:53:20.551  INFO 11208 --- [Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 81ms. Found 0 Redis repository interfaces.
+2020-06-26 19:53:21.547  INFO 11208 --- [Test worker] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-06-26 19:53:22.229  INFO 11208 --- [Test worker] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
+2020-06-26 19:53:23.063  INFO 11208 --- [Test worker] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2020-06-26 19:53:25.583  INFO 11208 --- [Test worker] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2020-06-26 19:53:26.407  INFO 11208 --- [Test worker] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-06-26 19:53:27.324  INFO 11208 --- [Test worker] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2020-06-26 19:53:27.389  INFO 11208 --- [Test worker] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2020-06-26 19:53:27.473  INFO 11208 --- [Test worker] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2020-06-26 19:53:27.795  INFO 11208 --- [Test worker] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: updateUsingPUT_1
+2020-06-26 19:53:27.850  INFO 11208 --- [Test worker] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: deleteUsingDELETE_1
+2020-06-26 19:53:27.898  INFO 11208 --- [Test worker] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: updateUsingPUT_2
+2020-06-26 19:53:27.912  INFO 11208 --- [Test worker] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: deleteUsingDELETE_2
+2020-06-26 19:53:27.981  INFO 11208 --- [Test worker] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: updateUsingPUT_3
+2020-06-26 19:53:28.064  INFO 11208 --- [Test worker] cn.example.demo.DemoApplicationTests     : Started DemoApplicationTests in 10.987 seconds (JVM running for 17.466)
+2020-06-26 19:53:29.072  INFO 11208 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-06-26 19:53:29.172  INFO 11208 --- [SpringContextShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closed
+2020-06-26 19:54:57.565  INFO 12816 --- [Test worker] cn.example.demo.DemoApplicationTests     : Starting DemoApplicationTests on PC7018 with PID 12816 (started by Administrator in D:\workspace\demo)
+2020-06-26 19:54:57.572  INFO 12816 --- [Test worker] cn.example.demo.DemoApplicationTests     : No active profile set, falling back to default profiles: default
+2020-06-26 19:55:00.753  INFO 12816 --- [Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-06-26 19:55:00.761  INFO 12816 --- [Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2020-06-26 19:55:00.889  INFO 12816 --- [Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 89ms. Found 0 Redis repository interfaces.
+2020-06-26 19:55:01.901  INFO 12816 --- [Test worker] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-06-26 19:55:02.758  INFO 12816 --- [Test worker] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
+2020-06-26 19:55:03.943  INFO 12816 --- [Test worker] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2020-06-26 19:55:07.110  INFO 12816 --- [Test worker] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2020-06-26 19:55:08.142  INFO 12816 --- [Test worker] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-06-26 19:55:09.675  INFO 12816 --- [Test worker] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2020-06-26 19:55:09.775  INFO 12816 --- [Test worker] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2020-06-26 19:55:10.111  INFO 12816 --- [Test worker] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2020-06-26 19:55:10.720  INFO 12816 --- [Test worker] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: updateUsingPUT_1
+2020-06-26 19:55:10.775  INFO 12816 --- [Test worker] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: deleteUsingDELETE_1
+2020-06-26 19:55:10.831  INFO 12816 --- [Test worker] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: updateUsingPUT_2
+2020-06-26 19:55:10.852  INFO 12816 --- [Test worker] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: deleteUsingDELETE_2
+2020-06-26 19:55:10.948  INFO 12816 --- [Test worker] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: updateUsingPUT_3
+2020-06-26 19:55:11.064  INFO 12816 --- [Test worker] cn.example.demo.DemoApplicationTests     : Started DemoApplicationTests in 14.456 seconds (JVM running for 23.22)
+2020-06-26 19:56:23.209  INFO 12816 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-06-26 19:56:23.304  INFO 12816 --- [SpringContextShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closed
+2020-06-26 19:56:43.118  INFO 4860 --- [Test worker] cn.example.demo.DemoApplicationTests     : Starting DemoApplicationTests on PC7018 with PID 4860 (started by Administrator in D:\workspace\demo)
+2020-06-26 19:56:43.122  INFO 4860 --- [Test worker] cn.example.demo.DemoApplicationTests     : No active profile set, falling back to default profiles: default
+2020-06-26 19:56:47.512  INFO 4860 --- [Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-06-26 19:56:47.518  INFO 4860 --- [Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2020-06-26 19:56:47.622  INFO 4860 --- [Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 66ms. Found 0 Redis repository interfaces.
+2020-06-26 19:56:48.806  INFO 4860 --- [Test worker] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-06-26 19:56:49.674  INFO 4860 --- [Test worker] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
+2020-06-26 19:56:51.523  INFO 4860 --- [Test worker] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2020-06-26 19:56:57.020  INFO 4860 --- [Test worker] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2020-06-26 19:56:59.170  INFO 4860 --- [Test worker] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-06-26 19:57:02.772  INFO 4860 --- [Test worker] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2020-06-26 19:57:02.957  INFO 4860 --- [Test worker] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2020-06-26 19:57:03.201  INFO 4860 --- [Test worker] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2020-06-26 19:57:03.804  INFO 4860 --- [Test worker] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: updateUsingPUT_1
+2020-06-26 19:57:03.908  INFO 4860 --- [Test worker] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: deleteUsingDELETE_1
+2020-06-26 19:57:04.025  INFO 4860 --- [Test worker] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: updateUsingPUT_2
+2020-06-26 19:57:04.066  INFO 4860 --- [Test worker] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: deleteUsingDELETE_2
+2020-06-26 19:57:04.183  INFO 4860 --- [Test worker] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: updateUsingPUT_3
+2020-06-26 19:57:04.292  INFO 4860 --- [Test worker] cn.example.demo.DemoApplicationTests     : Started DemoApplicationTests in 22.525 seconds (JVM running for 32.356)
+2020-06-26 19:57:05.391  INFO 4860 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-06-26 19:57:05.448  INFO 4860 --- [SpringContextShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closed
+2020-06-26 19:57:26.797  INFO 22164 --- [Test worker] cn.example.demo.DemoApplicationTests     : Starting DemoApplicationTests on PC7018 with PID 22164 (started by Administrator in D:\workspace\demo)
+2020-06-26 19:57:26.802  INFO 22164 --- [Test worker] cn.example.demo.DemoApplicationTests     : No active profile set, falling back to default profiles: default
+2020-06-26 19:57:29.293  INFO 22164 --- [Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-06-26 19:57:29.299  INFO 22164 --- [Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2020-06-26 19:57:29.387  INFO 22164 --- [Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 57ms. Found 0 Redis repository interfaces.
+2020-06-26 19:57:30.151  INFO 22164 --- [Test worker] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-06-26 19:57:30.864  INFO 22164 --- [Test worker] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
+2020-06-26 19:57:31.679  INFO 22164 --- [Test worker] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2020-06-26 19:57:33.994  INFO 22164 --- [Test worker] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2020-06-26 19:57:34.940  INFO 22164 --- [Test worker] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-06-26 19:57:35.895  INFO 22164 --- [Test worker] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2020-06-26 19:57:35.949  INFO 22164 --- [Test worker] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2020-06-26 19:57:36.031  INFO 22164 --- [Test worker] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2020-06-26 19:57:36.361  INFO 22164 --- [Test worker] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: updateUsingPUT_1
+2020-06-26 19:57:36.412  INFO 22164 --- [Test worker] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: deleteUsingDELETE_1
+2020-06-26 19:57:36.461  INFO 22164 --- [Test worker] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: updateUsingPUT_2
+2020-06-26 19:57:36.475  INFO 22164 --- [Test worker] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: deleteUsingDELETE_2
+2020-06-26 19:57:36.539  INFO 22164 --- [Test worker] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: updateUsingPUT_3
+2020-06-26 19:57:36.584  INFO 22164 --- [Test worker] cn.example.demo.DemoApplicationTests     : Started DemoApplicationTests in 10.709 seconds (JVM running for 17.229)
+2020-06-26 19:57:37.464  INFO 22164 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-06-26 19:57:37.513  INFO 22164 --- [SpringContextShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closed
+2020-06-26 19:58:12.049  INFO 23288 --- [Test worker] cn.example.demo.DemoApplicationTests     : Starting DemoApplicationTests on PC7018 with PID 23288 (started by Administrator in D:\workspace\demo)
+2020-06-26 19:58:12.053  INFO 23288 --- [Test worker] cn.example.demo.DemoApplicationTests     : No active profile set, falling back to default profiles: default
+2020-06-26 19:58:14.662  INFO 23288 --- [Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-06-26 19:58:14.668  INFO 23288 --- [Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2020-06-26 19:58:14.753  INFO 23288 --- [Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 53ms. Found 0 Redis repository interfaces.
+2020-06-26 19:58:15.522  INFO 23288 --- [Test worker] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-06-26 19:58:16.260  INFO 23288 --- [Test worker] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
+2020-06-26 19:58:17.046  INFO 23288 --- [Test worker] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2020-06-26 19:58:19.476  INFO 23288 --- [Test worker] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2020-06-26 19:58:20.259  INFO 23288 --- [Test worker] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-06-26 19:58:21.178  INFO 23288 --- [Test worker] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2020-06-26 19:58:21.233  INFO 23288 --- [Test worker] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2020-06-26 19:58:21.324  INFO 23288 --- [Test worker] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2020-06-26 19:58:21.695  INFO 23288 --- [Test worker] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: updateUsingPUT_1
+2020-06-26 19:58:21.772  INFO 23288 --- [Test worker] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: deleteUsingDELETE_1
+2020-06-26 19:58:21.829  INFO 23288 --- [Test worker] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: updateUsingPUT_2
+2020-06-26 19:58:21.843  INFO 23288 --- [Test worker] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: deleteUsingDELETE_2
+2020-06-26 19:58:21.911  INFO 23288 --- [Test worker] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: updateUsingPUT_3
+2020-06-26 19:58:21.951  INFO 23288 --- [Test worker] cn.example.demo.DemoApplicationTests     : Started DemoApplicationTests in 10.65 seconds (JVM running for 17.027)
+2020-06-26 19:58:22.754  INFO 23288 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-06-26 19:58:22.836  INFO 23288 --- [SpringContextShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closed
+2020-06-26 20:04:02.140  INFO 14328 --- [Test worker] cn.example.demo.DemoApplicationTests     : Starting DemoApplicationTests on PC7018 with PID 14328 (started by Administrator in D:\workspace\demo)
+2020-06-26 20:04:02.144  INFO 14328 --- [Test worker] cn.example.demo.DemoApplicationTests     : No active profile set, falling back to default profiles: default
+2020-06-26 20:04:04.802  INFO 14328 --- [Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-06-26 20:04:04.811  INFO 14328 --- [Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2020-06-26 20:04:04.909  INFO 14328 --- [Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 64ms. Found 0 Redis repository interfaces.
+2020-06-26 20:04:05.725  INFO 14328 --- [Test worker] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-06-26 20:04:06.401  INFO 14328 --- [Test worker] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
+2020-06-26 20:04:07.352  INFO 14328 --- [Test worker] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2020-06-26 20:04:09.985  INFO 14328 --- [Test worker] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2020-06-26 20:04:10.790  INFO 14328 --- [Test worker] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-06-26 20:04:11.671  INFO 14328 --- [Test worker] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2020-06-26 20:04:11.723  INFO 14328 --- [Test worker] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2020-06-26 20:04:11.828  INFO 14328 --- [Test worker] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2020-06-26 20:04:12.143  INFO 14328 --- [Test worker] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: updateUsingPUT_1
+2020-06-26 20:04:12.194  INFO 14328 --- [Test worker] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: deleteUsingDELETE_1
+2020-06-26 20:04:12.250  INFO 14328 --- [Test worker] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: updateUsingPUT_2
+2020-06-26 20:04:12.264  INFO 14328 --- [Test worker] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: deleteUsingDELETE_2
+2020-06-26 20:04:12.336  INFO 14328 --- [Test worker] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: updateUsingPUT_3
+2020-06-26 20:04:12.390  INFO 14328 --- [Test worker] cn.example.demo.DemoApplicationTests     : Started DemoApplicationTests in 11.013 seconds (JVM running for 17.384)
+2020-06-26 20:04:13.366  INFO 14328 --- [Test worker] io.lettuce.core.EpollProvider            : Starting without optional epoll library
+2020-06-26 20:04:13.372  INFO 14328 --- [Test worker] io.lettuce.core.KqueueProvider           : Starting without optional kqueue library
+2020-06-26 20:04:21.003  INFO 14328 --- [Test worker] cn.example.demo.DemoApplicationTests     : reis:{}
+2020-06-26 20:04:21.043  INFO 14328 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-06-26 20:04:21.196  INFO 14328 --- [SpringContextShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closed
+2020-06-26 20:04:49.957  INFO 7552 --- [Test worker] cn.example.demo.DemoApplicationTests     : Starting DemoApplicationTests on PC7018 with PID 7552 (started by Administrator in D:\workspace\demo)
+2020-06-26 20:04:49.961  INFO 7552 --- [Test worker] cn.example.demo.DemoApplicationTests     : No active profile set, falling back to default profiles: default
+2020-06-26 20:04:52.638  INFO 7552 --- [Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-06-26 20:04:52.644  INFO 7552 --- [Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2020-06-26 20:04:52.731  INFO 7552 --- [Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 59ms. Found 0 Redis repository interfaces.
+2020-06-26 20:04:53.549  INFO 7552 --- [Test worker] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-06-26 20:04:54.276  INFO 7552 --- [Test worker] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
+2020-06-26 20:04:55.621  INFO 7552 --- [Test worker] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2020-06-26 20:04:58.015  INFO 7552 --- [Test worker] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2020-06-26 20:04:58.850  INFO 7552 --- [Test worker] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-06-26 20:04:59.798  INFO 7552 --- [Test worker] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2020-06-26 20:04:59.856  INFO 7552 --- [Test worker] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2020-06-26 20:04:59.936  INFO 7552 --- [Test worker] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2020-06-26 20:05:00.293  INFO 7552 --- [Test worker] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: updateUsingPUT_1
+2020-06-26 20:05:00.340  INFO 7552 --- [Test worker] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: deleteUsingDELETE_1
+2020-06-26 20:05:00.398  INFO 7552 --- [Test worker] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: updateUsingPUT_2
+2020-06-26 20:05:00.418  INFO 7552 --- [Test worker] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: deleteUsingDELETE_2
+2020-06-26 20:05:00.493  INFO 7552 --- [Test worker] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: updateUsingPUT_3
+2020-06-26 20:05:00.545  INFO 7552 --- [Test worker] cn.example.demo.DemoApplicationTests     : Started DemoApplicationTests in 11.463 seconds (JVM running for 17.999)
+2020-06-26 20:05:01.537  INFO 7552 --- [Test worker] io.lettuce.core.EpollProvider            : Starting without optional epoll library
+2020-06-26 20:05:01.542  INFO 7552 --- [Test worker] io.lettuce.core.KqueueProvider           : Starting without optional kqueue library
+2020-06-26 20:05:10.233  INFO 7552 --- [Test worker] cn.example.demo.DemoApplicationTests     : reis:{token=123456}
+2020-06-26 20:05:10.274  INFO 7552 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-06-26 20:05:10.422  INFO 7552 --- [SpringContextShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closed

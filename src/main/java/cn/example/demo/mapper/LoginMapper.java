@@ -3,13 +3,14 @@ package cn.example.demo.mapper;
 import cn.example.demo.dao.Customer;
 import cn.example.demo.dao.Login;
 import org.apache.ibatis.annotations.Param;
-import org.springframework.stereotype.Service;
+import org.springframework.stereotype.Repository;
 
 /**
  * @author liuwu4
  * 13:00
  * description:
  */
+@Repository
 public interface LoginMapper {
 
     /**

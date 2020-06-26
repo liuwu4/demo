@@ -8,6 +8,7 @@ import cn.example.demo.service.TypeService;
 import cn.example.demo.utils.Encryption;
 import cn.example.demo.utils.Excel;
 import cn.example.demo.utils.GenerateToken;
+import cn.example.demo.utils.RedisUtil;
 import org.junit.jupiter.api.Test;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -20,9 +21,9 @@ import java.util.List;
 
 @SpringBootTest
 class DemoApplicationTests {
-    private Logger log = LoggerFactory.getLogger(DemoApplicationTests.class);
-    private String pathXls = "C:\\Users\\Administrator\\Desktop\\type.xls";
-    private String pathXlsx = "C:\\Users\\Administrator\\Desktop\\type.xlsx";
+    private final Logger log = LoggerFactory.getLogger(DemoApplicationTests.class);
+    private final String pathXls = "C:\\Users\\Administrator\\Desktop\\type.xls";
+    private final String pathXlsx = "C:\\Users\\Administrator\\Desktop\\type.xlsx";
     private static final String JET_KEY = "JWT-key-123";
     @Autowired
     Excel excel;
@@ -31,6 +32,13 @@ class DemoApplicationTests {
     TypeService typeService;
     @Autowired
     LoginService loginService;
+    @Autowired
+    RedisUtil redisUtil;
+
+    @Test
+    public void redisStart() {
+        log.info("reis:" + redisUtil.getValues("token"));
+    }
 
     @Test
     public void excel() {
@@ -67,8 +75,14 @@ class DemoApplicationTests {
         String testToken = "eyJ0eXBlIjoiSldUIiwiYWxnIjoiSFMyNTYiLCJ0eXAiOiJKV1QifQ.eyJhdWQiOiJBUFAiLCJ1c2VyVG9rZW4iOiIxNTA4MjAwMDg1NSIsImlzcyI6IlNlcnZpY2UifQ.PKJS_UHPcYmLTO3I5LJc_MUxOUtnMDGf1DaltG273Jo\n";
         System.out.println(new GenerateToken().parseToken(testToken));
     }
+
     @Test
-    public  void encryption(){
+    public void encryption() {
         new Encryption().generatorEncryption("123434/'");
     }
+
+    @Test
+    public void redisTest() {
+    }
+
 }

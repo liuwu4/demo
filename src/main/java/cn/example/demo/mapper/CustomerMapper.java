@@ -2,6 +2,7 @@ package cn.example.demo.mapper;
 
 import cn.example.demo.dao.Customer;
 import org.apache.ibatis.annotations.Param;
+import org.springframework.stereotype.Repository;
 
 import java.util.List;
 
@@ -10,6 +11,7 @@ import java.util.List;
  * 10:33
  * description:
  */
+@Repository
 public interface CustomerMapper {
     /**
      * 获取所用用户信息
