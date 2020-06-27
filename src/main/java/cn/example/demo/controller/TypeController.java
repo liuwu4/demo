@@ -1,7 +1,7 @@
 package cn.example.demo.controller;
 
 import cn.example.demo.dao.Type;
-import cn.example.demo.exception.StatusEnum;
+import cn.example.demo.utils.ReturnFormat;
 import cn.example.demo.service.TypeService;
 import cn.example.demo.utils.Excel;
 import cn.example.demo.utils.HttpUtils;
@@ -80,7 +80,7 @@ public class TypeController {
             map.put("result", result);
         } else {
             map.put("result", result);
-            map.put("warning", StatusEnum.EXCEL_NULL);
+            map.put("warning", ReturnFormat.EXCEL_NULL);
         }
         return httpUtils.response(map);
     }

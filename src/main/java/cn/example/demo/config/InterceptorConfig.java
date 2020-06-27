@@ -1,4 +1,4 @@
-package cn.example.demo.interceptor;
+package cn.example.demo.config;
 
 import cn.example.demo.utils.GenerateToken;
 import cn.example.demo.utils.HttpUtils;

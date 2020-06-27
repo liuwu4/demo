@@ -2,7 +2,6 @@
 POST {{baseUrl}}/login
 Accept: */*
 Content-Type: application/json
-Authorization:
 
 {"account": "15082000855", "password": "123456"}
 
@@ -11,5 +10,5 @@ Authorization:
 ### 请求产品信息
 GET {{baseUrl}}/products
 Accept: application/json
-Authorization: 123456
+Authorization: {{ token }}
 ###

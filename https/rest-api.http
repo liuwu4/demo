@@ -1,16 +1,19 @@
 ### 请求所有的用户信息
 GET {{ baseUrl }}/users
 Accept: application/json
+Authorization: {{ token }}
 
 > {% client.global.set("userList", response.body.data); %}
 
-###
+### 批量修改密码
 PUT {{ baseUrl }}/batchUpdatePassword
 Accept: */*
 Content-Type: application/json
+Authorization: {{ token }}
 
+{}
 
-###
 ### 校验用户是否存在
 GET {{ baseUrl }}/users?customerId=1
-Accept: application/json
+Accept: application/
+Authorization: {{ token }}
